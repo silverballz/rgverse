@@ -112,7 +112,7 @@ function Search({ onSearch }) {
     <div className="relative pb-6">
       <StyledWrapper className="mb-4">
         <a
-          href="https://github.com/codeaashu/DevDisplay/blob/main/CONTRIBUTING.md#-add-your-profile-on-devdisplay-"
+          href="https://github.com/Piyush-t24/rgverse/blob/main/CONTRIBUTING.md"
           target="_blank"
           rel="noreferrer"
         >
@@ -120,25 +120,29 @@ function Search({ onSearch }) {
             <div className="content-avatar">
               <div className="status-user" />
               <div className="avatar">
-                <svg className="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg
+                  className="user-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z" />
                 </svg>
               </div>
             </div>
             <div className="notice-content">
-              <div className="username">Dev Pioneer</div>
+              <div className="username">RGIPTIAN</div>
               <div className="lable-message">
                 Add Your Profile
                 <FaCheckCircle className="ml-2 rounded-full border-[1px] border-[#0ea5e9] p-0.5 text-xl text-[#0ea5e9]" />
               </div>
-              <div className="user-id">@devpioneer</div>
+              <div className="user-id">@rgiptian</div>
             </div>
           </button>
         </a>
       </StyledWrapper>
       <div className="relative flex items-center justify-end space-x-4 ">
         <select
-          className="focus:border-primaryFocus focus:bg-primaryLight dark:focus:border-secondaryFocus dark:focus:bg-secondaryLight h-12 rounded-lg border-2 border-borderSecondary bg-primaryColor px-4 py-3 text-base text-secondaryColor outline-none dark:border-borderColor dark:bg-secondaryColor dark:text-white"
+          className="focus:border-primaryFocus focus:bg-primaryLight dark:focus:border-secondaryFocus dark:focus:bg-secondaryLight border-borderSecondary bg-primaryColor text-secondaryColor dark:border-borderColor dark:bg-secondaryColor h-12 rounded-lg border-2 px-4 py-3 text-base outline-none dark:text-white"
           value={searchCriteria}
           onChange={handleCriteriaChange}
         >
@@ -148,7 +152,7 @@ function Search({ onSearch }) {
         </select>
         <div className="relative w-full">
           <input
-            className="focus:border-primaryFocus focus:bg-primaryLight dark:focus:border-secondaryFocus dark:focus:bg-secondaryLight h-12 w-full rounded-lg border-2 border-borderSecondary bg-primaryColor px-4 py-3 pr-20 font-spaceMono text-base text-secondaryColor outline-none dark:border-borderColor dark:bg-secondaryColor dark:text-white"
+            className="focus:border-primaryFocus focus:bg-primaryLight dark:focus:border-secondaryFocus dark:focus:bg-secondaryLight border-borderSecondary bg-primaryColor font-spaceMono text-secondaryColor dark:border-borderColor dark:bg-secondaryColor h-12 w-full rounded-lg border-2 px-4 py-3 pr-20 text-base outline-none dark:text-white"
             ref={searchInput}
             type="text"
             onChange={handleInputChange}
@@ -159,26 +163,26 @@ function Search({ onSearch }) {
           {searchValue ? (
             <FontAwesomeIcon
               onClick={handleDeleteButtonClick}
-              className="hover:text-primaryFocus dark:hover:text-secondaryFocus absolute right-4 top-1/2 -translate-y-1/2 scale-125 transform cursor-pointer text-xl text-secondaryColor dark:text-white"
+              className="hover:text-primaryFocus dark:hover:text-secondaryFocus text-secondaryColor absolute right-4 top-1/2 -translate-y-1/2 scale-125 transform cursor-pointer text-xl dark:text-white"
               icon={faXmark}
             />
           ) : (
             <FontAwesomeIcon
               onClick={handleSearchButtonClick}
-              className="hover:text-primaryFocus dark:hover:text-secondaryFocus absolute right-4 top-1/2 -translate-y-1/2 transform cursor-pointer text-xl text-secondaryColor dark:text-white"
+              className="hover:text-primaryFocus dark:hover:text-secondaryFocus text-secondaryColor absolute right-4 top-1/2 -translate-y-1/2 transform cursor-pointer text-xl dark:text-white"
               icon={faMagnifyingGlass}
             />
           )}
           <FontAwesomeIcon
             onClick={() => setIsListening((prev) => !prev)}
-            className="hover:text-primaryFocus dark:hover:text-secondaryFocus absolute right-12 top-1/2 -translate-y-1/2 transform cursor-pointer text-xl text-secondaryColor dark:text-white"
+            className="hover:text-primaryFocus dark:hover:text-secondaryFocus text-secondaryColor absolute right-12 top-1/2 -translate-y-1/2 transform cursor-pointer text-xl dark:text-white"
             icon={faMicrophone}
           />
         </div>
       </div>
 
       {/* This block show the skills the user searched */}
-      {searchCriteria === 'skill' && searchSkills && searchSkills.length > 0 ? (
+      {searchCriteria === "skill" && searchSkills && searchSkills.length > 0 ? (
         <>
           <button
             onClick={handleClearSkills}
@@ -186,11 +190,18 @@ function Search({ onSearch }) {
           >
             Clear All
           </button>
-          <SearchSkillsContainer searchSkills={searchSkills} setSearchSkills={setSearchSkills} />
+          <SearchSkillsContainer
+            searchSkills={searchSkills}
+            setSearchSkills={setSearchSkills}
+          />
         </>
       ) : null}
 
-      <VoiceSearch setVoiceText={setVoiceText} isListening={isListening} setIsListening={setIsListening} />
+      <VoiceSearch
+        setVoiceText={setVoiceText}
+        isListening={isListening}
+        setIsListening={setIsListening}
+      />
     </div>
   );
 }
