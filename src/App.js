@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import Homepage from './Homepage';
 import ProfilePage from "./components/Profile/ProfilePage";
 
-
 function App() {
   React.useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -32,7 +31,8 @@ function App() {
       </Helmet>
 
       <Routes>
-        <Route index element={<Homepage />} />    
+        <Route index element={<Homepage />} /> 
+        <Route path="/profile/:name" element={<ProfilePage />} />   
       </Routes>
     </BrowserRouter>
   );
