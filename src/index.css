@@ -63,10 +63,10 @@ code {
 
 @keyframes skeleton-loading {
   0% {
-    background-color: hsla(221, 42%, 22%, 0.773);
+    background-color: hsla(143, 42%, 22%, 0.773);
   }
   100% {
-    background-color: hsla(221, 42%, 22%, 0.773);
+    background-color: hsla(143, 42%, 22%, 0.773);
   }
 }
 
@@ -117,7 +117,7 @@ code {
   bottom: 0;
   border: 3px solid transparent;
   border-radius: 10px;
-  background: conic-gradient(#0ea5e9 20deg, transparent 120deg);
+  background: conic-gradient(#0ee978 20deg, transparent 120deg);
   background-size: 400% 400%;
   z-index: -1;
   animation: rotate 10s linear infinite;
