@@ -16,7 +16,7 @@ function App() {
         <meta name="description" content="One Central Hub for RGIPT Students to Discover Resources, Connect with Seniors, and Grow Together." />
         <meta
           name="keywords"
-          content="RGVerse, open source, community, tech skills, Paradise for developers, collaboration, tech platform, developers, RGVerse, Connect, Collab, Code, Create, Conquer, RGVerse org, developers, opensource, developer community, tech community, Dev Display, dev display"
+          content="RGVerse, open source, community, tech skills, Paradise for developers, collaboration, tech platform, developers, RGVerse, Connect, Collab, Code, Create, Conquer, RGVerse org, developers, opensource, developer community, tech community, RGIPT, RGIPTIAN"
         />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
