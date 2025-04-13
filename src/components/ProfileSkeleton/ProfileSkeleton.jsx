@@ -17,12 +17,12 @@ const pulse = keyframes`
 `;
 
 const ProfileSkeletonWrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap");
 
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 
   .skeleton {
-    background-color: rgb(13, 25, 53);
+    background-color: rgb(13, 53, 24);
     animation: ${pulse} 1.5s infinite ease-in-out;
     border-radius: 8px;
   }
@@ -48,7 +48,7 @@ const ProfileSkeletonWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(13, 25, 53);
+    background-color: rgb(13, 53, 24);
     border-radius: 0.25rem;
     animation: ${pulse} 1.5s infinite ease-in-out;
   }
@@ -171,14 +171,19 @@ function ProfileSkeleton() {
                   viewBox="0 0 24 24"
                   width="16"
                   height="16"
-                  style={{ marginLeft: '8px' }}
+                  style={{ marginLeft: "8px" }}
                 >
-                  <circle cx="12" cy="12" r="10" fill="rgb(24, 186, 255)" />
-                  <path fill="#fff" d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z" />
+                  <circle cx="12" cy="12" r="10" fill="rgb(24, 255, 70)" />
+                  <path
+                    fill="#fff"
+                    d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z"
+                  />
                 </svg>
               )}
             </h3>
-            <p className="skeleton skeleton-line w-full">{skeletonData.location}</p>
+            <p className="skeleton skeleton-line w-full">
+              {skeletonData.location}
+            </p>
             <div className="flex flex-wrap gap-[1rem] overflow-hidden">
               {skeletonData.skills &&
                 skeletonData.skills.map((skill, index) => (
@@ -193,9 +198,13 @@ function ProfileSkeleton() {
           </div>
         </div>
         <div className="mt-[1rem]">
-          <div className="skeleton skeleton-line w-full">{skeletonData.bio}</div>
+          <div className="skeleton skeleton-line w-full">
+            {skeletonData.bio}
+          </div>
           <div className="mt-[0.5rem] flex h-auto flex-wrap gap-[1rem]">
-            {Object.keys(skeletonData.social).map((platform, index) => socialIcons[platform])}
+            {Object.keys(skeletonData.social).map(
+              (platform, index) => socialIcons[platform],
+            )}
           </div>
         </div>
       </div>
