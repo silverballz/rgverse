@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Homepage from './Homepage';
+import ProfilePage from "./components/Profile/ProfilePage";
+
 
 function App() {
   React.useEffect(() => {
