@@ -165,7 +165,7 @@ function Card({ data }) {
         </div>
         <div className="flex items-center justify-end md:absolute md:right-0 md:top-0">
           <FaShareAlt
-            className="mr-4 cursor-pointer text-xl text-blue-600 duration-300 hover:scale-125"
+            className="mr-4 cursor-pointer text-xl text-green-600 duration-300 hover:scale-125"
             onClick={(e) => {
               const profileFileName = data.fileName.replace(".json", "");
               const shareUrl = `https://rgverse.vercel.app/profile/${profileFileName}`;
@@ -206,43 +206,43 @@ function Card({ data }) {
         <div className="mt-1 flex gap-x-4">
           {data.social?.GitHub && (
             <a href={data.social.GitHub} target="_blank" rel="noreferrer">
-              <FaGithub className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaGithub className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Twitter && (
             <a href={data.social.Twitter} target="_blank" rel="noreferrer">
-              <FaXTwitter className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaXTwitter className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.LinkedIn && (
             <a href={data.social.LinkedIn} target="_blank" rel="noreferrer">
-              <FaLinkedin className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaLinkedin className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Instagram && (
             <a href={data.social.Instagram} target="_blank" rel="noreferrer">
-              <FaInstagram className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaInstagram className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Discord && (
             <a href={data.social.Discord} target="_blank" rel="noreferrer">
-              <FaDiscord className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaDiscord className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.LeetCode && (
             <a href={data.social.LeetCode} target="_blank" rel="noreferrer">
-              <SiLeetcode className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <SiLeetcode className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Codeforces && (
             <a href={data.social.Codeforces} target="_blank" rel="noreferrer">
-              <SiCodeforces className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <SiCodeforces className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
@@ -252,85 +252,85 @@ function Card({ data }) {
               target="_blank"
               rel="noreferrer"
             >
-              <FaStackOverflow className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaStackOverflow className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.YouTube && (
             <a href={data.social.YouTube} target="_blank" rel="noreferrer">
-              <FaYoutube className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaYoutube className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.DevTo && (
             <a href={data.social.DevTo} target="_blank" rel="noreferrer">
-              <FaDev className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaDev className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Hashnode && (
             <a href={data.social.Hashnode} target="_blank" rel="noreferrer">
-              <SiHashnode className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <SiHashnode className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Behance && (
             <a href={data.social.Behance} target="_blank" rel="noreferrer">
-              <FaBehance className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaBehance className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Dribbble && (
             <a href={data.social.Dribbble} target="_blank" rel="noreferrer">
-              <FaDribbble className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaDribbble className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Figma && (
             <a href={data.social.Figma} target="_blank" rel="noreferrer">
-              <FaFigma className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaFigma className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Replit && (
             <a href={data.social.Replit} target="_blank" rel="noreferrer">
-              <SiReplit className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <SiReplit className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.BuyMeACoffee && (
             <a href={data.social.BuyMeACoffee} target="_blank" rel="noreferrer">
-              <FaCoffee className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaCoffee className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.ProductHunt && (
             <a href={data.social.ProductHunt} target="_blank" rel="noreferrer">
-              <FaProductHunt className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaProductHunt className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Medium && (
             <a href={data.social.Medium} target="_blank" rel="noreferrer">
-              <FaMedium className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaMedium className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Reddit && (
             <a href={data.social.Reddit} target="_blank" rel="noreferrer">
-              <FaReddit className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaReddit className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.Unstop && (
             <a href={data.social.Unstop} target="_blank" rel="noreferrer">
-              <UnstopIcon className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <UnstopIcon className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
           {data.social?.HackerRank && (
             <a href={data.social.HackerRank} target="_blank" rel="noreferrer">
-              <SiHackerrank className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <SiHackerrank className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
@@ -340,7 +340,7 @@ function Card({ data }) {
               target="_blank"
               rel="noreferrer"
             >
-              <FaEnvelope className="text-2xl text-blue-600 duration-300 hover:scale-125" />
+              <FaEnvelope className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
         </div>
