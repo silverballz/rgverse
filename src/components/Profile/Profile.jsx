@@ -202,6 +202,7 @@ function Card({ data }) {
         </div>
       </div>
       <div className="mt-4">
+        <div className="dark:text-white">Branch-{data.branch}</div>
         <div className="dark:text-white">{data.bio}</div>
         <div className="mt-1 flex gap-x-4">
           {data.social?.GitHub && (
