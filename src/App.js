@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Homepage from './Homepage';
 import ProfilePage from "./components/Profile/ProfilePage";
-import { Analytics } from "@vercel/analytics/react";
+
 
 function App() {
   React.useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
         />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Analytics />
+        
 
         <meta name="theme-color" content="#317EFB" />
 
