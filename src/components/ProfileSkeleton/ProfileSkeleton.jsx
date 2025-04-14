@@ -199,6 +199,9 @@ function ProfileSkeleton() {
         </div>
         <div className="mt-[1rem]">
           <div className="skeleton skeleton-line w-full">
+            {skeletonData.branch}
+          </div>
+          <div className="skeleton skeleton-line w-full">
             {skeletonData.bio}
           </div>
           <div className="mt-[0.5rem] flex h-auto flex-wrap gap-[1rem]">
