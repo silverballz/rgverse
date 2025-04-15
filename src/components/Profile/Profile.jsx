@@ -83,7 +83,7 @@ function Card({ data }) {
   }, []);
 
   return (
-    <div className="dark:bg-textPrimary mb-6 h-auto rounded-lg bg-white p-4 shadow">
+    <div className="mb-6 h-auto rounded-lg bg-white p-4 shadow dark:bg-textPrimary">
       <div className="relative flex gap-4">
         <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-gray-200">
           {!showFallback ? (
@@ -101,7 +101,7 @@ function Card({ data }) {
         <div className="w-[55%] sm:w-[75%]">
           <h3>
             <a
-              className="hover:text-textSecondary flex items-center text-lg font-bold dark:text-white"
+              className="flex items-center text-lg font-bold hover:text-textSecondary dark:text-white"
               href={data.portfolio}
               target="_blank"
               rel="noreferrer"
@@ -118,13 +118,13 @@ function Card({ data }) {
           </p>
           <div className=" group flex overflow-hidden">
             <div
-              className=" skills-container group-hover:paused animate-loop-scroll mr-2 mt-4 flex  h-auto gap-4 whitespace-nowrap "
+              className=" skills-container group-hover:paused mr-2 mt-4 flex h-auto  animate-loop-scroll gap-4 whitespace-nowrap "
               ref={cardRef}
             >
               {data.skills &&
                 data.skills.map((skill, index) => (
                   <div
-                    className=" bg-secondaryColor inline  h-auto cursor-default whitespace-nowrap rounded-md px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
+                    className=" inline h-auto  cursor-default whitespace-nowrap rounded-md bg-secondaryColor px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
                     key={index}
                   >
                     {skill}
@@ -132,14 +132,14 @@ function Card({ data }) {
                 ))}
             </div>
             <div
-              className=" skills-container group-hover:paused animate-loop-scroll mr-2 mt-4 flex  h-auto gap-4 whitespace-nowrap"
+              className=" skills-container group-hover:paused mr-2 mt-4 flex h-auto  animate-loop-scroll gap-4 whitespace-nowrap"
               aria-hidden="true"
               ref={cardRef}
             >
               {data.skills &&
                 data.skills.map((skill, index) => (
                   <div
-                    className=" bg-secondaryColor inline  h-auto cursor-default whitespace-nowrap rounded-md px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
+                    className=" inline h-auto  cursor-default whitespace-nowrap rounded-md bg-secondaryColor px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
                     key={index}
                   >
                     {skill}
@@ -147,14 +147,14 @@ function Card({ data }) {
                 ))}
             </div>
             <div
-              className=" skills-container group-hover:paused animate-loop-scroll mt-4 flex h-auto  gap-4 whitespace-nowrap"
+              className=" skills-container group-hover:paused mt-4 flex h-auto animate-loop-scroll  gap-4 whitespace-nowrap"
               aria-hidden="true"
               ref={cardRef}
             >
               {data.skills &&
                 data.skills.map((skill, index) => (
                   <div
-                    className=" bg-secondaryColor inline  h-auto cursor-default whitespace-nowrap rounded-md px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
+                    className=" inline h-auto  cursor-default whitespace-nowrap rounded-md bg-secondaryColor px-2 py-1 text-[9px] text-white sm:text-sm md:h-[30px]"
                     key={index}
                   >
                     {skill}
@@ -191,7 +191,7 @@ function Card({ data }) {
             className={`flex w-28 items-center gap-2 ${
               data.portfolio
                 ? "text-textSecondary hover:underline"
-                : "text-textSecondary cursor-not-allowed brightness-50"
+                : "cursor-not-allowed text-textSecondary brightness-50"
             }`}
             target="_blank"
             rel="noreferrer"
@@ -202,7 +202,10 @@ function Card({ data }) {
         </div>
       </div>
       <div className="mt-4">
-        <div className="dark:text-white">Branch-{data.branch}</div>
+        {!data.name?.includes("Faculty") && (
+          <div className="dark:text-white">Branch-{data.branch}</div>
+        )}
+
         <div className="dark:text-white">{data.bio}</div>
         <div className="mt-1 flex gap-x-4">
           {data.social?.GitHub && (
