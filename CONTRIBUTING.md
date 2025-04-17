@@ -18,21 +18,23 @@ Just follow the steps below 👇 (It’s super simple!)
 ### 🔹 Step 1: Fork the Repository 🍴  
 Click the **Fork** button on the top-right to fork the repo into your account.
 
-🖼️ ![Step 1 - Fork](https://your-image-hosting-link.com/fork.png)
 
 ---
 
 ### 🔹 Step 2: Navigate to `public/data` 📂  
 Go to the folder where all profiles are stored.
 
-🖼️ ![Step 2 - Navigate to data](https://your-image-hosting-link.com/navigate.png)
+<img src="https://github.com/Piyush-t24/rgverse/blob/main/public/assets/Contributing/Step12.png?raw=true" width="500" alt="Step 12 - Screenshot" />
+
+
+
+
 
 ---
 
 ### 🔹 Step 3: Click on `Add file` → `Create new file` 🆕  
 This is how you’ll add your profile.
 
-🖼️ ![Step 3 - Add file](https://your-image-hosting-link.com/add-file.png)
 
 ---
 
@@ -41,7 +43,7 @@ Use your name like this:
 
 👉 Example: `Piyush.json`
 
-🖼️ ![Step 4 - File name](https://your-image-hosting-link.com/filename.png)
+<img src="https://github.com/Piyush-t24/rgverse/blob/main/public/assets/Contributing/Step345.png?raw=true" width="500" alt="Step 12 - Screenshot" />
 
 ---
 
@@ -89,21 +91,19 @@ Paste your github or linkedin profile pic link
 ### 🔹 Step 6: Commit the File 💾  
 Click on **Commit new file** on the top-right to save your profile.
 
-🖼️ ![Step 6 - Commit](https://your-image-hosting-link.com/commit.png)
 
 ---
 
 ### 🔹 Step 7: Click on “1 commit ahead of…” link 📘  
 This appears near the top – means your fork is 1 commit ahead of the main project.
 
-🖼️ ![Step 7 - Commit ahead](https://your-image-hosting-link.com/commit-ahead.png)
 
 ---
 
 ### 🔹 Step 8: Review the Changes ✅  
 On the comparing changes page, check if everything is highlighted in green. This means your code is clean and ready to be merged! 💚
 
-🖼️ ![Step 8 - Review green](https://your-image-hosting-link.com/review.png)
+<img src="https://github.com/Piyush-t24/rgverse/blob/main/public/assets/Contributing/Step67.png?raw=true" width="500" alt="Step 12 - Screenshot" />
 
 ---
 
@@ -112,7 +112,7 @@ Click on **Create pull request**.
 Give it a meaningful title like: `Added My Profile - Piyush`  
 Click **Create pull request** again to submit.
 
-🖼️ ![Step 9 - Pull request](https://your-image-hosting-link.com/pr.png)
+<img src="https://github.com/Piyush-t24/rgverse/blob/main/public/assets/Contributing/Step8910.png?raw=true" width="500" alt="Step 12 - Screenshot" />
 
 ---
 
