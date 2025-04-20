@@ -1,14 +1,15 @@
 // filepath:
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import Homepage from './Homepage';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Homepage from "./Homepage";
 import ProfilePage from "./components/Profile/ProfilePage";
-
+// Introducing RGVerse
+import Home from "./Page/Home.jsx";
 
 function App() {
   React.useEffect(() => {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add("dark");
   }, []);
 
   return (
@@ -25,7 +26,6 @@ function App() {
         />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
 
         <meta name="theme-color" content="#317EFB" />
 
@@ -36,6 +36,8 @@ function App() {
 
       <Routes>
         <Route index element={<Homepage />} />
+        {/* Introducing RGVerse */}
+        <Route path="/Home" element={<Home />} />
         <Route path="/profile/:name" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
