@@ -10,7 +10,7 @@ import filenames from "../ProfilesList.json";
 
 const Hero = () => {
   return (
-    <section className="hero-section flex flex-col items-center justify-center bg-secondaryColor py-12 text-white">
+    <section className="hero-section flex flex-col items-center justify-center bg-secondaryColor py-12 pb-5 text-white">
       <div className="flex w-full flex-col items-center justify-center px-8 text-center">
         <img
           src={LOGO}
@@ -180,7 +180,7 @@ const TechFeatures = () => {
   ];
 
   return (
-    <section className="tech-features-section  bg-secondaryColor py-16 text-white">
+    <section className="tech-features-section  bg-secondaryColor py-16 pt-0 text-white">
       <div className="mx-auto mb-16 max-w-4xl text-center">
         <h2 className="custom-font mb-6 text-4xl font-bold text-textSecondary">
           Dive into RGVerse
