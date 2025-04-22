@@ -104,7 +104,7 @@ const FeatureCard = ({ title, description, image, link }) => {
           <p className="text-gray-400">{description}</p>
         </div>
         <StyledButton onClick={() => (window.location.href = link)}>
-          <div className="inner">Explore Now</div>
+          <div className="inner">Coming Soon</div>
         </StyledButton>
       </div>
     </div>
