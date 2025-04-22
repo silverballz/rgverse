@@ -41,7 +41,7 @@ This is how you’ll add your profile.
 ### 🔹 Step 4: Name Your File 📄  
 Use your name like this:
 
-👉 Example: `Piyush.json`
+👉 Example: `Piyush23.json` (Add your clg registration year after your name)
 
 <img src="https://github.com/Piyush-t24/rgverse/blob/main/public/assets/Contributing/Step345.png?raw=true" width="500" alt="Step 12 - Screenshot" />
 
@@ -56,6 +56,7 @@ Paste your github or linkedin profile pic link
 {
   "name": "Your Name (2023-27)", 
   "location": "Your Location",
+  "branch": "IT",
   "bio": "Your Bio should be 20-30 words not more than that",
   "avatar": "https://github.com/your-github-username.png", 
   "portfolio": "Your Portfolio URL or Github URL",
