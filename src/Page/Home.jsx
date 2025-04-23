@@ -119,7 +119,7 @@ const TechFeatures = () => {
         "Handwritten Notes, PYQs, Must watch yt playlist, E-books, and many more",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ok7D1Mqvv3kf8HFyj19Yu_wN06JVjk4rSDyRSryZbVsIzQsSIQ&s=10&ec=72940544",
-      link: "/opportunities",
+      link: "/notes",
     },
     {
       title: "Opportunities",
@@ -135,7 +135,7 @@ const TechFeatures = () => {
         "Access a wide range of learning resources, tools, and libraries to boost your skills.",
       image:
         "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80",
-      link: "/Resources",
+      link: "/resources",
     },
     {
       title: "Roadmaps",
@@ -143,7 +143,7 @@ const TechFeatures = () => {
         "Explore the best roadmaps provided by your seniors to become pro in each field",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtp6B8_-JqwvXk9wQv__lxKTB8xIJqI4aveQ5KricXT9wgnY1mpQ&s=10&ec=72940544",
-      link: "/Resources",
+      link: "/roadmaps",
     },
     {
       title: "Project Showcase",
@@ -159,7 +159,7 @@ const TechFeatures = () => {
         "Explore $ PArticipate in various Global OpenSource Programs.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
-      link: "/PortfolioIdeas",
+      link: "/opensource",
     },
     {
       title: "Discussion",
@@ -167,7 +167,7 @@ const TechFeatures = () => {
         "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
-      link: "/PortfolioIdeas",
+      link: "/discussion",
     },
     {
       title: "Ai/ Developer Tools",
@@ -175,7 +175,7 @@ const TechFeatures = () => {
         "Explore powerful AI tools, dev utilities, and resources to boost your productivity and build smarter, faster.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYIHISJnOSNPhu8FId8YQfHbNm7rPcolEK1oiMBUCljGXcDm0TQ&s=10&ec=72940544",
-      link: "/PortfolioIdeas",
+      link: "aitools",
     },
   ];
 
