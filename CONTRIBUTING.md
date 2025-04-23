@@ -57,7 +57,7 @@ Paste your github or linkedin profile pic link
   "name": "Your Name (2023-27)", 
   "location": "Your Location",
   "branch": "IT",
-  "bio": "Your Bio should be 20-30 words not more than that",
+  "bio": "Your Bio should be 30-50 words not more than that",
   "avatar": "https://github.com/your-github-username.png", 
   "portfolio": "Your Portfolio URL or Github URL",
   "skills": ["Your Skill 1", "Your Skill 2", "..."],
@@ -128,7 +128,7 @@ Let’s grow together, dev fam 💻❤️
 ## 🙋 Need Help?
 
 - Stuck somewhere? Open an issue [here](https://github.com/Piyush-t24/rgverse/issues) 🧩  
-- Or ping the maintainers directly on Discord 📩
+- Or mail at rgverse2025@gmail.com to get assistance from the maintainers 📨
 
 ---
 
