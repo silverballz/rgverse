@@ -126,8 +126,9 @@ function Search({ onSearch }) {
           onChange={handleCriteriaChange}
         >
           <option value="name">Name</option>
-          <option value="location">Location</option>
+          <option value="branch">Branch</option>
           <option value="skill">Skill</option>
+          <option value="location">Location</option>
         </select>
         <div className="relative w-full">
           <input
