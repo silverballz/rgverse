@@ -19,7 +19,7 @@ import {
   FaReddit,
   FaShareAlt,
 } from "react-icons/fa";
-import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
+import { FaXTwitter, FaLocationDot, FaThreads } from "react-icons/fa6";
 import {
   SiLeetcode,
   SiCodeforces,
@@ -323,6 +323,11 @@ function Card({ data }) {
           {data.social?.Reddit && (
             <a href={data.social.Reddit} target="_blank" rel="noreferrer">
               <FaReddit className="text-2xl text-green-600 duration-300 hover:scale-125" />
+            </a>
+          )}
+          {data.social?.Threads && (
+            <a href={data.social.Threads} target="_blank" rel="noreferrer">
+              <FaThreads className="text-2xl text-green-600 duration-300 hover:scale-125" />
             </a>
           )}
 
