@@ -175,7 +175,7 @@ function Card({ data }) {
                 navigator
                   .share({
                     title: "Check out this profile!",
-                    text: "Check out my DevDisplay profile!",
+                    text: "Check out my RGVerse profile!",
                     url: shareUrl,
                   })
                   .then(() => console.log("Successful share"))
