@@ -10,7 +10,9 @@ const pages = [
 async function generateSitemap() {
   const writeStream = createWriteStream(path.resolve(__dirname, 'public', 'sitemap.xml'));
 
-  const sitemap = new SitemapStream({ hostname: 'https://www.rgverse.in' });
+  const sitemap = new SitemapStream({
+    hostname: "https://rgverse.vercel.app/",
+  });
 
   sitemap.pipe(writeStream).on('finish', () => {
     console.log('Sitemap generated successfully');
