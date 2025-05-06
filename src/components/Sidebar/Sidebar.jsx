@@ -1,25 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
+import emailjs from "emailjs-com"; 
+import StyledButton from "../StyledButton";
+import { RxCross2 } from "react-icons/rx"; 
 // import SvgLoader from "../SvgLoader/SvgLoader";
 
 function Sidebar() {
   const navigate = useNavigate();
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   function handleHome() {
     navigate("/Home");
   }
 
+  const handleKnowGithub = () => {
+    window.open(
+      "https://github.com/Piyush-t24/rgverse/blob/main/CONTRIBUTING.md",
+      "_blank",
+      "noreferrer"
+    );
+  };
+
+  const handleDontKnowGithub = () => {
+    setShowForm(true);
+    setOpenDropdown(false);
+  };
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.fullName.value;
+    const branch = form.branch.value;
+    const linkedin = form.linkedin.value;
+
+    const templateParams = {
+      fullName,
+      branch,
+      linkedin,
+      to_email: "rgverse2025@gmail.com",
+    };
+
+    emailjs
+      .send(
+        "service_k7barbv", // replace with your EmailJS service ID
+        "template_kgg4ahw", // replace with your EmailJS template ID
+        templateParams,
+        "apGJp-tRcTCxytNED", // replace with your EmailJS public key
+      )
+      .then((response) => {
+        alert("Form submitted successfully!");
+        form.reset();
+        setShowForm(false);
+      })
+      .catch((error) => {
+        console.error("Email sending error:", error);
+        alert("Failed to submit the form. Please try again.");
+      });
+  }
+
+
   return (
-    <div className="border-borderSecondary font-spaceMono dark:border-borderColor my-7 w-full border-r-2 px-7 md:h-[90vh] md:w-[23%] md:px-2 lg:px-7">
+    <div className="my-7 w-full border-r-2 border-borderSecondary px-7 font-spaceMono dark:border-borderColor md:h-[90vh] md:w-[23%] md:px-2 lg:px-7">
       <StyledWrapper className="flex flex-col items-center gap-6 pt-6">
-        <a
-          href="https://github.com/Piyush-t24/rgverse/blob/main/CONTRIBUTING.md"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button id="btn-message" className="button-message">
+        {/* Modified Button */}
+        <div className="relative flex w-full justify-center">
+          <button
+            id="btn-message"
+            className="button-message"
+            onClick={() => setOpenDropdown((prev) => !prev)}
+          >
             <div className="content-avatar">
               <div className="status-user" />
               <div className="avatar">
@@ -41,9 +94,80 @@ function Sidebar() {
               <div className="user-id">@rgiptian</div>
             </div>
           </button>
-        </a>
 
-        <div className="text-secondaryColor text-center dark:text-white">
+          {/* Dropdown */}
+          {openDropdown && (
+            <div
+              className="absolute top-full z-20 mt-2 w-48 rounded-md border-2  shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-textPrimary"
+              style={{ borderColor: "#ffffff50" }}
+            >
+              <div className="py-1">
+                <button
+                  onClick={handleKnowGithub}
+                  className="w-full px-4 py-2 text-left text-sm text-white hover:bg-secondaryColor"
+                >
+                  Know GitHub
+                </button>
+                <button
+                  onClick={handleDontKnowGithub}
+                  className="w-full px-4 py-2 text-left text-sm text-white hover:bg-secondaryColor"
+                >
+                  Don't Know GitHub
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Form */}
+        {showForm && (
+          <div
+            className="relative mt-4 w-full rounded-lg border-2 p-4 shadow-md"
+            style={{ backgroundColor: "#092413", borderColor: "#ffffff50" }} // semi-transparent white border
+          >
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute right-3 top-3 text-2xl font-bold"
+              style={{ color: "#cccccc" }} // soft white color
+            >
+              <RxCross2 /> {/* 👈 React Icon here */}
+            </button>
+
+            <h2 className="mb-4 text-center text-lg font-semibold text-white">
+              Fill Your Details
+            </h2>
+            <form className="flex flex-col gap-3" onSubmit={handleFormSubmit}>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                className="rounded border p-2 text-black"
+                required
+              />
+              <input
+                type="text"
+                name="branch"
+                placeholder="Branch"
+                className="rounded border p-2 text-black"
+                required
+              />
+              <input
+                type="text"
+                name="linkedin"
+                placeholder="LinkedIn ID"
+                className="rounded border p-2 text-black"
+                required
+              />
+
+              <StyledButton type="submit">
+                <div className="inner">Submit</div>
+              </StyledButton>
+            </form>
+          </div>
+        )}
+
+        {/* Other Sidebar content (Unchanged) */}
+        <div className="text-center text-secondaryColor dark:text-white">
           One Central Hub for RGIPT Students to Discover Resources, Connect with
           Seniors, and Grow Together.
         </div>
@@ -57,6 +181,7 @@ function Sidebar() {
     </div>
   );
 }
+
 
 const StyledWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap");
