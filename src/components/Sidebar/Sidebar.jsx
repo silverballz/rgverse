@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
@@ -11,6 +11,11 @@ function Sidebar() {
   const navigate = useNavigate();
   const [openDropdown, setOpenDropdown] = useState(false);
   const [showForm, setShowForm] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("E9tssnr-Oke8I2dd5"); // Your public key
+  }, []);
 
   function handleHome() {
     navigate("/Home");
@@ -36,28 +41,30 @@ function Sidebar() {
     const fullName = form.fullName.value;
     const branch = form.branch.value;
     const linkedin = form.linkedin.value;
+    const message = form.message.value;
 
     const templateParams = {
-      fullName,
-      branch,
-      linkedin,
+      from_name: fullName,
+      branch: branch,
+      linkedin: linkedin,
+      message: message,
       to_email: "rgverse2025@gmail.com",
     };
 
     emailjs
       .send(
-        "service_k7barbv", // replace with your EmailJS service ID
-        "template_kgg4ahw", // replace with your EmailJS template ID
-        templateParams,
-        "apGJp-tRcTCxytNED", // replace with your EmailJS public key
+        "service_k7barbv",
+        "template_gpqzxsc",
+        templateParams
       )
       .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
         alert("Form submitted successfully!");
         form.reset();
         setShowForm(false);
       })
       .catch((error) => {
-        console.error("Email sending error:", error);
+        console.error("FAILED...", error);
         alert("Failed to submit the form. Please try again.");
       });
   }
@@ -154,11 +161,17 @@ function Sidebar() {
               <input
                 type="text"
                 name="linkedin"
-                placeholder="LinkedIn ID"
+                placeholder="LinkedIn Link"
                 className="rounded border p-2 text-black"
                 required
               />
-
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className="rounded border p-2 text-black"
+                required
+                rows={3}
+              />
               <StyledButton type="submit">
                 <div className="inner">Submit</div>
               </StyledButton>
