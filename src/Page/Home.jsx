@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer/Footer";
 import LOGO from "./WordMark.png";
@@ -207,11 +207,50 @@ const TechFeatures = () => {
   );
 };
 
+const AuthorSection = () => {
+  const [loading, setLoading] = useState(true);
+  const [authorData, setAuthorData] = useState(null);
+
+  useEffect(() => {
+    const fetchAuthorData = async () => {
+      try {
+        const response = await fetch('/data/Piyush23.json');
+        const data = await response.json();
+        setAuthorData(data);
+      } catch (error) {
+        console.error('Error fetching author data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAuthorData();
+  }, []);
+
+  return (
+    <section className="author-section bg-secondaryColor py-16 text-white">
+      <div className="container mx-auto px-4">
+        <h2 className="custom-font mb-8 text-center text-3xl font-bold text-textSecondary">
+          Meet the Creator
+        </h2>
+        <div className="w-full">
+          {loading ? (
+            <ProfileSkeleton />
+          ) : (
+            authorData && <Profile data={authorData} />
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-900">
       <Hero />
       <TechFeatures />
+      {/* <AuthorSection /> */}
       <Footer />
     </div>
   );
