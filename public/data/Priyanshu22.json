@@ -1,0 +1,27 @@
+{
+  "name": "Priyanshu Soni (2022-26)",
+  "location": "Amethi, Uttar Pradesh",
+  "branch": "CDE",
+  "bio": "Student at Rajiv Gandhi Institute of Petroleum Technology (RGIPT)",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGu-g6uzdNLEg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711532424326?e=1753315200&v=beta&t=4LAmSEXZziT1V8HWZF0nhb4SLhlVSbOcCCKV06bQ4Js",
+  "portfolio": "https://3-d-portfolio-two-opal.vercel.app/",
+  "skills": [
+    "React.js",
+    "Solidity",
+    "Bootstrap 5",
+    "MongoDB",
+    "Hardhat",
+    "Sass",
+    "Express.js",
+    "Rust",
+    "CSS",
+    "Node.js",
+    "C++",
+    "HTML"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/priyanshu-soni-180219257",
+    "Instagram": "https://www.instagram.com/_priyanshu.08.soni/",
+    "Email": "priyanshus20k4@gmail.com"
+  }
+}
