@@ -1,0 +1,32 @@
+{
+  "name": "Abhirajkar Bajpai (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "Ex-SDE intern @Wyb || Final year undergraduate at RGIPT || Blockchain Developer|| Web Developer || MERN STACK",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5635AQHEXb21Hn1QIA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1737660495800?e=1748368800&v=beta&t=S45DlCm7IugpZdxZ_CejHz8ILHYaRuukFAccKLTIjSk",
+  "portfolio": "https://abhirajkarbajpai.vercel.app/",
+  "skills": [
+    "C++",
+    "Python",
+    "JavaScript",
+    "C",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "ReactJS",
+    "NodeJS",
+    "Express",
+    "MongoDB",
+    "NumPy",
+    "Pandas",
+    "Matplotlib",
+    "Scikit-learn",
+    "Blockchain Technology",
+    "MySQL"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/abhirajkarbajpai",
+    "Instagram": "https://www.instagram.com/abhirajkar_27_7/",
+    "Email": "abhirajkarbajpai2707@gmail.com"
+  }
+}
