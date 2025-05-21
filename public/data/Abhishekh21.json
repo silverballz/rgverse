@@ -1,0 +1,39 @@
+{
+  "name": "Abhishekh Kumar Singh (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "SDE Intern @WorkIndia | Ex-ML @Feynn Labs | RGIPT IT'25",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQFyHeVOf4Sn-w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728455771343?e=1753315200&v=beta&t=yxtavSTMDVwWv-ahCe2ZlLekv8SesXGW9GTv_c1dNSc",
+  "portfolio": "#",
+  "skills": [
+    "C++",
+    "C",
+    "Python",
+    "JavaScript",
+    "Scikit-Learn",
+    "TensorFlow",
+    "PyTorch",
+    "Numpy",
+    "NodeJs",
+    "ReactJs",
+    "Redux",
+    "Context",
+    "Linux",
+    "Git-GitHub",
+    "HTML",
+    "CSS",
+    "MongoDB",
+    "MySQL",
+    "Data Structures Algorithms",
+    "Web Technology",
+    "Object oriented programming",
+    "Principles of Programming Languages",
+    "Computer Organization and Architecture",
+    "Database Management"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/singh-abhishekh",
+    "Instagram": "https://www.instagram.com/abhishekh_cr9/",
+    "Email": "21it3004@rgipt.ac.in"
+  }
+}
