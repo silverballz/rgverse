@@ -1,0 +1,37 @@
+{
+  "name": "Abhishek Yadav (2021-25)",
+  "location": "Lucknow, Uttar Pradesh",
+  "branch": "IT",
+  "bio": "Software Development cum Machine Learning Engineer @ Ingenius Technologies and Consulting | Ex-Software Engineer Intern @ IME TECHNOLOGIES AND CONSULTANCY PVT LTD.",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGnj83Y3-Grug/profile-displayphoto-shrink_400_400/B56ZVMLA2CGsAg-/0/1740739711426?e=1753315200&v=beta&t=k5YL5Ue1AJqzKtkfqaZYi4jvb6R-Km-JqX-twjkleE0",
+  "portfolio": "https://ay7.in/",
+  "skills": [
+    "C",
+    "C++",
+    "Python",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "BootStrap",
+    "MySQL",
+    "MATLAB",
+    "AutoCAD",
+    "MAYA",
+    "TensorFlow",
+    "Keras",
+    "CNN",
+    "Django",
+    "LangChain",
+    "API Development",
+    "Django REST Framework",
+    "Tailwind CSS",
+    "Microsoft Azure",
+    "Docker",
+    "Artificial Intelligence"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/abhishek-yadav-ay7",
+    "Instagram": "https://www.instagram.com/_sanu_0711/",
+    "Email": "sanuabhi.0711@gmail.com"
+  }
+}
