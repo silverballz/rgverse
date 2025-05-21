@@ -1,0 +1,29 @@
+{
+  "name": "Anshum Dwivedi (2021-25)",
+  "location": "Jhansi, Uttar Pradesh",
+  "branch": "IT",
+  "bio": "Full-Stack Developer || Next.js, React, Node.js || Solved 600+ DSA Problems",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQFmWrIK8r03NQ/profile-displayphoto-shrink_400_400/B56ZZ9188iGQAg-/0/1745868018926?e=1753315200&v=beta&t=0u_nO3hOKZGVCAIi_ozEUu-8jph-dPhGNdFhZXXZLZc",
+  "portfolio": "https://anshum8.vercel.app/",
+  "skills": [
+    "C++",
+    "C",
+    "Python",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git",
+    "GitHub",
+    "ReactJS",
+    "Database Management",
+    "Data Structures",
+    "Algorithms",
+    "Web Technology"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/anshum-dwivedi-67530922a",
+    "Instagram": "https://www.instagram.com/dwivedianshum/",
+    "Email": "dwivedianshum3@gmail.com"
+  }
+}
