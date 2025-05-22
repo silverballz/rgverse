@@ -1,0 +1,32 @@
+{
+  "name": "Ayush Kumar (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "Frontend Developer || Python || Data Science",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5635AQFwc8pdk4t92A/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1719444540094?e=1748541600&v=beta&t=ksnRGfGgLjEM3vOR_uqvRvdPgGAiFDHRvUqxpt_4QNw",
+  "portfolio": "https://ayush-portfolio-render.onrender.com/",
+  "skills": [
+    "C++",
+    "C",
+    "Python",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git",
+    "GitHub",
+    "Flask",
+    "Node.js",
+    "ReactJS",
+    "Database Management",
+    "Data Structures",
+    "Algorithms",
+    "Networking",
+    "Web Technology",
+    "Cloud Computing"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/ayush-kmr",
+    "Email": "ayushkmr14102003@gmail.com"
+  }
+}
