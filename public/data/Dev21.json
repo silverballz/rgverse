@@ -1,0 +1,39 @@
+{
+  "name": "DEV SINGHMAR (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "Ex Data Engineer Intern @ K21 Technologies || Data Science Enthusiast || Data Engineer || Azure || Data Factory || Databricks || SQL || Power BI",
+  "avatar": "https://media.licdn.com/dms/image/v2/D4D03AQHKrSsa0dESug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692111115486?e=1753315200&v=beta&t=kdGOkhNOyPfZ-_m3uG2tV8elmeSH5E0CebKpqElx8wk",
+  "portfolio": "#",
+  "skills": [
+    "Java",
+    "C++",
+    "C",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git",
+    "GitHub",
+    "Bootstrap",
+    "jQuery",
+    "Node.js",
+    "Express.js",
+    "Mongoose",
+    "MongoDB",
+    "MAYA",
+    "Database Management",
+    "Data Structures",
+    "Algorithms",
+    "Web Technology",
+    "Microsoft Azure",
+    "Azure Databricks",
+    "Data Infrastructure",
+    "Extract, Transform, Load (ETL)",
+    "Power BI"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/dev-singhmar",
+    "Email": "21it3017@rgipt.ac.in"
+  }
+}
