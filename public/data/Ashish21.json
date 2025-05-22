@@ -1,0 +1,41 @@
+{
+  "name": "Ashish kumar Mishra (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "Full-Stack Developer | React & Node.js Specialist | Innovating with Machine Learning",
+  "avatar": "https://media.licdn.com/dms/image/v2/D4D35AQEK5aV0sqO7uA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1691694825139?e=1748541600&v=beta&t=fFFQohvzE66oeEp5FKX1ikY3EqAkeXbmoVjrrVWhM8I",
+  "portfolio": "https://www.ashishmishra.site/",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "React.js",
+    "Node.js",
+    "Next.js",
+    "Webpack",
+    "Vue.js",
+    "Angular.js",
+    "Three.js",
+    "GSAP",
+    "Phaser.js",
+    "Photoshop",
+    "Figma",
+    "Blender",
+    "PHP",
+    "Ajax",
+    "MySQL",
+    "JSON",
+    "Machine Learning",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Jupyter Notebooks",
+    "Bootstrap"
+  ],
+  "social": {
+    "GitHub": "https://github.com/Akm592",
+    "LinkedIn": "http://www.linkedin.com/in/ashishkumarmishra952",
+    "Instagram": "https://www.instagram.com/akm_297/"
+  }
+}
