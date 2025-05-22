@@ -1,0 +1,25 @@
+{
+  "name": "Sudhanshu Yadav (2021-25)",
+  "location": "Varanasi, Uttar Pradesh",
+  "branch": "IT",
+  "bio": "Ex-SWE Intern @CredenTek | RGIPT IT'25",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQEDSDkrbNBskA/profile-displayphoto-shrink_400_400/B56ZZXoN98GoAk-/0/1745226884025?e=1753315200&v=beta&t=56doK90CR83V-QWVp9JZ6hD8omKx9YVVChDb6G747t8",
+  "portfolio": "https://sudhanshu-portfolio-steel.vercel.app/",
+  "skills": [
+    "C++",
+    "C",
+    "Python",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Machine Learning",
+    "Web Development"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/sudhanshu-yadav-48099a227",
+    "Email": "dsudhanshu26uv@gmail.com"
+  }
+}
