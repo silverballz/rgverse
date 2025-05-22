@@ -1,0 +1,37 @@
+{
+  "name": "Siddharth Ojha (2021-25)",
+  "location": "Bengaluru, Karnataka",
+  "branch": "IT",
+  "bio": "Full-Stack || BackEnd || Ex-Intern Decent Technologies || IIT-JEE Advanced || B.Tech (IT)",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQEwR6BaVIMwZw/profile-displayphoto-shrink_400_400/B56ZXy_gDZGUAo-/0/1743538488774?e=1753315200&v=beta&t=kZpp4vzSU1Mt9vLtXBuN8kkcToIslWJignou8NG7QC4",
+  "portfolio": "https://siddharthojha.netlify.app/",
+  "skills": [
+    "C",
+    "C++",
+    "Python",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Angular",
+    "Git",
+    "GitHub",
+    "Canva",
+    "Database Management",
+    "Data Structures",
+    "Algorithms",
+    "Web Technology",
+    "Object-Oriented Programming",
+    "REST API",
+    "Docker",
+    "Grafana",
+    "Prometheus"
+  ],
+  "social": {
+    "LinkedIn": "http://www.linkedin.com/in/siddharth-ojha",
+    "Instagram": "https://www.instagram.com/sid.ojha195/",
+    "Email": "sidojha195@gmail.com"
+  }
+}
