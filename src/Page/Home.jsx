@@ -7,10 +7,27 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Profile from "../components/Profile/Profile";
 import ProfileSkeleton from "../components/ProfileSkeleton/ProfileSkeleton";
 import filenames from "../ProfilesList.json";
+import { ArrowLeft, Search, BookOpen } from "lucide-react";
+
+
+const Navbar = () => {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-[rgba(20,47,33,0.1)] bg-transparent text-white shadow-none">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <a href="https://rgverse.vercel.app/">
+          <button className="flex items-center gap-2 rounded-full border border-white p-2 transition-colors hover:bg-[#0a291e]">
+            <ArrowLeft className="h-5 w-5" />
+            <span className="hidden md:inline">Back</span>
+          </button>
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 const Hero = () => {
   return (
-    <section className="hero-section flex flex-col items-center justify-center bg-secondaryColor py-12 pb-5 text-white">
+    <section className="hero-section flex flex-col items-center justify-center bg-secondaryColor pb-5 text-white">
       <div className="flex w-full flex-col items-center justify-center px-8 text-center">
         <img
           src={LOGO}
@@ -64,11 +81,15 @@ const StyledButton = styled.button`
   padding: 1px;
   background: radial-gradient(circle 80px at 80% -10%, #ffffff, #092413);
   position: relative;
-  transition: all 0.3s ease;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+  animation: zoom 3s ease-in-out infinite;
   margin-top: 16px;
 
   &:hover {
     transform: scale(0.98);
+    animation-play-state: paused;
   }
 
   .inner {
@@ -83,6 +104,15 @@ const StyledButton = styled.button`
 
   &:hover .inner {
     background: radial-gradient(circle 80px at 80% -50%, #333333, #0a1e12);
+  }
+  @keyframes zoom {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
   }
 `;
 
@@ -119,8 +149,24 @@ const TechFeatures = () => {
         "Handwritten Notes, PYQs, Must watch yt playlist, E-books, and many more",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ok7D1Mqvv3kf8HFyj19Yu_wN06JVjk4rSDyRSryZbVsIzQsSIQ&s=10&ec=72940544",
-      link: "/notes",
+      link: "/Notes",
     },
+    {
+      title: "Resume Builder",
+      description:
+        "Create an impactful and ATS-friendly resume with tips, templates, and real examples.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqO8dPAdjkGX3wA58ty45DNpxz1sQ-fRN_UQ&s",
+        link: "/resume-builder",
+      },
+      {
+        title: "Discussion",
+        description:
+          "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
+        link: "/discussion",
+      },
     {
       title: "Opportunities",
       description:
@@ -160,14 +206,6 @@ const TechFeatures = () => {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
       link: "/opensource",
-    },
-    {
-      title: "Discussion",
-      description:
-        "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
-      link: "/discussion",
     },
     {
       title: "Ai/ Developer Tools",
@@ -247,7 +285,8 @@ const AuthorSection = () => {
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="background-wrapper min-h-screen bg-gray-900">
+      <Navbar />
       <Hero />
       <TechFeatures />
       {/* <AuthorSection /> */}
