@@ -6,6 +6,16 @@ import Homepage from "./Homepage";
 import ProfilePage from "./components/Profile/ProfilePage";
 // Introducing RGVerse
 import Home from "./Page/Home.jsx";
+// Features Notes
+import Notes from "./Page/Notes.jsx";
+import Sem1 from "./Page/NotesHub/Sem1.jsx";
+import Sem2 from "./Page/NotesHub/Sem2.jsx";
+import Sem3 from "./Page/NotesHub/Sem3.jsx";
+import Sem4 from "./Page/NotesHub/Sem4.jsx";
+import Sem5 from "./Page/NotesHub/Sem5.jsx";
+import Sem6 from "./Page/NotesHub/Sem6.jsx";
+import Sem7 from "./Page/NotesHub/Sem7.jsx";
+import Sem8 from "./Page/NotesHub/Sem8.jsx";
 
 function App() {
   React.useEffect(() => {
@@ -39,6 +49,16 @@ function App() {
         {/* Introducing RGVerse */}
         <Route path="/Home" element={<Home />} />
         <Route path="/profile/:name" element={<ProfilePage />} />
+        {/* Notes Page */}
+        <Route path="/Notes" element={<Notes />} />
+        <Route path="/Sem1" element={<Sem1 />} />
+        <Route path="/Sem2" element={<Sem2 />} />
+        <Route path="/Sem3" element={<Sem3 />} />
+        <Route path="/Sem4" element={<Sem4 />} />
+        <Route path="/Sem5" element={<Sem5 />} />
+        <Route path="/Sem6" element={<Sem6 />} />
+        <Route path="/Sem7" element={<Sem7 />} />
+        <Route path="/Sem8" element={<Sem8 />} />
       </Routes>
     </BrowserRouter>
   );
