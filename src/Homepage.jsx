@@ -26,6 +26,10 @@ function App() {
     const fetchData = async (file) => {
       try {
         const response = await fetch(file);
+        if (!response.ok) {
+          console.error('Error fetching data:', response.statusText);
+          return [];
+        }
         const data = await response.json();
         return data;
       } catch (error) {
