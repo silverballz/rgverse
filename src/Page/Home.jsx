@@ -157,16 +157,16 @@ const TechFeatures = () => {
         "Create an impactful and ATS-friendly resume with tips, templates, and real examples.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqO8dPAdjkGX3wA58ty45DNpxz1sQ-fRN_UQ&s",
-        link: "/resume-builder",
-      },
-      {
-        title: "Discussion",
-        description:
-          "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
-        link: "/discussion",
-      },
+      link: "https://rgverse-resume-builder.vercel.app/",
+    },
+    {
+      title: "Discussion",
+      description:
+        "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
+      link: "/discussion",
+    },
     {
       title: "Opportunities",
       description:
