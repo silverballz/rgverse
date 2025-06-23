@@ -118,7 +118,7 @@ const StyledButton = styled.button`
 
 const FeatureCard = ({ title, description, image, link }) => {
   return (
-    <div className="feature-card group relative h-full rounded-lg border border-gray-700 bg-white p-4 shadow dark:bg-textPrimary p-6 shadow-lg transition duration-300 hover:scale-[1.02]">
+    <div className="feature-card group relative h-full rounded-lg border border-gray-700 bg-white p-4 p-6 shadow shadow-lg transition duration-300 hover:scale-[1.02] dark:bg-textPrimary">
       <div className="mb-4 h-40 overflow-hidden rounded-lg">
         <img
           src={image}
@@ -134,7 +134,7 @@ const FeatureCard = ({ title, description, image, link }) => {
           <p className="text-gray-400">{description}</p>
         </div>
         <StyledButton onClick={() => (window.location.href = link)}>
-          <div className="inner">Coming Soon</div>
+          <div className="inner">Explore more</div>
         </StyledButton>
       </div>
     </div>
