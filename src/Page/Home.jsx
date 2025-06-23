@@ -207,14 +207,14 @@ const TechFeatures = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
       link: "/opensource",
     },
-    {
-      title: "Ai/ Developer Tools",
-      description:
-        "Explore powerful AI tools, dev utilities, and resources to boost your productivity and build smarter, faster.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYIHISJnOSNPhu8FId8YQfHbNm7rPcolEK1oiMBUCljGXcDm0TQ&s=10&ec=72940544",
-      link: "aitools",
-    },
+    // {
+    //   title: "Ai/ Developer Tools",
+    //   description:
+    //     "Explore powerful AI tools, dev utilities, and resources to boost your productivity and build smarter, faster.",
+    //   image:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYIHISJnOSNPhu8FId8YQfHbNm7rPcolEK1oiMBUCljGXcDm0TQ&s=10&ec=72940544",
+    //   link: "aitools",
+    // },
   ];
 
   return (

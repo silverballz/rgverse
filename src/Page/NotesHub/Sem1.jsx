@@ -571,7 +571,7 @@ const BranchCard = ({ branch, image, contributors,link1,link2,link3 }) => {
           <img
             src={image}
             alt={`${branch} representation`}
-            className="w-full h-40 object-cover"
+            className="w-full h-52 object-cover"
           />
         </div>
         
@@ -648,7 +648,7 @@ const Notes = () => {
   const branchList = [
     {
       branch: "Computer Science Engineering",
-      image: "/assets/branches/CSE.webp",
+      image: "/assets/branches/CSE2.webp",
       contributors: ["@Harshit", "@Raj", "@Priya", "@Amit"],
       link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
@@ -656,40 +656,40 @@ const Notes = () => {
     },
     {
       branch: "Chemical Engineering",
-      image: "/assets/branches/CSE.webp",
+      image: "/assets/branches/chem.webp",
       contributors: ["@Harshit", "@Sneha", "@Vikram"],
       link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
-      branch: "Mechanical Engineering",
-      image: "/assets/branches/CSE.webp",
+      branch: "Petroleum Engineering",
+      image: "/assets/branches/petro2.jpeg",
       contributors: ["@Harshit", "@Anjali", "@Rohit"],
       link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
-      branch: "Electrical Engineering",
-      image: "/assets/branches/CSE.webp",
+      branch: "Mathematics and Computing",
+      image: "/assets/branches/mnc2.webp",
+      contributors: ["@Harshit", "@Kiran", "@Rahul"],
+      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+    },
+    {
+      branch: "Electrical and Electronics Engineering",
+      image: "/assets/branches/EEE.webp",
       contributors: ["@Harshit", "@Neha", "@Arjun"],
       link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
-      branch: "Civil Engineering",
-      image: "/assets/branches/CSE.webp",
+      branch: "Mechanical Engineering",
+      image: "/assets/branches/mech2.webp",
       contributors: ["@Harshit", "@Pooja", "@Sanjay"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-    },
-    {
-      branch: "Electronics Engineering",
-      image: "/assets/branches/CSE.webp",
-      contributors: ["@Harshit", "@Kiran", "@Rahul"],
       link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
