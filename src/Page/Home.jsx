@@ -205,7 +205,7 @@ const TechFeatures = () => {
         "Explore $ PArticipate in various Global OpenSource Programs.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
-      link: "/opensource",
+      link: "/OpenSourceProgram",
     },
     // {
     //   title: "Ai/ Developer Tools",
