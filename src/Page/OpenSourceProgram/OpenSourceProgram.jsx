@@ -433,7 +433,7 @@ const StyledWrapper = styled.div`
 
   .bg-primary {
     --tw-bg-opacity: 1;
-    background-color: rgba(15, 27, 53, 0);
+    background-color: rgba(15, 53, 19, 0);
   }
 
   .py-2 {
@@ -679,7 +679,7 @@ const StyledOSProgramCard = styled.div`
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: rgba(0, 166, 251, 0.4);
+        background-color: rgba(0, 251, 50, 0.4);
       }
     }
   }
@@ -793,7 +793,7 @@ const OSProgramCardComponent = ({
             <div className="status-user" />
             Apply Now
           </a>
-          <div className="mt-2 flex flex-col items-start gap-1 rounded-lg border border-[#00fb69] bg-gray-900 bg-opacity-50 px-14 py-3 text-sm text-xs text-white text-white shadow-lg backdrop-blur-md transition-all hover:bg-gray-800">
+          <div className="mt-2 flex flex-col items-start gap-1 rounded-lg border border-[#00fb69] bg-green-900 bg-opacity-50 px-14 py-3 text-sm text-xs text-white text-white shadow-lg backdrop-blur-md transition-all hover:bg-green-800">
             <div className="flex items-center">
               <FontAwesomeIcon
                 icon={faCalendarAlt}
@@ -818,7 +818,7 @@ const OSProgramCardComponent = ({
             onClick={() =>
               shareContent(window.location.href.split("#")[0] + shareLink)
             }
-            className="bg-gray-1000 hover:bg-slate-1000 flex items-center justify-center gap-2 rounded-xl border border-[#00fb69] bg-opacity-50 px-2 py-1 text-xs text-white backdrop-blur-md transition-colors"
+            className="bg-green-1000 hover:bg-slate-1000 flex items-center justify-center gap-2 rounded-xl border border-[#00fb69] bg-opacity-50 px-2 py-1 text-xs text-white backdrop-blur-md transition-colors"
           >
             <FontAwesomeIcon icon={faShareAlt} />
             Share
@@ -826,8 +826,8 @@ const OSProgramCardComponent = ({
         </div>
         <div className="details flex flex-col items-center gap-4">
           <h2 className="text-lg font-bold text-white">{title}</h2>
-          <p className="text-center text-sm text-gray-300">{description}</p>
-          <div className="info mt-2 flex flex-col items-center gap-1 rounded-lg border border-[#00fb69] bg-gray-900 bg-opacity-50 px-14 py-3 text-sm text-white shadow-lg backdrop-blur-md transition-all hover:bg-gray-800">
+          <p className="text-center text-sm text-green-300">{description}</p>
+          <div className="info mt-2 flex flex-col items-center gap-1 rounded-lg border border-[#00fb69] bg-green-900 bg-opacity-50 px-14 py-3 text-sm text-white shadow-lg backdrop-blur-md transition-all hover:bg-green-800">
             <a
               href={guidelines}
               target="_blank"
@@ -938,7 +938,7 @@ const OpenSourceProgram = () => {
   }, [location]);
 
   return (
-    <div className="background-wrapper min-h-screen bg-gray-900">
+    <div className="background-wrapper min-h-screen bg-green-900">
       <Navbar />
       <Hero />
       <Tags />
