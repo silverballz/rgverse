@@ -11,10 +11,13 @@ export const Footer = () => {
               <a href="/Home" className="text-sm hover:text-[#08fb00]">
                 Home
               </a>
-              <a href="/about" className="text-sm hover:text-[#08fb00]">
+              <a href="/AboutUs" className="text-sm hover:text-[#08fb00]">
                 About Us
               </a>
-              <a href="/contact" className="text-sm hover:text-[#08fb00]">
+              <a
+                href="*"
+                className="text-sm hover:text-[#08fb00]"
+              >
                 Contact
               </a>
             </div>
