@@ -18,6 +18,9 @@ import Sem7 from "./Page/NotesHub/Sem7.jsx";
 import Sem8 from "./Page/NotesHub/Sem8.jsx";
 // Feature- OpenSourceProgram
 import OpenSourceProgram from "./Page/OpenSourceProgram/OpenSourceProgram.jsx";
+// About Us
+import AboutUs from "./components/AboutUs.jsx";
+import PageNotFound from "./components/PageNotFound.jsx";
 function App() {
   React.useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -62,6 +65,10 @@ function App() {
         <Route path="/Sem8" element={<Sem8 />} />
         {/*  Feature- OpenSourceProgram */}
         <Route path="/OpenSourceProgram" element={<OpenSourceProgram />} />
+        {/* About Us */}
+        <Route path="/AboutUs" element={<AboutUs />} />
+        {/* Page Not Found */}
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
