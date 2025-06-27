@@ -278,19 +278,27 @@ const Tags = () => {
   const tags = [
     "Google Summer of Code",
     "MLH Fellowship",
+    "Linux Kernel Mentorship Program",
     "Outreachy",
     "Hacktoberfest",
+    "Google Summer of Earth Engine",
+    "Millennium Fellowship",
     "Season of Docs",
-    "Linux Kernel Mentorship Program",
+    "Redox Summer of Code",
+    "Hyperledger Internship Program",
+    "FOSSASIA Internship Programme",
+    "Processing Foundation Fellowship",
     "Open Mainframe Project Mentorship Program",
+    "Summer of Haskell",
     "Free Software Foundation Internship",
     "Mozilla Open Source Support Program",
+    "24 Pull Requests",
+    "GirlScript Summer of Code",
+    "Social Summer of Code",
+    "KOSS Winter of Code",
     "Apache Software Foundation Mentorship",
     "Red Hat Open Source Contest",
-    "GirlScript Summer of Code",
-    "KOSS Winter of Code",
     "Script Winter of Code",
-    "Social Summer of Code",
     "DevScript Winter of Code",
     "LetsGrowMore Summer of Code",
     "CodePeak",
@@ -943,7 +951,13 @@ const OpenSourceProgram = () => {
       <Hero />
       <Tags />
       <div className="my-4"></div>
-      <div className="flex flex-wrap justify-center gap-4">
+      {/* <div className="flex flex-wrap justify-center gap-4"> */}
+      <div className="grid grid-cols-1 gap-2 px-3 sm:gap-2  md:grid-cols-1 lg:grid-cols-2">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4"> */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4"> */}
+      {/* <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 px-4"> */}
+
+
         {OSProgramList.map((program, index) => (
           <OSProgramCardComponent
             key={index}
