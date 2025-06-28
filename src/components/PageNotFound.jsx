@@ -11,7 +11,7 @@ const PageNotFound = () => {
         </p>
         <Link
           to="/Home"
-          className="mt-8 inline-block rounded-lg bg-textSecondary px-6 py-3 font-poppoins font-semibold text-white transition duration-300 hover:bg-blue-700"
+          className="mt-8 inline-block rounded-lg bg-textSecondary px-6 py-3 font-poppoins font-semibold text-white transition duration-300 hover:bg-green-700"
         >
           Go Back Home
         </Link>
