@@ -1,7 +1,11 @@
 // filepath:
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-RPQTJTX11Z"); 
+
+
 import Homepage from "./Homepage";
 import ProfilePage from "./components/Profile/ProfilePage";
 // Introducing RGVerse
@@ -21,6 +25,19 @@ import OpenSourceProgram from "./Page/OpenSourceProgram/OpenSourceProgram.jsx";
 // About Us
 import AboutUs from "./components/AboutUs.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
+
+// 👇 RouteTracker component to track page views
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return null;
+}
+
+// Main App component
 function App() {
   React.useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -28,6 +45,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <RouteTracker />
       <Helmet>
         <title>RGVerse - One Portal for Every RGIPTian</title>
         <meta
