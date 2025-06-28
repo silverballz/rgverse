@@ -11,6 +11,7 @@ import {
   faCalendarAlt,
   faClock,
   faBookOpen,
+  faMoneyBillWave,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -622,7 +623,7 @@ const StyledOSProgramCard = styled.div`
       border: 1px solidrgb(0, 251, 46);
       border-radius: 9999px;
       padding: 0.5rem 1rem;
-      color:rgb(0, 251, 17);
+      color: rgb(0, 251, 17);
       text-decoration: none;
       font-weight: 500;
       font-size: 0.875rem;
@@ -638,7 +639,7 @@ const StyledOSProgramCard = styled.div`
         margin-right: 8px;
         border-radius: 50%;
         outline: solid 2px #fff;
-        background-color:rgb(17, 251, 0);
+        background-color: rgb(17, 251, 0);
         animation: active-status 2s ease-in-out infinite;
       }
 
@@ -651,6 +652,43 @@ const StyledOSProgramCard = styled.div`
           opacity: 0.2;
         }
       }
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #00fb69;
+    background: rgba(0, 251, 105, 0.1);
+    padding: 0.8rem 1rem;
+    width: 100%;
+    min-height: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      background: rgba(0, 251, 105, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+
+  .explore-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+
+    span {
+      white-space: nowrap;
     }
   }
 
@@ -714,7 +752,7 @@ const StyledOSProgramCard = styled.div`
       grid-template-columns: 1fr; /* Single column for smaller screens */
       gap: 0.5rem;
       font-size: 0.9rem;
-      color:rgb(0, 251, 13);
+      color: rgb(0, 251, 13);
 
       span,
       a {
@@ -766,9 +804,9 @@ const OSProgramCardComponent = ({
   organizer,
   title,
   description,
-  timeline,
-  Duration,
-  guidelines,
+  timelineLink,
+  stipend,
+  exploreLink,
   applyLink,
   poster,
   shareLink,
@@ -801,17 +839,25 @@ const OSProgramCardComponent = ({
             <div className="status-user" />
             Apply Now
           </a>
-          <div className="mt-2 flex flex-col items-start gap-1 rounded-lg border border-[#00fb69] bg-green-900 bg-opacity-50 px-14 py-3 text-sm text-xs text-white text-white shadow-lg backdrop-blur-md transition-all hover:bg-green-800">
-            <div className="flex items-center">
+          <div className="left-container">
+            <a
+              href={timelineLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="info-button"
+            >
               <FontAwesomeIcon
                 icon={faCalendarAlt}
-                className="mr-2 text-[#00fb69]"
+                className="text-[#00fb69]"
               />
-              <span className="font-medium">{timeline}</span>
-            </div>
-            <div className="flex items-center">
-              <FontAwesomeIcon icon={faClock} className="mr-2 text-[#00fb69]" />
-              <span className="font-medium">{Duration}</span>
+              <span>Timeline</span>
+            </a>
+
+            <div
+              className={`stipend-box ${stipend ? "stipend-yes" : "stipend-no"}`}
+            >
+              <FontAwesomeIcon icon={faMoneyBillWave} className="mr-2" />
+              <span>Stipend: {stipend ? "Yes" : "No"}</span>
             </div>
           </div>
         </div>
@@ -837,13 +883,13 @@ const OSProgramCardComponent = ({
           <p className="text-center text-sm text-green-300">{description}</p>
           <div className="info mt-2 flex flex-col items-center gap-1 rounded-lg border border-[#00fb69] bg-green-900 bg-opacity-50 px-14 py-3 text-sm text-white shadow-lg backdrop-blur-md transition-all hover:bg-green-800">
             <a
-              href={guidelines}
+              href={exploreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="explore-button flex h-full w-full items-center justify-center gap-2"
             >
               <FontAwesomeIcon icon={faBookOpen} className="text-[#00fb69]" />
-              <span className="font-medium">Guidelines</span>
+              <span className="font-medium">Explore More</span>
             </a>
           </div>
         </div>
@@ -858,10 +904,10 @@ const OSProgramList = [
     title: "Google Summer of Code 2025",
     description:
       "GSoC is a global, online program focused on bringing new contributors into open-source software development. Participants work with open-source organizations on a 12+ week programming project with mentorship and stipends provided by Google.",
-    timeline: "March 18 - April 2, 2025",
-    Duration: "May - September 2025",
+    timelineLink: "https://developers.google.com/open-source/gsoc/timeline",
+    stipend: "yes",
     type: "Student-friendly, Open Source",
-    guidelines: "https://summerofcode.withgoogle.com/how-it-works/",
+    exploreLink: "https://summerofcode.withgoogle.com/how-it-works/",
     applyLink: "https://summerofcode.withgoogle.com/",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#gsoc2025",
@@ -871,10 +917,10 @@ const OSProgramList = [
     title: "MLH Fellowship Spring 2025",
     description:
       "Collaborate with peers in a remote team to contribute to real open-source software projects under mentorship. Get paid while gaining practical development experience.",
-    timeline: "December 2024",
-    Duration: "March - June 2025",
+    timelineLink: "December 2024",
+    stipend: "yes",
     type: "Student-friendly, Open Source",
-    guidelines: "https://fellowship.mlh.io/",
+    exploreLink: "https://fellowship.mlh.io/",
     applyLink: "https://fellowship.mlh.io/",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#mlh-fellowship",
@@ -884,10 +930,10 @@ const OSProgramList = [
     title: "GirlScript Summer of Code 2025",
     description:
       "An open-source program where you can contribute to various projects and get mentorship, swags, and certifications. It’s beginner-friendly and inclusive.",
-    timeline: "August 2025",
-    Duration: "May - August 2025",
+    timelineLink: "August 2025",
+    stipend: "yes",
     type: "Beginner-friendly, Open Source",
-    guidelines: "https://gssoc.girlscript.tech/",
+    exploreLink: "https://gssoc.girlscript.tech/",
     applyLink: "https://gssoc.girlscript.tech/",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#gssoc2025",
@@ -897,10 +943,10 @@ const OSProgramList = [
     title: "Outreachy May 2025 Cohort",
     description:
       "Paid internships in open-source and open science for underrepresented groups. Work remotely with mentors on impactful projects.",
-    timeline: "January 2025",
-    Duration: "May - August 2025",
+    timelineLink: "January 2025",
+    stipend: "yes",
     type: "Inclusive, Open Source, Paid",
-    guidelines: "https://www.outreachy.org/",
+    exploreLink: "https://www.outreachy.org/",
     applyLink: "https://www.outreachy.org/apply/",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#outreachy",
@@ -910,10 +956,10 @@ const OSProgramList = [
     title: "KOSS Winter of Code 2024-25",
     description:
       "Winter-long open-source program for students to learn and contribute to FOSS projects with mentorship and rewards.",
-    timeline: "November 2024",
-    Duration: "December - February",
+    timelineLink: "November 2024",
+    stipend: "yes",
     type: "Student-friendly, Open Source",
-    guidelines: "https://kossiitkgp.org/woc",
+    exploreLink: "https://kossiitkgp.org/woc",
     applyLink: "https://kossiitkgp.org/woc",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#woc2024",
@@ -923,10 +969,10 @@ const OSProgramList = [
     title: "Hacktoberfest 2025",
     description:
       "Annual event in October that encourages contributions to open source via GitHub. Complete PRs and earn swag or plant a tree!",
-    timeline: "October 1 - October 31",
-    Duration: "1 Month",
+    timelineLink: "October 1 - October 31",
+    stipend: "yes",
     type: "Global, Open Source",
-    guidelines: "https://hacktoberfest.com/",
+    exploreLink: "https://hacktoberfest.com/",
     applyLink: "https://hacktoberfest.com/",
     poster: "/assets/opensourceProgram/GSOC.png",
     shareLink: "#hacktoberfest2025",
@@ -959,10 +1005,10 @@ const OpenSourceProgram = () => {
             organizer={program.organizer}
             title={program.title}
             description={program.description}
-            timeline={program.timeline}
-            Duration={program.Duration}
+            timelineLink={program.timelineLink}
+            stipend={program.stipend}
             type={program.type}
-            guidelines={program.guidelines}
+            exploreLink={program.exploreLink}
             applyLink={program.applyLink}
             poster={program.poster}
             shareLink={program.shareLink}
