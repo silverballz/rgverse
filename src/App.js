@@ -3,9 +3,8 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-RPQTJTX11Z"); 
 
-
+// Importing components
 import Homepage from "./Homepage";
 import ProfilePage from "./components/Profile/ProfilePage";
 // Introducing RGVerse
@@ -25,6 +24,8 @@ import OpenSourceProgram from "./Page/OpenSourceProgram/OpenSourceProgram.jsx";
 // About Us
 import AboutUs from "./components/AboutUs.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
+
+ReactGA.initialize("G-RPQTJTX11Z"); // Initialize Google Analytics with your tracking ID
 
 // 👇 RouteTracker component to track page views
 function RouteTracker() {
