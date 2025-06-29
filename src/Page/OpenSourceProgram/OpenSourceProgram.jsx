@@ -957,12 +957,12 @@ const OSProgramCardComponent = ({
 const OSProgramList = [
   {
     organizer: "Google",
-    title: "Google Summer of Code 2025",
+    title: "Google Summer of Code",
     description:
-      "GSoC is a global, online program focused on bringing new contributors into open-source software development. Participants work with open-source organizations on a 12+ week programming project with mentorship and stipends provided by Google.",
+      "Global 12‑week program where beginners contribute to open-source projects under mentorship and earn a stipend.",
     timelineLink: "https://developers.google.com/open-source/gsoc/timeline",
-    stipend: "no",
-    type: "Student-friendly, Open Source",
+    stipend: "yes",
+    type: "Student‑friendly, Open Source",
     exploreLink: "https://summerofcode.withgoogle.com/how-it-works/",
     applyLink: "https://summerofcode.withgoogle.com/",
     poster: "/assets/opensourceProgram/GSOC.png",
@@ -970,16 +970,16 @@ const OSProgramList = [
   },
   {
     organizer: "MLH",
-    title: "MLH Fellowship Spring 2025",
+    title: "MLH Fellowship Spring",
     description:
-      "Collaborate with peers in a remote team to contribute to real open-source software projects under mentorship. Get paid while gaining practical development experience.",
-    timelineLink: "December 2024",
+      "Remote 12‑week program to work on real open‑source projects with peers, mentors, and receive an educational stipend.",
+    timelineLink: "https://fellowship.mlh.io/",
     stipend: "yes",
-    type: "Student-friendly, Open Source",
-    exploreLink: "https://fellowship.mlh.io/",
+    type: "Student‑friendly, Open Source",
+    exploreLink: "https://fellowship.mlh.io/programs/open-source",
     applyLink: "https://fellowship.mlh.io/",
-    poster: "/assets/opensourceProgram/GSOC.png",
-    shareLink: "#mlh-fellowship",
+    poster: "/assets/opensourceProgram/MLH.png",
+    shareLink: "#mlhfellowshipSpring",
   },
   {
     organizer: "GirlScript Foundation",
