@@ -615,12 +615,61 @@ const StyledOSProgramCard = styled.div`
     margin-top: 0.5rem;
     text-align: center; /* Center-align the button */
 
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 0.8rem;
+      gap: 0.5rem;
+
+      /* Timeline button styling */
+      .timeline-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(0, 251, 105, 0.1);
+        border: 1px solid #00fb69;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+
+        &:hover {
+          background: rgba(0, 251, 105, 0.2);
+          transform: translateY(-2px);
+        }
+      }
+
+      /* Stipend box styling */
+      .stipend-box {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .stipend-yes {
+        background-color: rgba(40, 167, 69, 0.2); /* Green background */
+        border: 1px solid #28a745;
+        color: #28a745;
+      }
+
+      .stipend-no {
+        background-color: rgba(220, 53, 69, 0.2); /* Red background */
+        border: 1px solid #dc3545;
+        color: #dc3545;
+      }
+    }
+
     a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       background-color: transparent;
-      border: 1px solidrgb(0, 251, 46);
+      border: 1px solid rgb(0, 251, 46);
       border-radius: 9999px;
       padding: 0.5rem 1rem;
       color: rgb(0, 251, 17);
@@ -823,6 +872,13 @@ const OSProgramCardComponent = ({
     }
   };
 
+  // Fixed stipend logic - handles both boolean and string values
+  const hasStipend =
+    stipend === true ||
+    stipend === "true" ||
+    stipend === "yes" ||
+    stipend === "Yes";
+  
   return (
     <StyledOSProgramCard id={shareLink.substring(1)}>
       <div className="poster">
@@ -839,12 +895,12 @@ const OSProgramCardComponent = ({
             <div className="status-user" />
             Apply Now
           </a>
-          <div className="left-container">
+          <div className="info-row">
             <a
               href={timelineLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="info-button"
+              className="timeline-button"
             >
               <FontAwesomeIcon
                 icon={faCalendarAlt}
@@ -854,10 +910,10 @@ const OSProgramCardComponent = ({
             </a>
 
             <div
-              className={`stipend-box ${stipend ? "stipend-yes" : "stipend-no"}`}
+              className={`stipend-box ${hasStipend ? "stipend-yes" : "stipend-no"}`}
             >
               <FontAwesomeIcon icon={faMoneyBillWave} className="mr-2" />
-              <span>Stipend: {stipend ? "Yes" : "No"}</span>
+              <span>Stipend: {hasStipend ? "Yes" : "No"}</span>
             </div>
           </div>
         </div>
@@ -905,7 +961,7 @@ const OSProgramList = [
     description:
       "GSoC is a global, online program focused on bringing new contributors into open-source software development. Participants work with open-source organizations on a 12+ week programming project with mentorship and stipends provided by Google.",
     timelineLink: "https://developers.google.com/open-source/gsoc/timeline",
-    stipend: "yes",
+    stipend: "no",
     type: "Student-friendly, Open Source",
     exploreLink: "https://summerofcode.withgoogle.com/how-it-works/",
     applyLink: "https://summerofcode.withgoogle.com/",
@@ -931,7 +987,7 @@ const OSProgramList = [
     description:
       "An open-source program where you can contribute to various projects and get mentorship, swags, and certifications. It’s beginner-friendly and inclusive.",
     timelineLink: "August 2025",
-    stipend: "yes",
+    stipend: "no",
     type: "Beginner-friendly, Open Source",
     exploreLink: "https://gssoc.girlscript.tech/",
     applyLink: "https://gssoc.girlscript.tech/",
