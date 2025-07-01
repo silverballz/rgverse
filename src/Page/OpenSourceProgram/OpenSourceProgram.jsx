@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="text-2xl font-bold">
           <img
             src="./RGVerse ICON.png"
-            alt="DevDisplay"
+            alt="RGVerse"
             className="h-12 w-12"
           />
         </div>
