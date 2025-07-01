@@ -9,6 +9,8 @@ import Homepage from "./Homepage";
 import ProfilePage from "./components/Profile/ProfilePage";
 // Introducing RGVerse
 import Home from "./Page/Home.jsx";
+// Feature- Project Showcase
+import ProjectShowcase from "./Page/ProjectShowcase/ProjectShowcase.jsx";
 // Features Notes
 import Notes from "./Page/Notes.jsx";
 import Sem1 from "./Page/NotesHub/Sem1.jsx";
@@ -84,6 +86,8 @@ function App() {
         <Route path="/Sem8" element={<Sem8 />} />
         {/*  Feature- OpenSourceProgram */}
         <Route path="/OpenSourceProgram" element={<OpenSourceProgram />} />
+        {/* Feature- Project Showcase */}
+        <Route path="/ProjectShowcase" element={<ProjectShowcase />} />
         {/* About Us */}
         <Route path="/AboutUs" element={<AboutUs />} />
         {/* Page Not Found */}
