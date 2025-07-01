@@ -296,7 +296,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <TechFeatures />
-      {/* <AuthorSection /> */}
+      <AuthorSection />
       <Footer />
     </div>
   );

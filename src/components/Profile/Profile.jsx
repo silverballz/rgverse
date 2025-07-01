@@ -116,7 +116,7 @@ function Card({ data }) {
             <FaLocationDot />
             {data.location}
           </p>
-          <div className=" group flex overflow-hidden">
+          <div className="flex overflow-hidden">
             <div
               className=" skills-container group-hover:paused mr-2 mt-4 flex h-auto  animate-loop-scroll gap-4 whitespace-nowrap "
               ref={cardRef}
