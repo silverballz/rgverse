@@ -21,14 +21,6 @@ export const Footer = () => {
                 Contact
               </a>
             </div>
-            <div className="flex flex-col space-y-4">
-              <a href="/privacy" className="text-sm hover:text-[#08fb00]">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm hover:text-[#08fb00]">
-                Terms of Service
-              </a>
-            </div>
           </div>
 
           {/* Column 2 */}
