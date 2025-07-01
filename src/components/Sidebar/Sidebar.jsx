@@ -250,7 +250,7 @@ const StyledWrapper = styled.div`
       #228504,
       transparent
     );
-    box-shadow: -10px 10px 30px #0051ff2d;
+    box-shadow: -10px 10px 30px #00ff482d;
     transition:
       background 0.3s,
       box-shadow 0.3s;
