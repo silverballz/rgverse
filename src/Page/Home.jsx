@@ -117,6 +117,7 @@ const StyledButton = styled.button`
 `;
 
 const FeatureCard = ({ title, description, image, link }) => {
+  const isComingSoon = title === "Discussion"
   return (
     <div className="feature-card group relative h-full rounded-lg border border-gray-700 bg-white p-4 p-6 shadow shadow-lg transition duration-300 hover:scale-[1.02] dark:bg-textPrimary">
       <div className="mb-4 h-40 overflow-hidden rounded-lg">
@@ -133,9 +134,15 @@ const FeatureCard = ({ title, description, image, link }) => {
           </h3>
           <p className="text-gray-400">{description}</p>
         </div>
-        <StyledButton onClick={() => (window.location.href = link)}>
-          <div className="inner">Explore more</div>
-        </StyledButton>
+        {isComingSoon ? (
+          <StyledButton disabled className="cursor-not-allowed opacity-60">
+            <div className="inner">Coming Soon</div>
+          </StyledButton>
+        ) : (
+          <StyledButton onClick={() => (window.location.href = link)}>
+            <div className="inner">Explore more</div>
+          </StyledButton>
+        )}
       </div>
     </div>
   );
@@ -160,6 +167,46 @@ const TechFeatures = () => {
       link: "https://rgverse-resume-builder.vercel.app/",
     },
     {
+      title: "Opportunities",
+      description:
+      "Explore various career and learning opportunities in the tech industry.",
+      image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ijqoWoPj5GXXP1WNAyp5C12DzyDGd0t_7zRkH9CBRA&s&ec=72940544",
+      link: "/opportunities",
+    },
+    {
+      title: "Resources",
+      description:
+      "Access a wide range of learning resources, tools, and libraries to boost your skills.",
+      image:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80",
+      link: "/resources",
+    },
+    {
+      title: "Roadmaps",
+      description:
+      "Explore the best roadmaps provided by your seniors to become pro in each field",
+      image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtp6B8_-JqwvXk9wQv__lxKTB8xIJqI4aveQ5KricXT9wgnY1mpQ&s=10&ec=72940544",
+      link: "/roadmaps",
+    },
+    {
+      title: "Project Showcase",
+      description:
+      "Showcase your projects, get feedback, and inspire others to collaborate.",
+      image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHTVp3QcnqNb0TIdBGAr9Vq0d7ztWRdCDSy0Z7E5gdINoqzP8Bw&s=10&ec=72940544",
+      link: "/ProjectShowcase",
+    },
+    {
+      title: "OpenSource Programs",
+      description:
+      "Explore $ PArticipate in various Global OpenSource Programs.",
+      image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
+      link: "/OpenSourceProgram",
+    },
+    {
       title: "Discussion",
       description:
         "Join topic-wise channels to discuss projects, internships, courses, and more with fellow RGIPTians.",
@@ -167,57 +214,17 @@ const TechFeatures = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJspDoThOWNTMehvRMbOvmhjOaFVi5v8IIb5ph18iENvxMGZRAg&s=10&ec=72940544",
       link: "/discussion",
     },
-    {
-      title: "Opportunities",
-      description:
-        "Explore various career and learning opportunities in the tech industry.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ijqoWoPj5GXXP1WNAyp5C12DzyDGd0t_7zRkH9CBRA&s&ec=72940544",
-      link: "/opportunities",
-    },
-    {
-      title: "Resources",
-      description:
-        "Access a wide range of learning resources, tools, and libraries to boost your skills.",
-      image:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80",
-      link: "/resources",
-    },
-    {
-      title: "Roadmaps",
-      description:
-        "Explore the best roadmaps provided by your seniors to become pro in each field",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtp6B8_-JqwvXk9wQv__lxKTB8xIJqI4aveQ5KricXT9wgnY1mpQ&s=10&ec=72940544",
-      link: "/roadmaps",
-    },
-    {
-      title: "Project Showcase",
-      description:
-        "Showcase your projects, get feedback, and inspire others to collaborate.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHTVp3QcnqNb0TIdBGAr9Vq0d7ztWRdCDSy0Z7E5gdINoqzP8Bw&s=10&ec=72940544",
-      link: "/ProjectShowcase",
-    },
-    {
-      title: "OpenSource Programs",
-      description:
-        "Explore $ PArticipate in various Global OpenSource Programs.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
-      link: "/OpenSourceProgram",
-    },
     // {
-    //   title: "Ai/ Developer Tools",
-    //   description:
-    //     "Explore powerful AI tools, dev utilities, and resources to boost your productivity and build smarter, faster.",
-    //   image:
-    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYIHISJnOSNPhu8FId8YQfHbNm7rPcolEK1oiMBUCljGXcDm0TQ&s=10&ec=72940544",
-    //   link: "aitools",
-    // },
-  ];
-
-  return (
+      //   title: "Ai/ Developer Tools",
+      //   description:
+      //     "Explore powerful AI tools, dev utilities, and resources to boost your productivity and build smarter, faster.",
+      //   image:
+      //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYIHISJnOSNPhu8FId8YQfHbNm7rPcolEK1oiMBUCljGXcDm0TQ&s=10&ec=72940544",
+      //   link: "aitools",
+      // },
+    ];
+    
+    return (
     <section className="tech-features-section  bg-secondaryColor py-16 pt-0 text-white">
       <div className="mx-auto mb-16 max-w-4xl text-center">
         <h2 className="custom-font mb-6 text-4xl font-bold text-textSecondary">
