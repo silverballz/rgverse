@@ -772,7 +772,6 @@ const ProjectShowcase = ({ isModalOpen, setIsModalOpen }) => {
           <SearchBar onSearch={setSearchTerm} />
         </div>
       </div>
-
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="w-full max-w-md rounded-lg bg-[#092413] p-6 text-white">
@@ -787,9 +786,7 @@ const ProjectShowcase = ({ isModalOpen, setIsModalOpen }) => {
                 X
               </button>
             </div>
-
             <iframe
-              //   src="https://tally.so/embed/npzgEZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               src="https://tally.so/r/nW6ZyP"
               width="100%"
               height="500px"
@@ -797,7 +794,6 @@ const ProjectShowcase = ({ isModalOpen, setIsModalOpen }) => {
               title="Tally Form"
               className="rounded-lg"
             ></iframe>
-
             <div className="mt-4 flex justify-end">
               <button
                 type="button"
@@ -951,7 +947,7 @@ const ProjectsPage = () => {
           setIsModalOpen={setIsModalOpen}
         />
       </div>
-      <Footer />
+      <Footer onOpenModal={() => setIsModalOpen(true)} />
     </div>
   );
 };
