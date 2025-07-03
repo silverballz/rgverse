@@ -59,7 +59,7 @@ function Sidebar() {
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("Form submitted successfully!");
+        alert("Form submitted successfully, your profile will be added within 24 hours.");
         form.reset();
         setShowForm(false);
       })
