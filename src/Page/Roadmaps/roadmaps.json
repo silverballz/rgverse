@@ -6,7 +6,9 @@
     "senior": {
       "name": "Priya Sharma",
       "role": "Senior Frontend Engineer @ Google",
-      "avatar": "/images/seniors/frontend.jpg"
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@PriyaSarma",
+      "socialUrl": "https://hellojikyahalchal.com/Priya"
     },
     "stages": [
       {
@@ -20,12 +22,9 @@
         "resources": [
           {
             "name": "freeCodeCamp Responsive Web Design",
-            "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+            "link": "https://freecodecamp.org/learn/2022/responsive-web-design/"
           },
-          {
-            "name": "MDN Web Docs",
-            "link": "https://developer.mozilla.org/"
-          }
+          { "name": "JavaScript.info", "link": "https://javascript.info" }
         ]
       },
       {
@@ -35,16 +34,6 @@
           "State Management (Redux/Zustand)",
           "React Router",
           "CSS-in-JS (Styled Components)"
-        ],
-        "resources": [
-          {
-            "name": "React Official Documentation",
-            "link": "https://react.dev/learn"
-          },
-          {
-            "name": "Frontend Masters - React Path",
-            "link": "https://frontendmasters.com/learn/react/"
-          }
         ]
       },
       {
@@ -55,166 +44,367 @@
           "Testing (Jest, React Testing Library)",
           "Web Vitals & Lighthouse"
         ]
-      },
-      {
-        "title": "Stage 4: Specialization (Ongoing)",
-        "topics": [
-          "Choose a specialization:",
-          "- Web Performance",
-          "- Accessibility",
-          "- Animation & WebGL",
-          "- Design Systems"
-        ]
       }
     ],
     "externalResources": [
-      {
-        "name": "roadmap.sh",
-        "link": "https://roadmap.sh/frontend"
-      },
-      {
-        "name": "Frontend Masters",
-        "link": "https://frontendmasters.com"
-      },
-      {
-        "name": "React Patterns",
-        "link": "https://reactpatterns.com"
-      },
-      {
-        "name": "CSS Tricks",
-        "link": "https://css-tricks.com"
-      }
+      { "name": "roadmap.sh", "link": "https://roadmap.sh/frontend" },
+      { "name": "Frontend Masters", "link": "https://frontendmasters.com" },
+      { "name": "React Patterns", "link": "https://reactpatterns.com" },
+      { "name": "CSS Tricks", "link": "https://css-tricks.com" }
     ]
   },
   {
     "id": 2,
-    "field": "AI/ML Engineering",
-    "icon": "🤖",
+    "field": "Backend Development",
+    "icon": "⚙️",
     "senior": {
-      "name": "Raj Patel",
-      "role": "AI Research Scientist @ Microsoft",
-      "avatar": "/images/seniors/ai.jpg"
+      "name": "Arjun Mehta",
+      "role": "Backend Architect @ Netflix",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@ArjunMehta",
+      "socialUrl": "https://hellojikyahalchal.com/Arjun"
     },
     "stages": [
       {
-        "title": "Stage 1: Math & Programming (3 Months)",
+        "title": "Stage 1: Core Technologies (3 Months)",
         "topics": [
-          "Linear Algebra & Calculus",
-          "Probability & Statistics",
-          "Python for Data Science",
-          "NumPy, Pandas, Matplotlib"
+          "Node.js/Express or Python/Django",
+          "RESTful API Design",
+          "Database Design (SQL & NoSQL)",
+          "Authentication (JWT/OAuth)"
         ]
       },
       {
-        "title": "Stage 2: ML Fundamentals (4 Months)",
+        "title": "Stage 2: System Design (4 Months)",
         "topics": [
-          "Supervised Learning Algorithms",
-          "Unsupervised Learning",
-          "Model Evaluation Metrics",
-          "Scikit-Learn Mastery"
+          "Microservices Architecture",
+          "Message Brokers (RabbitMQ/Kafka)",
+          "Caching Strategies (Redis)",
+          "API Security Best Practices"
         ]
       },
       {
-        "title": "Stage 3: Deep Learning (4 Months)",
+        "title": "Stage 3: Cloud & DevOps (3 Months)",
         "topics": [
-          "Neural Networks Fundamentals",
-          "TensorFlow/PyTorch",
-          "CNN for Computer Vision",
-          "RNN/LSTM for NLP"
-        ]
-      },
-      {
-        "title": "Stage 4: Specialization (Ongoing)",
-        "topics": [
-          "Computer Vision",
-          "Natural Language Processing",
-          "Reinforcement Learning",
-          "MLOps & Deployment"
+          "Docker & Containerization",
+          "AWS/Azure/GCP Deployment",
+          "Serverless Architecture",
+          "CI/CD Pipelines"
         ]
       }
     ],
     "externalResources": [
+      { "name": "Backend Roadmap", "link": "https://roadmap.sh/backend" },
       {
-        "name": "Kaggle",
-        "link": "https://kaggle.com"
+        "name": "System Design Primer",
+        "link": "https://github.com/donnemartin/system-design-primer"
       },
-      {
-        "name": "Fast.ai",
-        "link": "https://www.fast.ai"
-      },
-      {
-        "name": "Andrew Ng Courses",
-        "link": "https://www.coursera.org/specializations/deep-learning"
-      },
-      {
-        "name": "Papers With Code",
-        "link": "https://paperswithcode.com"
-      }
+      { "name": "PostgreSQL Exercises", "link": "https://pgexercises.com" },
+      { "name": "REST API Tutorial", "link": "https://restapitutorial.com" }
     ]
   },
   {
     "id": 3,
+    "field": "Data Science",
+    "icon": "📊",
+    "senior": {
+      "name": "Nisha Reddy",
+      "role": "Lead Data Scientist @ Meta",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@NishaReddy",
+      "socialUrl": "https://hellojikyahalchal.com/Nisha"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Foundations (3 Months)",
+        "topics": [
+          "Python for Data Science",
+          "Pandas & NumPy Mastery",
+          "Data Visualization (Matplotlib/Seaborn)",
+          "SQL for Analysis"
+        ]
+      },
+      {
+        "title": "Stage 2: Machine Learning (4 Months)",
+        "topics": [
+          "Scikit-Learn Fundamentals",
+          "Feature Engineering",
+          "Model Evaluation Metrics",
+          "ML Algorithms (Regression, Classification)"
+        ]
+      },
+      {
+        "title": "Stage 3: Advanced Concepts (4 Months)",
+        "topics": [
+          "Deep Learning (TensorFlow/PyTorch)",
+          "Natural Language Processing",
+          "Big Data Tools (Spark)",
+          "Deployment (Flask/Docker)"
+        ]
+      }
+    ],
+    "externalResources": [
+      { "name": "Kaggle", "link": "https://kaggle.com" },
+      { "name": "DataCamp", "link": "https://datacamp.com" },
+      {
+        "name": "Towards Data Science",
+        "link": "https://towardsdatascience.com"
+      },
+      { "name": "Google Colab", "link": "https://colab.research.google.com" }
+    ]
+  },
+  {
+    "id": 4,
     "field": "DevOps Engineering",
     "icon": "🚀",
     "senior": {
       "name": "Amit Kumar",
       "role": "DevOps Lead @ Amazon Web Services",
-      "avatar": "/images/seniors/devops.jpg"
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@AmitKumar",
+      "socialUrl": "https://hellojikyahalchal.com/Amit"
     },
     "stages": [
       {
-        "title": "Stage 1: Linux & Networking (2 Months)",
+        "title": "Stage 1: Fundamentals (2 Months)",
         "topics": [
           "Linux System Administration",
           "Bash Scripting",
-          "Networking Fundamentals",
-          "HTTP/HTTPS Protocols"
+          "Networking Concepts",
+          "Version Control (Git)"
         ]
       },
       {
         "title": "Stage 2: Cloud & IaC (3 Months)",
         "topics": [
-          "AWS/Azure/GCP Fundamentals",
+          "AWS/Azure/GCP Core Services",
           "Infrastructure as Code (Terraform)",
           "Configuration Management (Ansible)",
-          "Cloud Networking"
+          "Cloud Security Fundamentals"
         ]
       },
       {
-        "title": "Stage 3: CI/CD & Containers (3 Months)",
+        "title": "Stage 3: CI/CD & Orchestration (3 Months)",
         "topics": [
           "Docker & Containerization",
           "Kubernetes Orchestration",
           "Jenkins/GitLab CI Pipelines",
-          "Monitoring & Logging"
-        ]
-      },
-      {
-        "title": "Stage 4: Advanced Practices (Ongoing)",
-        "topics": [
-          "Service Mesh (Istio/Linkerd)",
-          "Serverless Architecture",
-          "GitOps Practices",
-          "Security & Compliance"
+          "Monitoring & Logging (Prometheus/ELK)"
         ]
       }
     ],
     "externalResources": [
+      { "name": "DevOps Roadmap", "link": "https://roadmap.sh/devops" },
+      { "name": "Kubernetes Docs", "link": "https://kubernetes.io/docs/home/" },
       {
-        "name": "Kubernetes Docs",
-        "link": "https://kubernetes.io/docs/home/"
+        "name": "Terraform Learn",
+        "link": "https://learn.hashicorp.com/terraform"
       },
       {
-        "name": "DevOps Roadmap",
-        "link": "https://roadmap.sh/devops"
+        "name": "DevOps Exercises",
+        "link": "https://github.com/bregman-arie/devops-exercises"
+      }
+    ]
+  },
+
+  
+  {
+    "id": 5,
+    "field": "UX Design",
+    "icon": "🎨",
+    "senior": {
+      "name": "Sanya Verma",
+      "role": "Principal UX Designer @ Adobe",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@SanyaVerma",
+      "socialUrl": "https://hellojikyahalchal.com/Sanya"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Design Fundamentals (2 Months)",
+        "topics": [
+          "Design Principles & Heuristics",
+          "User Research Methods",
+          "Wireframing & Prototyping",
+          "Accessibility Standards"
+        ]
       },
       {
-        "name": "Awesome DevOps",
-        "link": "https://github.com/Awesome-DevOps"
+        "title": "Stage 2: Tools & Execution (3 Months)",
+        "topics": [
+          "Figma/Sketch Mastery",
+          "Interaction Design Patterns",
+          "Usability Testing",
+          "Design System Creation"
+        ]
       },
       {
-        "name": "CNCF Landscape",
-        "link": "https://landscape.cncf.io"
+        "title": "Stage 3: Advanced Practices (3 Months)",
+        "topics": [
+          "UX Writing & Microcopy",
+          "Motion Design Principles",
+          "Quantitative UX Research",
+          "Cross-platform Design Strategies"
+        ]
+      }
+    ],
+    "externalResources": [
+      { "name": "NN/g Articles", "link": "https://www.nngroup.com/articles/" },
+      { "name": "Figma Community", "link": "https://figma.com/community" },
+      { "name": "UX Collective", "link": "https://uxdesign.cc" },
+      { "name": "Laws of UX", "link": "https://lawsofux.com" }
+    ]
+  },
+  {
+    "id": 6,
+    "field": "Cybersecurity",
+    "icon": "🔒",
+    "senior": {
+      "name": "Vikram Singh",
+      "role": "Security Architect @ Palo Alto Networks",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@VikramSingh",
+      "socialUrl": "https://hellojikyahalchal.com/Vikram"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Foundations (3 Months)",
+        "topics": [
+          "Networking Fundamentals",
+          "Operating System Security",
+          "Cryptography Basics",
+          "Security Protocols"
+        ]
+      },
+      {
+        "title": "Stage 2: Offensive Security (4 Months)",
+        "topics": [
+          "Penetration Testing Methodologies",
+          "Web Application Vulnerabilities",
+          "Network Exploitation Techniques",
+          "Ethical Hacking Tools"
+        ]
+      },
+      {
+        "title": "Stage 3: Defensive Security (4 Months)",
+        "topics": [
+          "SIEM Solutions (Splunk/ELK)",
+          "Incident Response Procedures",
+          "Threat Intelligence",
+          "Cloud Security Architecture"
+        ]
+      }
+    ],
+    "externalResources": [
+      { "name": "OWASP Foundation", "link": "https://owasp.org" },
+      { "name": "TryHackMe", "link": "https://tryhackme.com" },
+      { "name": "Hack The Box", "link": "https://hackthebox.com" },
+      { "name": "Cybrary", "link": "https://cybrary.it" }
+    ]
+  },
+  {
+    "id": 7,
+    "field": "Product Management",
+    "icon": "📈",
+    "senior": {
+      "name": "Rajiv Kapoor",
+      "role": "Director of Product @ Microsoft",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@RajivKapoor",
+      "socialUrl": "https://hellojikyahalchal.com/Rajiv"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Core Concepts (2 Months)",
+        "topics": [
+          "Product Lifecycle Management",
+          "Market Research Techniques",
+          "User Story Mapping",
+          "Agile/Scrum Methodologies"
+        ]
+      },
+      {
+        "title": "Stage 2: Execution (3 Months)",
+        "topics": [
+          "Prioritization Frameworks (RICE, MoSCoW)",
+          "Metrics & Analytics (AARRR Framework)",
+          "Stakeholder Management",
+          "Roadmapping Tools (Jira, Productboard)"
+        ]
+      },
+      {
+        "title": "Stage 3: Strategy (3 Months)",
+        "topics": [
+          "Business Model Canvas",
+          "Competitive Analysis",
+          "Pricing Strategies",
+          "Go-to-Market Planning"
+        ]
+      }
+    ],
+    "externalResources": [
+      { "name": "Product School", "link": "https://productschool.com/blog" },
+      { "name": "Mind the Product", "link": "https://www.mindtheproduct.com" },
+      {
+        "name": "Product Management Exercises",
+        "link": "https://productexercises.com"
+      },
+      { "name": "Stratechery", "link": "https://stratechery.com" }
+    ]
+  },
+  {
+    "id": 8,
+    "field": "Quantum Computing",
+    "icon": "⚛️",
+    "senior": {
+      "name": "Dr. Ananya Das",
+      "role": "Quantum Researcher @ IBM",
+      "avatar": "/assets/Avatars/Demo.png",
+      "socialId": "@AnanyaDas",
+      "socialUrl": "https://hellojikyahalchal.com/Ananya"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Math Foundations (3 Months)",
+        "topics": [
+          "Linear Algebra",
+          "Complex Numbers",
+          "Probability Theory",
+          "Differential Equations"
+        ]
+      },
+      {
+        "title": "Stage 2: Quantum Mechanics (4 Months)",
+        "topics": [
+          "Wave Functions",
+          "Schrödinger Equation",
+          "Quantum Superposition",
+          "Quantum Entanglement"
+        ]
+      },
+      {
+        "title": "Stage 3: Quantum Computing (5 Months)",
+        "topics": [
+          "Qubits & Quantum Gates",
+          "Quantum Algorithms (Shor's, Grover's)",
+          "Quantum Error Correction",
+          "Quantum Hardware Overview"
+        ]
+      }
+    ],
+    "externalResources": [
+      { "name": "Qiskit Textbook", "link": "https://qiskit.org/textbook" },
+      {
+        "name": "Quantum Computing Report",
+        "link": "https://quantumcomputingreport.com"
+      },
+      {
+        "name": "IBM Quantum Experience",
+        "link": "https://quantum-computing.ibm.com"
+      },
+      {
+        "name": "Microsoft Quantum",
+        "link": "https://azure.microsoft.com/en-us/solutions/quantum-computing/"
       }
     ]
   }
