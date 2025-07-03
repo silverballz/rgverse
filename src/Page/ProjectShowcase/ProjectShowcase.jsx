@@ -308,6 +308,65 @@ const StyledProjectCard = styled.div`
       right: 0;
     }
   }
+
+  @media (max-width: 640px) {
+    height: 320px;
+    padding: 0.75rem;
+    .space-y-4 > * + * {
+      margin-top: 0.75rem !important;
+    }
+    .h-8 {
+      height: 2.2rem !important;
+      width: 2.2rem !important;
+    }
+    .h-40 {
+      height: 160px !important;
+    }
+    .text-xl {
+      font-size: 1.25rem !important;
+    }
+    .text-base {
+      font-size: 1.05rem !important;
+    }
+    .text-lg {
+      font-size: 1.15rem !important;
+    }
+    .px-4 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    .py-2 {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+    .px-3 {
+      padding-left: 0.7rem !important;
+      padding-right: 0.7rem !important;
+    }
+    .py-1 {
+      padding-top: 0.3rem !important;
+      padding-bottom: 0.3rem !important;
+    }
+    .rounded-md {
+      border-radius: 0.5rem !important;
+    }
+    .rounded-lg {
+      border-radius: 0.7rem !important;
+    }
+    .font-handwritten {
+      font-size: 1.1rem !important;
+    }
+    .p-4 {
+      padding: 0.75rem !important;
+    }
+    button,
+    .text-sm {
+      font-size: 1rem !important;
+    }
+    .gap-2 {
+      gap: 0.6rem !important;
+    }
+  }
 `;
 
 const shuffleArray = (array) => {
