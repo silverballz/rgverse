@@ -188,7 +188,7 @@ const TechFeatures = () => {
       "Explore the best roadmaps provided by your seniors to become pro in each field",
       image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtp6B8_-JqwvXk9wQv__lxKTB8xIJqI4aveQ5KricXT9wgnY1mpQ&s=10&ec=72940544",
-      link: "/roadmaps",
+      link: "/Roadmaps",
     },
     {
       title: "Project Showcase",
