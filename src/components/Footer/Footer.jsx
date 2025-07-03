@@ -90,7 +90,8 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="transform text-3xl transition-transform hover:scale-110 hover:text-[#08fb00]"
             >
-              <i className="fab fa-twitter"></i>
+              {/* <i className="fab fa-twitter"></i> */}
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a
               href="https://www.instagram.com/piyush_t24/"
