@@ -3,6 +3,30 @@ import React, { useState } from "react";
 
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const feedbackUrl = "https://tally.so/r/3lj8rv";
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "RGVerse Feedback",
+          text: "Share your feedback for RGVerse!",
+          url: feedbackUrl,
+        });
+      } catch (e) {
+        // User cancelled or error
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(feedbackUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      } catch (e) {
+        // fallback: do nothing
+      }
+    }
+  };
 
   return (
     <footer className="w-full bg-white p-4 py-8 text-white shadow dark:bg-textPrimary">
@@ -98,14 +122,23 @@ export const Footer = () => {
               </button>
             </div>
             <iframe
-              src="https://tally.so/r/3lj8rv"
+              src={feedbackUrl}
               width="100%"
               height="500px"
               frameBorder="0"
               title="Tally Form"
               className="rounded-lg"
             ></iframe>
-            <div className="mt-4 flex justify-end">
+            <div className="mt-4 flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={handleShare}
+                className="flex items-center rounded-lg border border-[#cffab6] bg-white px-4 py-2 text-[#228504] transition-colors hover:bg-[#cffab6] hover:text-black"
+                style={{ marginRight: "0.5rem" }}
+              >
+                <i className="fas fa-share-alt mr-2"></i>
+                {copied ? "Copied!" : "Share"}
+              </button>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(false)}

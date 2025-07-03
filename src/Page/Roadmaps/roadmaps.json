@@ -1,0 +1,221 @@
+[
+  {
+    "id": 1,
+    "field": "Frontend Development",
+    "icon": "🖥️",
+    "senior": {
+      "name": "Priya Sharma",
+      "role": "Senior Frontend Engineer @ Google",
+      "avatar": "/images/seniors/frontend.jpg"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Foundations (2-3 Months)",
+        "topics": [
+          "HTML5 & Semantic Markup",
+          "CSS3, Flexbox & Grid",
+          "JavaScript Fundamentals (ES6+)",
+          "Responsive Design Principles"
+        ],
+        "resources": [
+          {
+            "name": "freeCodeCamp Responsive Web Design",
+            "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+          },
+          {
+            "name": "MDN Web Docs",
+            "link": "https://developer.mozilla.org/"
+          }
+        ]
+      },
+      {
+        "title": "Stage 2: Core Frameworks (3-4 Months)",
+        "topics": [
+          "React.js Fundamentals",
+          "State Management (Redux/Zustand)",
+          "React Router",
+          "CSS-in-JS (Styled Components)"
+        ],
+        "resources": [
+          {
+            "name": "React Official Documentation",
+            "link": "https://react.dev/learn"
+          },
+          {
+            "name": "Frontend Masters - React Path",
+            "link": "https://frontendmasters.com/learn/react/"
+          }
+        ]
+      },
+      {
+        "title": "Stage 3: Advanced Concepts (2 Months)",
+        "topics": [
+          "TypeScript Fundamentals",
+          "Performance Optimization",
+          "Testing (Jest, React Testing Library)",
+          "Web Vitals & Lighthouse"
+        ]
+      },
+      {
+        "title": "Stage 4: Specialization (Ongoing)",
+        "topics": [
+          "Choose a specialization:",
+          "- Web Performance",
+          "- Accessibility",
+          "- Animation & WebGL",
+          "- Design Systems"
+        ]
+      }
+    ],
+    "externalResources": [
+      {
+        "name": "roadmap.sh",
+        "link": "https://roadmap.sh/frontend"
+      },
+      {
+        "name": "Frontend Masters",
+        "link": "https://frontendmasters.com"
+      },
+      {
+        "name": "React Patterns",
+        "link": "https://reactpatterns.com"
+      },
+      {
+        "name": "CSS Tricks",
+        "link": "https://css-tricks.com"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "field": "AI/ML Engineering",
+    "icon": "🤖",
+    "senior": {
+      "name": "Raj Patel",
+      "role": "AI Research Scientist @ Microsoft",
+      "avatar": "/images/seniors/ai.jpg"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Math & Programming (3 Months)",
+        "topics": [
+          "Linear Algebra & Calculus",
+          "Probability & Statistics",
+          "Python for Data Science",
+          "NumPy, Pandas, Matplotlib"
+        ]
+      },
+      {
+        "title": "Stage 2: ML Fundamentals (4 Months)",
+        "topics": [
+          "Supervised Learning Algorithms",
+          "Unsupervised Learning",
+          "Model Evaluation Metrics",
+          "Scikit-Learn Mastery"
+        ]
+      },
+      {
+        "title": "Stage 3: Deep Learning (4 Months)",
+        "topics": [
+          "Neural Networks Fundamentals",
+          "TensorFlow/PyTorch",
+          "CNN for Computer Vision",
+          "RNN/LSTM for NLP"
+        ]
+      },
+      {
+        "title": "Stage 4: Specialization (Ongoing)",
+        "topics": [
+          "Computer Vision",
+          "Natural Language Processing",
+          "Reinforcement Learning",
+          "MLOps & Deployment"
+        ]
+      }
+    ],
+    "externalResources": [
+      {
+        "name": "Kaggle",
+        "link": "https://kaggle.com"
+      },
+      {
+        "name": "Fast.ai",
+        "link": "https://www.fast.ai"
+      },
+      {
+        "name": "Andrew Ng Courses",
+        "link": "https://www.coursera.org/specializations/deep-learning"
+      },
+      {
+        "name": "Papers With Code",
+        "link": "https://paperswithcode.com"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "field": "DevOps Engineering",
+    "icon": "🚀",
+    "senior": {
+      "name": "Amit Kumar",
+      "role": "DevOps Lead @ Amazon Web Services",
+      "avatar": "/images/seniors/devops.jpg"
+    },
+    "stages": [
+      {
+        "title": "Stage 1: Linux & Networking (2 Months)",
+        "topics": [
+          "Linux System Administration",
+          "Bash Scripting",
+          "Networking Fundamentals",
+          "HTTP/HTTPS Protocols"
+        ]
+      },
+      {
+        "title": "Stage 2: Cloud & IaC (3 Months)",
+        "topics": [
+          "AWS/Azure/GCP Fundamentals",
+          "Infrastructure as Code (Terraform)",
+          "Configuration Management (Ansible)",
+          "Cloud Networking"
+        ]
+      },
+      {
+        "title": "Stage 3: CI/CD & Containers (3 Months)",
+        "topics": [
+          "Docker & Containerization",
+          "Kubernetes Orchestration",
+          "Jenkins/GitLab CI Pipelines",
+          "Monitoring & Logging"
+        ]
+      },
+      {
+        "title": "Stage 4: Advanced Practices (Ongoing)",
+        "topics": [
+          "Service Mesh (Istio/Linkerd)",
+          "Serverless Architecture",
+          "GitOps Practices",
+          "Security & Compliance"
+        ]
+      }
+    ],
+    "externalResources": [
+      {
+        "name": "Kubernetes Docs",
+        "link": "https://kubernetes.io/docs/home/"
+      },
+      {
+        "name": "DevOps Roadmap",
+        "link": "https://roadmap.sh/devops"
+      },
+      {
+        "name": "Awesome DevOps",
+        "link": "https://github.com/Awesome-DevOps"
+      },
+      {
+        "name": "CNCF Landscape",
+        "link": "https://landscape.cncf.io"
+      }
+    ]
+  }
+]
