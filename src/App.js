@@ -23,6 +23,8 @@ import Sem7 from "./Page/NotesHub/Sem7.jsx";
 import Sem8 from "./Page/NotesHub/Sem8.jsx";
 // Feature- OpenSourceProgram
 import OpenSourceProgram from "./Page/OpenSourceProgram/OpenSourceProgram.jsx";
+// Feature- Roadmaps
+import Roadmaps from "./Page/Roadmaps/Roadmaps.jsx";
 // About Us
 import AboutUs from "./components/AboutUs.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
@@ -88,6 +90,8 @@ function App() {
         <Route path="/OpenSourceProgram" element={<OpenSourceProgram />} />
         {/* Feature- Project Showcase */}
         <Route path="/ProjectShowcase" element={<ProjectShowcase />} />
+        {/* Feature- Roadmaps */}
+        <Route path="/Roadmaps" element={<Roadmaps />} />
         {/* About Us */}
         <Route path="/AboutUs" element={<AboutUs />} />
         {/* Page Not Found */}
