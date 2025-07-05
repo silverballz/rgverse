@@ -883,7 +883,7 @@ const RoleBasedRoadmaps = () => (
     <h2 className="mb-8 text-center text-2xl font-bold text-[#00fb69]">
       Role-based Roadmaps
     </h2>
-    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
       {ROLE_BASED_ROADMAPS.map((role) => (
         <a
           key={role.label}
