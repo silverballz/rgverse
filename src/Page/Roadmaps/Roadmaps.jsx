@@ -159,7 +159,7 @@ const Hero = () => {
           <div className="modgp relative inline-block w-full py-3">
             <div className="relative">
               <div className="bg-primary enabled:hover:bg-primary-dark enabled:active:bg-primary-dark enabled:focus:bg-primary-dark px-18 relative inline-flex w-full items-center justify-center rounded-lg py-5 text-6xl font-bold text-white transition-all focus:outline-none enabled:hover:shadow-md disabled:opacity-50">
-                <div className="flex w-full items-center justify-center">
+                <div className="flex w-full items-center justify-center text-5xl sm:text-6xl md:text-6xl lg:text-6xl">
                   Guided Roadmaps
                 </div>
               </div>
