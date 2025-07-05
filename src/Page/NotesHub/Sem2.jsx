@@ -576,12 +576,15 @@ const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
           </p>
           <div className="flex flex-wrap gap-2">
             {contributors.map((contributor, index) => (
-              <span
+              <a
                 key={index}
-                className="rounded-full bg-[#092413] px-3 py-1 text-xs text-[#c8e6d5]"
+                href={contributor.profileUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer rounded-full bg-[#092413] px-3 py-1 text-xs text-[#c8e6d5] transition-colors hover:bg-[#0a291e] hover:text-[#00fb69]"
               >
-                {contributor}
-              </span>
+                {contributor.name}
+              </a>
             ))}
           </div>
         </div>
@@ -646,13 +649,19 @@ const SemesterFilter = () => {
   );
 };
 
+
 const Notes = () => {
   const location = useLocation();
   const branchList = [
     {
       branch: "Computer Science Engineering",
       image: "/assets/branches/CSE3.webp",
-      contributors: ["@Harshit", "@Raj", "@Priya", "@Amit"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
@@ -663,7 +672,12 @@ const Notes = () => {
     {
       branch: "Chemical Engineering",
       image: "/assets/branches/chem2.webp",
-      contributors: ["@Harshit", "@Sneha", "@Vikram"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
@@ -674,7 +688,12 @@ const Notes = () => {
     {
       branch: "Petroleum Engineering",
       image: "/assets/branches/petro.webp",
-      contributors: ["@Harshit", "@Anjali", "@Rohit"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
@@ -685,7 +704,12 @@ const Notes = () => {
     {
       branch: "Mathematics and Computing",
       image: "/assets/branches/mnc.jpeg",
-      contributors: ["@Harshit", "@Kiran", "@Rahul"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
@@ -696,7 +720,12 @@ const Notes = () => {
     {
       branch: "Electrical and Electronics Engineering",
       image: "/assets/branches/EEE2.webp",
-      contributors: ["@Harshit", "@Neha", "@Arjun"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
@@ -707,7 +736,12 @@ const Notes = () => {
     {
       branch: "Mechanical Engineering",
       image: "/assets/branches/mech.webp",
-      contributors: ["@Harshit", "@Pooja", "@Sanjay"],
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
       link1:
         "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
       link2:
