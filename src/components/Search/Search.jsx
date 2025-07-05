@@ -187,7 +187,7 @@ function Search({ onSearch }) {
             value={searchValue}
             placeholder={
               searchCriteria === "skill"
-                ? "Search user by skill and press enter"
+                ? "Search user by skill & press enter"
                 : `Search user by ${searchCriteria}`
             }
             onKeyDown={handleSearchOnEnter}
