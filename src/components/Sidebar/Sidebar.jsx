@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
-import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com";
 import StyledButton from "../StyledButton";
-import { RxCross2 } from "react-icons/rx"; 
+import { RxCross2 } from "react-icons/rx";
 // import SvgLoader from "../SvgLoader/SvgLoader";
 
 function Sidebar() {
@@ -25,7 +25,7 @@ function Sidebar() {
     window.open(
       "https://github.com/Piyush-t24/rgverse/blob/main/CONTRIBUTING.md",
       "_blank",
-      "noreferrer"
+      "noreferrer",
     );
   };
 
@@ -52,14 +52,12 @@ function Sidebar() {
     };
 
     emailjs
-      .send(
-        "service_k7barbv",
-        "template_gpqzxsc",
-        templateParams
-      )
+      .send("service_k7barbv", "template_gpqzxsc", templateParams)
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("Form submitted successfully, your profile will be added within 24 hours.");
+        alert(
+          "Form submitted successfully, your profile will be added within 24 hours.",
+        );
         form.reset();
         setShowForm(false);
       })
@@ -68,7 +66,6 @@ function Sidebar() {
         alert("Failed to submit the form. Please try again.");
       });
   }
-
 
   return (
     <div className="my-7 w-full border-r-2 border-borderSecondary px-7 font-spaceMono dark:border-borderColor md:h-[90vh] md:w-[23%] md:px-2 lg:px-7">
@@ -167,11 +164,15 @@ function Sidebar() {
               />
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder={`Your Message
+- Skills
+- Update my profile
+- Any other message`}
                 className="rounded border p-2 text-black"
                 required
                 rows={3}
               />
+
               <StyledButton type="submit">
                 <div className="inner">Submit</div>
               </StyledButton>
@@ -194,7 +195,6 @@ function Sidebar() {
     </div>
   );
 }
-
 
 const StyledWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap");
