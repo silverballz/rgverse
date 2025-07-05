@@ -1,13 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
-import Profile from './components/Profile/Profile';
-import ProfileSkeleton from './components/ProfileSkeleton/ProfileSkeleton';
-import Search from './components/Search/Search';
-import Sidebar from './components/Sidebar/Sidebar';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import NoResultFound from './components/NoResultFound/NoResultFound';
-import Pagination from './components/Pagination/Pagination';
-import './App.css';
-import filenames from './ProfilesList.json';
+import { useState, useEffect, useRef } from "react";
+import Profile from "./components/Profile/Profile";
+import ProfileSkeleton from "./components/ProfileSkeleton/ProfileSkeleton";
+import Search from "./components/Search/Search";
+import Sidebar from "./components/Sidebar/Sidebar";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import NoResultFound from "./components/NoResultFound/NoResultFound";
+import Pagination from "./components/Pagination/Pagination";
+import "./App.css";
+import filenames from "./ProfilesList.json";
 // import GTranslateLoader from './components/GTranslateLoader';
 
 function App() {
@@ -27,13 +27,13 @@ function App() {
       try {
         const response = await fetch(file);
         if (!response.ok) {
-          console.error('Error fetching data:', response.statusText);
+          console.error("Error fetching data:", response.statusText);
           return [];
         }
         const data = await response.json();
         return data;
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
         return [];
       }
     };
@@ -42,14 +42,18 @@ function App() {
       setLoadingProfiles(true);
       try {
         const promises = filenames.map((file, index) =>
-          fetchData(`/data/${file}`).then((data) => ({ ...data, id: index + 1, fileName: file.replace('.json', '') })),
+          fetchData(`/data/${file}`).then((data) => ({
+            ...data,
+            id: index + 1,
+            fileName: file.replace(".json", ""),
+          })),
         );
         const combinedData = await Promise.all(promises);
         const flattenedData = combinedData.flat();
         setCombinedData(flattenedData);
         setShuffledProfiles(shuffleProfiles(flattenedData));
       } catch (error) {
-        console.error('Error combining data:', error);
+        console.error("Error combining data:", error);
         setCombinedData([]);
         setShuffledProfiles([]);
       }
@@ -68,33 +72,52 @@ function App() {
   };
 
   const normalizeString = (str) => {
-    if (!str) return ''; // Return an empty string if str is undefined or null
+    if (typeof str !== "string") return "";
     return str
       .toLowerCase()
-      .replace(/\s*,\s*/g, ' ')
-      .replace(/\s+/g, ' ')
+      .replace(/\s*,\s*/g, " ")
+      .replace(/\s+/g, " ")
       .trim();
   };
 
   const handleSearch = ({ value, criteria }) => {
-    const normalizedValue = normalizeString(value);
+    const normalizedValue =
+      typeof value === "string" ? normalizeString(value) : "";
 
-    if (criteria !== 'skill') {
+    if (criteria !== "skill") {
       const filteredResults = combinedData.filter((user) => {
-        if (criteria === 'name') {
+        if (criteria === "name") {
           return normalizeString(user.name).includes(normalizedValue);
-        } else if (criteria === 'location') {
-          return normalizeString(user.location).includes(normalizedValue);
+        } else if (criteria === "location") {
+          return (
+            user.location &&
+            normalizeString(user.location).includes(normalizedValue)
+          );
+        } else if (criteria === "branch") {
+          return (
+            user.branch &&
+            normalizeString(user.branch).includes(normalizedValue)
+          );
         }
         return false;
       });
 
       setProfiles(filteredResults);
-    } else if (criteria === 'skill') {
-      if (value.length > 0) {
-        const setOfSearchSkills = new Set(value.map((skill) => skill.toLowerCase()));
-        const filteredUsers = shuffledProfiles.filter((user) =>
-          user.skills.some((skill) => setOfSearchSkills.has(skill.toLowerCase())),
+    } else if (criteria === "skill") {
+      if (Array.isArray(value) && value.length > 0) {
+        const setOfSearchSkills = new Set(
+          value.map((skill) =>
+            typeof skill === "string" ? skill.toLowerCase() : "",
+          ),
+        );
+        const filteredUsers = shuffledProfiles.filter(
+          (user) =>
+            Array.isArray(user.skills) &&
+            user.skills.some(
+              (skill) =>
+                typeof skill === "string" &&
+                setOfSearchSkills.has(skill.toLowerCase()),
+            ),
         );
         setProfiles(filteredUsers);
       } else {
@@ -108,7 +131,9 @@ function App() {
   };
 
   const handleNextPage = () => {
-    const totalPages = Math.ceil((searching ? profiles.length : combinedData.length) / recordsPerPage);
+    const totalPages = Math.ceil(
+      (searching ? profiles.length : combinedData.length) / recordsPerPage,
+    );
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
@@ -123,7 +148,7 @@ function App() {
   useEffect(() => {
     profilesRef.current.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [currentPage]);
 
@@ -139,7 +164,7 @@ function App() {
       return (
         <>
           {Array(5)
-            .fill('profile-skeleton')
+            .fill("profile-skeleton")
             .map((item, index) => (
               <ProfileSkeleton key={index} />
             ))}
@@ -147,19 +172,31 @@ function App() {
       );
     }
     const paginatedData = getPaginatedData();
-    return paginatedData.map((currentRecord, index) => <Profile data={currentRecord} key={index} />);
+    return paginatedData.map((currentRecord, index) => (
+      <Profile data={currentRecord} key={index} />
+    ));
   };
 
-  return currentUrl === '/' ? (
+  return currentUrl === "/" ? (
     <div className="App flex flex-col bg-primaryColor dark:bg-secondaryColor md:flex-row">
       <Sidebar />
-      <div className="w-full pl-5 pr-4 md:h-screen md:w-[77%] md:overflow-y-scroll md:py-7" ref={profilesRef}>
+      <div
+        className="w-full pl-5 pr-4 md:h-screen md:w-[77%] md:overflow-y-scroll md:py-7"
+        ref={profilesRef}
+      >
         <Search onSearch={handleSearch} />
-        {profiles.length === 0 && searching ? <NoResultFound /> : renderProfiles()}
+        {profiles.length === 0 && searching ? (
+          <NoResultFound />
+        ) : (
+          renderProfiles()
+        )}
         {combinedData.length > 0 && (
           <Pagination
             currentPage={currentPage}
-            totalPages={Math.ceil((searching ? profiles.length : shuffledProfiles.length) / recordsPerPage)}
+            totalPages={Math.ceil(
+              (searching ? profiles.length : shuffledProfiles.length) /
+                recordsPerPage,
+            )}
             onNextPage={handleNextPage}
             onPrevPage={handlePrevPage}
           />
