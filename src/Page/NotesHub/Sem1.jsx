@@ -24,11 +24,7 @@ const Navbar = () => {
         </a>
 
         <div className="text-2xl font-bold">
-          <img
-            src="./RGVerse ICON.png"
-            alt="RGVerse"
-            className="h-12 w-12"
-          />
+          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
         </div>
       </div>
     </nav>
@@ -547,8 +543,7 @@ const Tags = () => {
   );
 };
 
-
-const BranchCard = ({ branch, image, contributors,link1,link2,link3 }) => {
+const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
   const shareContent = () => {
     if (navigator.share) {
       navigator.share({
@@ -558,60 +553,71 @@ const BranchCard = ({ branch, image, contributors,link1,link2,link3 }) => {
       });
     } else {
       navigator.clipboard.writeText(window.location.href);
-      alert('Link copied to clipboard!');
+      alert("Link copied to clipboard!");
     }
   };
 
   return (
-    <div className="branch-card bg-gradient-to-b from-[#0d3528] to-[#092413] rounded-xl border border-white shadow-xl overflow-hidden transition duration-300 hover:border-[#00fb69]">
+    <div className="branch-card overflow-hidden rounded-xl border border-white bg-gradient-to-b from-[#0d3528] to-[#092413] shadow-xl transition duration-300 hover:border-[#00fb69]">
       <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-4">{branch}</h3>
-        
-        <div className="branch-image mb-4 rounded-lg overflow-hidden">
+        <h3 className="mb-4 text-xl font-bold text-white">{branch}</h3>
+
+        <div className="branch-image mb-4 overflow-hidden rounded-lg">
           <img
             src={image}
             alt={`${branch} representation`}
-            className="w-full h-52 object-cover"
+            className="h-52 w-full object-cover"
           />
         </div>
-        
+
         <div className="contributors mb-4">
-          <p className="text-sm font-medium text-[#00fb69] mb-2">Contributed By:</p>
+          <p className="mb-2 text-sm font-medium text-[#00fb69]">
+            Contributed By:
+          </p>
           <div className="flex flex-wrap gap-2">
             {contributors.map((contributor, index) => (
-              <span key={index} className="bg-[#092413] text-[#c8e6d5] px-3 py-1 rounded-full text-xs">
-                {contributor}
-              </span>
+              <a
+                key={index}
+                href={contributor.profileUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer rounded-full bg-[#092413] px-3 py-1 text-xs text-[#c8e6d5] transition-colors hover:bg-[#0a291e] hover:text-[#00fb69]"
+              >
+                {contributor.name}
+              </a>
             ))}
           </div>
         </div>
-        
-        <div className="flex gap-3 mb-6">
-          <button 
+
+        <div className="mb-6 flex gap-3">
+          <button
             onClick={shareContent}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#0d3528] hover:bg-[#0a291e] text-[#00fb69] border border-[#00fb69] py-2 rounded-lg transition-colors"
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#00fb69] bg-[#0d3528] py-2 text-[#00fb69] transition-colors hover:bg-[#0a291e]"
           >
             <FontAwesomeIcon icon={faShareAlt} />
             <span>Share</span>
           </button>
-          <button className="flex-1 flex items-center justify-center gap-2 bg-[#0d3528] hover:bg-[#0a291e] text-[#00fb69] border border-[#00fb69] py-2 rounded-lg transition-colors">
+          <button className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#00fb69] bg-[#0d3528] py-2 text-[#00fb69] transition-colors hover:bg-[#0a291e]">
             <FontAwesomeIcon icon={faDownload} />
             <span>Extra Materials</span>
           </button>
         </div>
       </div>
-      
+
       <div className="resource-buttons grid grid-cols-3 gap-0 border-t border-[rgba(20,47,33,0.3)]">
-        <button className="flex flex-col items-center justify-center gap-1 p-4 bg-[#092413] hover:bg-[#0a291e] text-[#c8e6d5] border-r border-[rgba(20,47,33,0.3)] transition-colors">
-          <FontAwesomeIcon icon={faFileAlt} className="text-[#00fb69] text-xl" />
+        <button className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+          <FontAwesomeIcon
+            icon={faFileAlt}
+            className="text-xl text-[#00fb69]"
+          />
           <a href={link1}>Handwritten Notes </a>
         </button>
-        <button className="flex flex-col items-center justify-center gap-1 p-4 bg-[#092413] hover:bg-[#0a291e] text-[#c8e6d5] border-r border-[rgba(20,47,33,0.3)] transition-colors">
-          <FontAwesomeIcon icon={faBook} className="text-[#00fb69] text-xl" />
+        <button className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+          <FontAwesomeIcon icon={faBook} className="text-xl text-[#00fb69]" />
           <a href={link2}>PYQs </a>
         </button>
-        <button className="flex flex-col items-center justify-center gap-1 p-4 bg-[#092413] hover:bg-[#0a291e] text-[#c8e6d5] transition-colors">
-          <FontAwesomeIcon icon={faBook} className="text-[#00fb69] text-xl" />
+        <button className="flex flex-col items-center justify-center gap-1 bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+          <FontAwesomeIcon icon={faBook} className="text-xl text-[#00fb69]" />
           <a href={link3}>E-Books </a>
         </button>
       </div>
@@ -621,7 +627,7 @@ const BranchCard = ({ branch, image, contributors,link1,link2,link3 }) => {
 
 const SemesterFilter = () => {
   const semesters = [1, 2, 3, 4, 5, 6, 7, 8];
-  
+
   return (
     <div className="semester-filter px-4 py-6">
       <div className="mx-auto max-w-6xl">
@@ -649,50 +655,98 @@ const Notes = () => {
     {
       branch: "Computer Science Engineering",
       image: "/assets/branches/CSE2.webp",
-      contributors: ["@Harshit", "@Raj", "@Priya", "@Amit"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
       branch: "Chemical Engineering",
       image: "/assets/branches/chem.webp",
-      contributors: ["@Harshit", "@Sneha", "@Vikram"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
       branch: "Petroleum Engineering",
       image: "/assets/branches/petro2.jpeg",
-      contributors: ["@Harshit", "@Anjali", "@Rohit"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
       branch: "Mathematics and Computing",
       image: "/assets/branches/mnc2.webp",
-      contributors: ["@Harshit", "@Kiran", "@Rahul"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
       branch: "Electrical and Electronics Engineering",
       image: "/assets/branches/EEE.webp",
-      contributors: ["@Harshit", "@Neha", "@Arjun"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
     {
       branch: "Mechanical Engineering",
       image: "/assets/branches/mech2.webp",
-      contributors: ["@Harshit", "@Pooja", "@Sanjay"],
-      link1: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      contributors: [
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Om", profileUrl: "/profile/Omkar23" },
+        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+      ],
+      link1:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link2:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      link3:
+        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
     },
   ];
 
@@ -700,12 +754,10 @@ const Notes = () => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
-
-
 
   return (
     <div className="background-wrapper min-h-screen bg-gray-900">
@@ -714,7 +766,7 @@ const Notes = () => {
       <Tags />
       <div className="my-4"></div>
       <div className="max-w-8xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {branchList.map((branch, index) => (
             <BranchCard
               key={index}
@@ -728,9 +780,9 @@ const Notes = () => {
           ))}
         </div>
       </div>
-      
+
       <SemesterFilter />
-      
+
       <div className="my-8"></div>
       <Footer />
     </div>
