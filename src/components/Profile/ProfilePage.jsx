@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Profile from './Profile';
-import profilesList from '../../ProfilesList.json';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Profile from "./Profile";
+import profilesList from "../../ProfilesList.json";
 
 const ProfilePage = () => {
   const { name } = useParams();
@@ -11,7 +11,9 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const profileFile = profilesList.find((file) => file.replace('.json', '') === name);
+        const profileFile = profilesList.find(
+          (file) => file.replace(".json", "") === name,
+        );
         if (!profileFile) {
           setProfileData(null);
           setLoading(false);
@@ -21,7 +23,7 @@ const ProfilePage = () => {
         const data = await response.json();
         setProfileData(data);
       } catch (error) {
-        console.error('Error fetching profile data:', error);
+        console.error("Error fetching profile data:", error);
       } finally {
         setLoading(false);
       }
@@ -31,17 +33,23 @@ const ProfilePage = () => {
   }, [name]);
 
   if (loading) {
-    return <div className="flex min-h-screen items-center justify-center bg-[#0e1a34] text-white">Loading...</div>;
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#092413] text-white">
+        Loading...
+      </div>
+    );
   }
 
   if (!profileData) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0e1a34] text-white">Profile not found</div>
+      <div className="flex min-h-screen items-center justify-center bg-[#092413] text-white">
+        Profile not found
+      </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#0e1a34] text-white">
+    <div className="min-h-screen bg-[#092413] text-white">
       <Profile data={profileData} />
     </div>
   );
