@@ -342,7 +342,7 @@ const Tags = () => {
         </div>
       </Marquee>
 
-      <div className="my-4"></div>
+      <div className="my-2"></div>
 
       <Marquee
         gradient={false}
@@ -905,7 +905,7 @@ const ResourcesHub = () => {
       <div className="py-8">
         <div className="container mx-auto px-4">
           {/* Search Bar */}
-          <div className="mb-10 flex flex-col items-center">
+          <div className="mb-4 flex flex-col items-center">
             <div className="relative w-full max-w-md">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#c5e3bf]">
                 <FontAwesomeIcon icon={faSearch} />
