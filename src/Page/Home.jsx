@@ -167,6 +167,30 @@ const TechFeatures = () => {
       link: "https://rgverse-resume-builder.vercel.app/",
     },
     {
+      title: "Resources",
+      description:
+        "Access a wide range of learning resources, tools, and libraries to boost your skills.",
+      image:
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80",
+      link: "/ResourcesHub",
+    },
+    {
+      title: "Project Showcase",
+      description:
+        "Showcase your projects, get feedback, and inspire others to collaborate.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHTVp3QcnqNb0TIdBGAr9Vq0d7ztWRdCDSy0Z7E5gdINoqzP8Bw&s=10&ec=72940544",
+      link: "/ProjectShowcase",
+    },
+    {
+      title: "Opportunities",
+      description:
+        "Explore various career and learning opportunities in the tech industry.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ijqoWoPj5GXXP1WNAyp5C12DzyDGd0t_7zRkH9CBRA&s&ec=72940544",
+      link: "/OpportunitiesHub",
+    },
+    {
       title: "Roadmaps",
       description:
         "Explore the best roadmaps provided by your seniors to become pro in each field",
@@ -181,30 +205,6 @@ const TechFeatures = () => {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmHkbgMwherDEFpY0Ygp5ydUKx1cS1r-GzPhZ91mLkP2arLgXAw&s=10&ec=72940544",
       link: "/OpenSourceProgram",
-    },
-    {
-      title: "Project Showcase",
-      description:
-        "Showcase your projects, get feedback, and inspire others to collaborate.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHTVp3QcnqNb0TIdBGAr9Vq0d7ztWRdCDSy0Z7E5gdINoqzP8Bw&s=10&ec=72940544",
-      link: "/ProjectShowcase",
-    },
-    {
-      title: "Resources",
-      description:
-        "Access a wide range of learning resources, tools, and libraries to boost your skills.",
-      image:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80",
-      link: "/ResourcesHub",
-    },
-    {
-      title: "Opportunities",
-      description:
-        "Explore various career and learning opportunities in the tech industry.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ijqoWoPj5GXXP1WNAyp5C12DzyDGd0t_7zRkH9CBRA&s&ec=72940544",
-      link: "/OpportunitiesHub",
     },
     {
       title: "Discussion",
