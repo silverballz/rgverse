@@ -27,6 +27,8 @@ import OpenSourceProgram from "./Page/OpenSourceProgram/OpenSourceProgram.jsx";
 import Roadmaps from "./Page/Roadmaps/Roadmaps.jsx";
 // Feature- ResourcesHub
 import ResourcesHub from "./Page/ResourcesHub/ResourcesHub.jsx";
+// Feature- OpportunitiesHub
+import OpportunitiesHub from "./Page/OpportunitiesHub/OpportunitiesHub.jsx";
 // About Us
 import AboutUs from "./components/AboutUs.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
@@ -96,6 +98,8 @@ function App() {
         <Route path="/Roadmaps" element={<Roadmaps />} />
         {/* Feature- ResourcesHub */}
         <Route path="/ResourcesHub" element={<ResourcesHub />} />
+        {/* Feature- OpportunitiesHub */}
+        <Route path="/OpportunitiesHub" element={<OpportunitiesHub />} />
         {/* About Us */}
         <Route path="/AboutUs" element={<AboutUs />} />
         {/* Page Not Found */}
