@@ -204,7 +204,7 @@ const TechFeatures = () => {
         "Explore various career and learning opportunities in the tech industry.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ijqoWoPj5GXXP1WNAyp5C12DzyDGd0t_7zRkH9CBRA&s&ec=72940544",
-      link: "/opportunities",
+      link: "/OpportunitiesHub",
     },
     {
       title: "Discussion",
