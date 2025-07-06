@@ -688,6 +688,11 @@ const resourceData = [
     iconColor: "#00fb69",
     iconBg: "rgba(0, 251, 105, 0.1)",
     link: "https://drive.google.com/your-dsa-resources-link",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 2,
@@ -700,6 +705,11 @@ const resourceData = [
     iconColor: "#ff6b6b",
     iconBg: "rgba(255, 107, 107, 0.1)",
     link: "https://example.com/interview-prep-guide.pdf",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 3,
@@ -712,6 +722,11 @@ const resourceData = [
     iconColor: "#f8f9fa",
     iconBg: "rgba(24, 24, 35, 0.7)",
     link: "https://github.com/your-coding-projects-repo",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 4,
@@ -724,6 +739,11 @@ const resourceData = [
     iconColor: "#4cc9f0",
     iconBg: "rgba(76, 201, 240, 0.1)",
     link: "https://example.com/best-online-courses-2025",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 5,
@@ -736,6 +756,11 @@ const resourceData = [
     iconColor: "#ffd166",
     iconBg: "rgba(255, 209, 102, 0.1)",
     link: "https://example.com/api-integration-handbook",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 6,
@@ -748,6 +773,11 @@ const resourceData = [
     iconColor: "#7209b7",
     iconBg: "rgba(114, 9, 183, 0.1)",
     link: "https://example.com/ml-advancements-2025",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 7,
@@ -760,6 +790,11 @@ const resourceData = [
     iconColor: "#ff6b6b",
     iconBg: "rgba(255, 107, 107, 0.1)",
     link: "https://example.com/gate-preparation-material.pdf",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 8,
@@ -772,6 +807,11 @@ const resourceData = [
     iconColor: "#e63946",
     iconBg: "rgba(230, 57, 70, 0.1)",
     link: "https://example.com/cold-emailing-templates",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 9,
@@ -784,6 +824,11 @@ const resourceData = [
     iconColor: "#f8f9fa",
     iconBg: "rgba(24, 24, 35, 0.7)",
     link: "https://github.com/your-placement-prep-kit",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 10,
@@ -796,6 +841,11 @@ const resourceData = [
     iconColor: "#ff6b6b",
     iconBg: "rgba(255, 107, 107, 0.1)",
     link: "https://example.com/aptitude-mastery-guide.pdf",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 11,
@@ -808,6 +858,11 @@ const resourceData = [
     iconColor: "#00fb69",
     iconBg: "rgba(0, 251, 105, 0.1)",
     link: "https://drive.google.com/your-company-project-ideas",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
   {
     id: 12,
@@ -820,6 +875,11 @@ const resourceData = [
     iconColor: "#4cc9f0",
     iconBg: "rgba(76, 201, 240, 0.1)",
     link: "https://example.com/frontend-development-resources",
+    contributors: [
+      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
+      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+      { name: "@Om", profileUrl: "/profile/Omkar23" },
+    ],
   },
 ];
 
@@ -866,6 +926,53 @@ const ResourceCardComponent = ({ resource, gridSpan }) => {
         <ResourceTitle>{resource.title}</ResourceTitle>
         <ResourceDescription>{resource.description}</ResourceDescription>
       </CardBody>
+      {Array.isArray(resource.contributors) &&
+        resource.contributors.length > 0 && (
+          <div
+            style={{
+              background: "inherit",
+              color: "#00fb69",
+              padding: "0.4rem 0.8rem",
+              borderRadius: "0.5rem",
+              margin: "0 1rem 0.5rem 1rem",
+              fontSize: "0.95em",
+              fontWeight: 500,
+              textAlign: "left",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.7em",
+              flexWrap: "wrap",
+            }}
+          >
+            <span style={{ marginRight: "0.5em" }}>Contributed by:</span>
+            {resource.contributors.map((contrib, idx) =>
+              contrib.profileUrl ? (
+                <a
+                  key={contrib.name + idx}
+                  href={contrib.profileUrl}
+                  style={{
+                    color: "#c5e3bf",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    marginRight: "0.5em",
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {contrib.name}
+                </a>
+              ) : (
+                <span
+                  key={contrib.name + idx}
+                  style={{ fontWeight: 700, marginRight: "0.5em" }}
+                >
+                  {contrib.name}
+                </span>
+              ),
+            )}
+          </div>
+        )}
       <CardFooter>
         {resource.tags.map((tag, index) => (
           <Tag key={index}>{tag}</Tag>
