@@ -101,7 +101,7 @@ function Card({ data }) {
         <div className="w-[55%] sm:w-[75%]">
           <h3>
             <a
-              className="flex items-center text-base font-bold hover:text-textSecondary dark:text-white"
+              className="flex items-center text-lg font-bold hover:text-textSecondary dark:text-white"
               href={data.portfolio}
               target="_blank"
               rel="noreferrer"
