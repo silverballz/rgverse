@@ -9,12 +9,11 @@ import ProfileSkeleton from "../components/ProfileSkeleton/ProfileSkeleton";
 import filenames from "../ProfilesList.json";
 import { ArrowLeft, Search, BookOpen } from "lucide-react";
 
-
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[rgba(20,47,33,0.1)] bg-transparent text-white shadow-none">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-        <a href="https://rgverse.vercel.app/">
+        <a href="/">
           <button className="flex items-center gap-2 rounded-full border border-white p-2 transition-colors hover:bg-[#0a291e]">
             <ArrowLeft className="h-5 w-5" />
             <span className="hidden md:inline">Back</span>
@@ -117,7 +116,7 @@ const StyledButton = styled.button`
 `;
 
 const FeatureCard = ({ title, description, image, link }) => {
-  const isComingSoon = title === "Discussion"
+  const isComingSoon = title === "Discussion";
   return (
     <div className="feature-card group relative h-full rounded-lg border border-gray-700 bg-white p-4 p-6 shadow shadow-lg transition duration-300 hover:scale-[1.02] dark:bg-textPrimary">
       <div className="mb-4 h-40 overflow-hidden rounded-lg">
@@ -223,8 +222,8 @@ const TechFeatures = () => {
     //   link: "aitools",
     // },
   ];
-    
-    return (
+
+  return (
     <section className="tech-features-section  bg-secondaryColor py-16 pt-0 text-white">
       <div className="mx-auto mb-16 max-w-4xl text-center">
         <h2 className="custom-font mb-6 text-4xl font-bold text-textSecondary">
@@ -259,11 +258,11 @@ const AuthorSection = () => {
   useEffect(() => {
     const fetchAuthorData = async () => {
       try {
-        const response = await fetch('/data/Piyush23.json');
+        const response = await fetch("/data/Piyush23.json");
         const data = await response.json();
         setAuthorData(data);
       } catch (error) {
-        console.error('Error fetching author data:', error);
+        console.error("Error fetching author data:", error);
       } finally {
         setLoading(false);
       }
@@ -274,16 +273,18 @@ const AuthorSection = () => {
 
   return (
     <section className="author-section bg-secondaryColor py-16 text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="custom-font mb-8 text-center text-3xl font-bold text-textSecondary">
+      <div className="container mx-auto px-2 xs:px-4">
+        <h2 className="custom-font mb-6 text-center text-2xl font-bold text-textSecondary xs:text-3xl">
           Meet the Creator
         </h2>
-        <div className="w-full">
-          {loading ? (
-            <ProfileSkeleton />
-          ) : (
-            authorData && <Profile data={authorData} />
-          )}
+        <div className="mx-auto w-full max-w-[95vw] px-1 xs:max-w-[500px] xs:px-2 sm:max-w-[700px] sm:px-4 md:max-w-[900px] lg:max-w-[1100px] lg:px-8">
+          <div className="rounded-xl bg-[#072b16] p-2 shadow-md xs:p-4 sm:p-6">
+            {loading ? (
+              <ProfileSkeleton />
+            ) : (
+              authorData && <Profile data={authorData} />
+            )}
+          </div>
         </div>
       </div>
     </section>
@@ -296,7 +297,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <TechFeatures />
-      {/* <AuthorSection /> */}
+      <AuthorSection />
       <Footer />
     </div>
   );
