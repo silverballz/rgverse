@@ -85,35 +85,35 @@ function Card({ data }) {
   return (
     <div className="mb-6 h-auto rounded-lg bg-white p-4 shadow dark:bg-textPrimary">
       <div className="relative flex gap-4">
-        <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-gray-200">
+        <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 xs:h-16 xs:w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
           {!showFallback ? (
             <img
               src={data.avatar}
               onError={() => setShowFallback(true)}
-              className="h-full w-full rounded-full"
+              className="h-full w-full rounded-full object-cover"
               alt="User Avatar"
             />
           ) : (
-            <FaUserCircle className="text-6xl text-gray-500" />
+            <FaUserCircle className="text-6xl text-gray-500 " />
           )}
         </div>
 
         <div className="w-[55%] sm:w-[75%]">
           <h3>
             <a
-              className="flex items-center text-lg font-bold hover:text-textSecondary dark:text-white"
+              className="flex items-center text-base font-bold hover:text-textSecondary dark:text-white"
               href={data.portfolio}
               target="_blank"
               rel="noreferrer"
             >
               {data.name}
               {data.verified && (
-                <FaCheckCircle className="ml-2 rounded-full border-[1px] border-[#0ea5e9] p-0.5 text-xl text-[#0ea5e9]" />
+                <FaCheckCircle className="ml-2 rounded-full border-[1px] border-[#0ea5e9] p-0.5 text-base text-[#0ea5e9] xs:text-lg sm:text-xl md:text-2xl" />
               )}
             </a>
           </h3>
-          <p className="flex items-center gap-x-1 text-sm dark:text-white">
-            <FaLocationDot />
+          <p className="flex items-center gap-x-1 text-sm dark:text-white ">
+            <FaLocationDot className="text-xs xs:text-sm sm:text-base md:text-lg" />
             {data.location}
           </p>
           <div className="flex overflow-hidden">
