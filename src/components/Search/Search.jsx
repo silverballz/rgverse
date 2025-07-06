@@ -34,6 +34,11 @@ function Search({ onSearch }) {
 
   useEffect(() => {
     setSearchValue(voiceText);
+    // Trigger search when voiceText changes and is not empty, and not skill search
+    if (voiceText && searchCriteria !== "skill") {
+      onSearch({ value: voiceText, criteria: searchCriteria });
+      setPrevSearchValue(voiceText);
+    }
   }, [voiceText]);
 
   const normalizeString = (str) =>
