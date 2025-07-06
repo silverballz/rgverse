@@ -105,7 +105,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-          <p className="text-sm">© 2024 RGVerse. All Rights Reserved.</p>
+          <p className="text-sm">© 2025 RGVerse. All Rights Reserved.</p>
         </div>
       </div>
       {isModalOpen && (
