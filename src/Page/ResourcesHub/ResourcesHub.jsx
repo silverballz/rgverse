@@ -29,7 +29,113 @@ function useWindowWidth() {
   return width;
 }
 
-const Navbar = () => {
+// StyledButton copied from Roadmaps.jsx
+const StyledButton = styled.button`
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  padding: 1px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b19);
+  position: relative;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+  animation: zoom 3s ease-in-out infinite;
+  margin-top: 0;
+
+  &:hover {
+    transform: scale(0.98);
+    animation-play-state: paused;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 60%;
+    border-radius: 120px;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 20px #ffffff38;
+    z-index: -1;
+    transition: box-shadow 0.3s;
+  }
+
+  &:hover::after {
+    box-shadow: 0 0 10px #ffffff18;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    border-radius: 16px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+      circle 60px at 0% 100%,
+      #00ff91,
+      #228504,
+      transparent
+    );
+    box-shadow: -10px 10px 30px #00ff482d;
+    transition:
+      background 0.3s,
+      box-shadow 0.3s;
+  }
+
+  &:hover .blob1 {
+    box-shadow: -5px 5px 20px #000;
+  }
+
+  .inner {
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: #fff;
+    z-index: 3;
+    position: relative;
+    background: radial-gradient(circle 80px at 80% -50%, #777777, #0f110f);
+    transition: background 0.3s;
+  }
+
+  &:hover .inner {
+    background: radial-gradient(circle 80px at 80% -50%, #333333, #0f0f0f);
+  }
+
+  .inner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    background: radial-gradient(
+      circle 60px at 0% 100%,
+      #33ff001a,
+      #00ff2f11,
+      transparent
+    );
+    position: absolute;
+    transition: opacity 0.3s;
+  }
+
+  &:hover .inner::before {
+    opacity: 0;
+  }
+
+  @keyframes zoom {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+const Navbar = ({ onOpenModal }) => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[rgba(20,47,33,0.1)] bg-[#0d3528] text-white shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
@@ -39,7 +145,12 @@ const Navbar = () => {
             <span className="hidden md:inline">Back</span>
           </button>
         </a>
-
+        <div className="flex flex-1 items-center justify-center">
+          <StyledButton onClick={onOpenModal}>
+            <div className="blob1" />
+            <div className="inner">Add Resource</div>
+          </StyledButton>
+        </div>
         <div className="text-2xl font-bold">
           <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
         </div>
@@ -985,6 +1096,9 @@ const ResourceCardComponent = ({ resource, gridSpan }) => {
 const ResourcesHub = () => {
   const location = useLocation();
   const [search, setSearch] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -1006,7 +1120,7 @@ const ResourcesHub = () => {
 
   return (
     <div className="background-wrapper min-h-screen bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364]">
-      <Navbar />
+      <Navbar onOpenModal={handleOpenModal} />
       <Hero />
       <Tags />
       <div className="py-8">
@@ -1038,6 +1152,41 @@ const ResourcesHub = () => {
         </div>
       </div>
       <Footer />
+      {/* Modal for Add Resource */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="w-full max-w-md rounded-lg bg-[#092413] p-6 text-white">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-[#cffab6]">
+                Contribute a Valuable Resource!
+              </h2>
+              <button
+                onClick={handleCloseModal}
+                className="text-[#cffab6] hover:text-white"
+              >
+                X
+              </button>
+            </div>
+            <iframe
+              src="https://tally.so/r/w40JQO"
+              width="100%"
+              height="500px"
+              frameBorder="0"
+              title="Tally Form"
+              className="rounded-lg"
+            ></iframe>
+            <div className="mt-4 flex justify-end">
+              <button
+                type="button"
+                onClick={handleCloseModal}
+                className="rounded-lg bg-[#00fb69] px-4 py-2 text-black transition-colors hover:bg-[#4c6d4a]"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
