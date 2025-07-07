@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { ArrowLeft, Search, BookOpen } from "lucide-react";
 import { Footer } from "../components/Footer/Footer";
 import styled from "styled-components";
-import Marquee from 'react-fast-marquee'; // Import Marquee
+import Marquee from "react-fast-marquee"; // Import Marquee
 
-const Navbar = () => {
+const Navbar = ({ onOpenModal }) => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[rgba(20,47,33,0.1)] bg-[#0d3528] text-white shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
@@ -14,19 +14,19 @@ const Navbar = () => {
             <span className="hidden md:inline">Back</span>
           </button>
         </a>
-
+        <div className="flex flex-1 items-center justify-center">
+          <StyledButton onClick={onOpenModal}>
+            <div className="blob1" />
+            <div className="inner">Add Notes</div>
+          </StyledButton>
+        </div>
         <div className="text-2xl font-bold">
-          <img
-            src="./RGVerse ICON.png"
-            alt="RGVerse"
-            className="h-12 w-12"
-          />
+          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
         </div>
       </div>
     </nav>
   );
 };
-
 
 const Hero = () => {
   return (
@@ -287,71 +287,70 @@ const Tags = () => {
     "Lab Manuals",
   ];
 
-return (
-  <section id="tags" className="mb-0 w-full pt-12 sm:py-16">
-    <h1 className="text-md mb-8 text-center font-bold text-[#00fb69] lg:text-2xl">
-      Unlock All Tech Resources in One Place
-    </h1>
+  return (
+    <section id="tags" className="mb-0 w-full pt-12 sm:py-16">
+      <h1 className="text-md mb-8 text-center font-bold text-[#00fb69] lg:text-2xl">
+        Unlock All Tech Resources in One Place
+      </h1>
 
-    {/* Right to Left Scrolling */}
-    <Marquee
-      gradient={false}
-      speed={60}
-      pauseOnHover={true}
-      loop={0}
-      className="w-full"
-    >
-      <div className="flex w-full flex-nowrap items-center">
-        {[...tags, ...tags, ...tags].map((text, index) => (
-          <span key={index} className="tag-item mr-6">
-            {text}
-          </span>
-        ))}
-      </div>
-    </Marquee>
+      {/* Right to Left Scrolling */}
+      <Marquee
+        gradient={false}
+        speed={60}
+        pauseOnHover={true}
+        loop={0}
+        className="w-full"
+      >
+        <div className="flex w-full flex-nowrap items-center">
+          {[...tags, ...tags, ...tags].map((text, index) => (
+            <span key={index} className="tag-item mr-6">
+              {text}
+            </span>
+          ))}
+        </div>
+      </Marquee>
 
-    <div className="my-4"></div>
+      <div className="my-4"></div>
 
-    {/* Left to Right Scrolling */}
-    <Marquee
-      gradient={false}
-      speed={60}
-      pauseOnHover={true}
-      loop={0}
-      direction="right"
-      className="w-full"
-    >
-      <div className="flex w-full flex-nowrap items-center">
-        {[...tags, ...tags, ...tags].map((text, index) => (
-          <span key={index} className="tag-item mr-6">
-            {text}
-          </span>
-        ))}
-      </div>
-    </Marquee>
+      {/* Left to Right Scrolling */}
+      <Marquee
+        gradient={false}
+        speed={60}
+        pauseOnHover={true}
+        loop={0}
+        direction="right"
+        className="w-full"
+      >
+        <div className="flex w-full flex-nowrap items-center">
+          {[...tags, ...tags, ...tags].map((text, index) => (
+            <span key={index} className="tag-item mr-6">
+              {text}
+            </span>
+          ))}
+        </div>
+      </Marquee>
 
-    <style jsx>{`
-      .tag-item {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-        padding: 0.5rem 1.5rem;
-        border-radius: 9999px;
-        border: 1px solid #00fb69;
-        background-color: rgba(13, 53, 40, 0.6);
-        color: #e2e8f0;
-        font-size: 0.915rem;
-        text-align: center;
-        min-width: max-content;
-      }
-    `}</style>
-  </section>
-);
+      <style jsx>{`
+        .tag-item {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          white-space: nowrap;
+          padding: 0.5rem 1.5rem;
+          border-radius: 9999px;
+          border: 1px solid #00fb69;
+          background-color: rgba(13, 53, 40, 0.6);
+          color: #e2e8f0;
+          font-size: 0.915rem;
+          text-align: center;
+          min-width: max-content;
+        }
+      `}</style>
+    </section>
+  );
 };
 
 const NotesCards = () => {
-    
   const [searchTerm, setSearchTerm] = useState("");
 
   const subjectsBySemester = [
@@ -442,7 +441,6 @@ const NotesCards = () => {
       `Semester ${semester.semester} ${semester.subjects.join(" ")}`.toLowerCase();
     return searchContent.includes(searchTerm.toLowerCase());
   });
-
 
   return (
     <section className="Notes-section mx-auto w-full px-4 py-8 text-white lg:max-w-[80%]">
@@ -556,7 +554,7 @@ const StyledButton = styled.button`
     background 0.3s,
     transform 0.3s;
   animation: zoom 3s ease-in-out infinite;
-  margin-top: 16px;
+  margin-top: 0;
 
   &:hover {
     transform: scale(0.98);
@@ -578,6 +576,29 @@ const StyledButton = styled.button`
 
   &:hover::after {
     box-shadow: 0 0 10px #ffffff18;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    border-radius: 16px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+      circle 60px at 0% 100%,
+      #00ff91,
+      #228504,
+      transparent
+    );
+    box-shadow: -10px 10px 30px #00ff482d;
+    transition:
+      background 0.3s,
+      box-shadow 0.3s;
+  }
+
+  &:hover .blob1 {
+    box-shadow: -5px 5px 20px #000;
   }
 
   .inner {
@@ -604,7 +625,6 @@ const StyledButton = styled.button`
     }
   }
 `;
-
 
 const StyledDot = styled.div`
   .dot {
@@ -835,15 +855,52 @@ const StyledWrapper = styled.div`
   }
 `;
 
-
 const Notes = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
   return (
     <div className="background-wrapper min-h-screen bg-[#092413]">
-      <Navbar />
+      <Navbar onOpenModal={handleOpenModal} />
       <Hero />
       <Tags />
       <NotesCards />
       <Footer />
+      {/* Modal for Add Notes */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="w-full max-w-md rounded-lg bg-[#092413] p-6 text-white">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-[#cffab6]">
+                Help Juniors with Your Notes!
+              </h2>
+              <button
+                onClick={handleCloseModal}
+                className="text-[#cffab6] hover:text-white"
+              >
+                X
+              </button>
+            </div>
+            <iframe
+              src="https://tally.so/r/nWbEzP"
+              width="100%"
+              height="500px"
+              frameBorder="0"
+              title="Tally Form"
+              className="rounded-lg"
+            ></iframe>
+            <div className="mt-4 flex justify-end">
+              <button
+                type="button"
+                onClick={handleCloseModal}
+                className="rounded-lg bg-[#00fb69] px-4 py-2 text-black transition-colors hover:bg-[#4c6d4a]"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
