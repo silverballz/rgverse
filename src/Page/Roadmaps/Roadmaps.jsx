@@ -920,6 +920,10 @@ const Roadmaps = () => {
       <Navbar onOpenModal={handleOpenModal} />
       <Hero />
       <Tags />
+      {/* Info message about dummy data */}
+      <div className="mx-auto my-6 max-w-3xl rounded-lg border border-yellow-400 bg-yellow-100 bg-opacity-10 px-6 py-4 text-center text-lg font-semibold text-yellow-300 shadow">
+        These are sample roadmaps for now — the real ones will be added shortly.
+      </div>
       <RoadmapsGrid />
       <RoleBasedRoadmaps />
       {/* Modal for Add Roadmap */}
