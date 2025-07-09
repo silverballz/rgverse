@@ -26,11 +26,7 @@ const Navbar = () => {
         </a>
 
         <div className="text-2xl font-bold">
-          <img
-            src="./RGVerse ICON.png"
-            alt="RGVerse"
-            className="h-12 w-12"
-          />
+          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
         </div>
       </div>
     </nav>
@@ -878,7 +874,7 @@ const OSProgramCardComponent = ({
     stipend === "true" ||
     stipend === "yes" ||
     stipend === "Yes";
-  
+
   return (
     <StyledOSProgramCard id={shareLink.substring(1)}>
       <div className="poster">
@@ -1060,30 +1056,124 @@ const OSProgramList = [
     shareLink: "#seasonofdocs",
   },
   {
-    organizer: "Kharagpur Open Source Society",
-    title: "KOSS Winter of Code 2024-25",
+    organizer: "Social",
+    title: "Social Summer of Code",
     description:
-      "Winter-long open-source program for students to learn and contribute to FOSS projects with mentorship and rewards.",
-    timelineLink: "November 2024",
-    stipend: "yes",
-    type: "Student-friendly, Open Source",
-    exploreLink: "https://kossiitkgp.org/woc",
-    applyLink: "https://kossiitkgp.org/woc",
-    poster: "/assets/opensourceProgram/GSOC.png",
-    shareLink: "#woc2024",
+      "2‑month solo open‑source program pairing contributors with OSS projects, mentorship, prizes, and certificates.",
+    timelineLink: "https://ssoc.devfolio.co/overview",
+    stipend: "no",
+    type: "Student‑friendly, Open Source",
+    exploreLink: "https://ssoc.devfolio.co/overview",
+    applyLink: "https://ssoc.devfolio.co/overview",
+    poster: "/assets/opensourceProgram/SSOC.webp",
+    shareLink: "#ssoc",
   },
+
   {
     organizer: "DigitalOcean",
-    title: "Hacktoberfest 2025",
+    title: "DigitalOcean Open Source Credits",
     description:
-      "Annual event in October that encourages contributions to open source via GitHub. Complete PRs and earn swag or plant a tree!",
-    timelineLink: "October 1 - October 31",
+      "Grants cloud credits to support development and testing needs of approved open-source projects.",
+    timelineLink:
+      "https://www.digitalocean.com/open-source/credits-for-projects",
     stipend: "yes",
-    type: "Global, Open Source",
-    exploreLink: "https://hacktoberfest.com/",
-    applyLink: "https://hacktoberfest.com/",
-    poster: "/assets/opensourceProgram/GSOC.png",
-    shareLink: "#hacktoberfest2025",
+    type: "Open Source, Infrastructure Support",
+    exploreLink:
+      "https://www.digitalocean.com/open-source/credits-for-projects",
+    applyLink: "https://www.digitalocean.com/open-source/credits-for-projects",
+    poster: "/assets/opensourceProgram/DO.png",
+    shareLink: "#dooscredits",
+  },
+  {
+    organizer: "LF",
+    title: "Linux Kernel Mentorship Program",
+    description:
+      "Mentorship-based program helping contributors get started with Linux kernel and related OSS projects.",
+    timelineLink: "https://www.linuxfoundation.org/about/mentorship-programs",
+    stipend: "yes",
+    type: "Professional, Open Source",
+    exploreLink: "https://mentorship.lfx.linuxfoundation.org/",
+    applyLink: "https://mentorship.lfx.linuxfoundation.org/",
+    poster: "/assets/opensourceProgram/LFX.avif",
+    shareLink: "#linuxmentorship",
+  },
+  {
+    organizer: "Redox",
+    title: "Redox Summer of Code",
+    description:
+      "Rust-based open source internship where contributors work on Redox OS projects during summer.",
+    timelineLink: "https://www.redox-os.org/uk/rsoc/",
+    stipend: "yes",
+    type: "Student-friendly, Open Source",
+    exploreLink: "https://www.redox-os.org/uk/rsoc/",
+    applyLink: "https://www.redox-os.org/uk/rsoc/",
+    poster: "/assets/opensourceProgram/redoxsoc.png",
+    shareLink: "#rsoc",
+  },
+  {
+    organizer: "FOSSASIA",
+    title: "FOSSASIA Internship Programme",
+    description:
+      "Open source internships with mentorship, project-based tasks, and Codeheat contests for beginners.",
+    timelineLink: "https://fossasia.org/internship/",
+    stipend: "yes",
+    type: "Student-friendly, Open Source",
+    exploreLink: "https://fossasia.org/internship/",
+    applyLink: "https://fossasia.org/internship/",
+    poster: "/assets/opensourceProgram/fossasia.webp",
+    shareLink: "#fossasiaintern",
+  },
+  {
+    organizer: "LF",
+    title: "Open Mainframe Project Mentorship",
+    description:
+      "Part of Linux Foundation programs mentoring students on mainframe-related open source technologies.",
+    timelineLink: "https://www.openmainframeproject.org/projects/mentorship",
+    stipend: "yes",
+    type: "Student-friendly, Open Source",
+    exploreLink: "https://www.openmainframeproject.org/projects/mentorship",
+    applyLink: "https://mentorship.lfx.linuxfoundation.org/",
+    poster: "/assets/opensourceProgram/OMPM.jpeg",
+    shareLink: "#mainframeMentorship",
+  },
+  {
+    organizer: "OSS Community",
+    title: "24 Pull Requests",
+    description:
+      "Annual December initiative to encourage developers to submit daily open source pull requests.",
+    timelineLink: "https://24pullrequests.com/",
+    stipend: "no",
+    type: "Community Event, Open Source",
+    exploreLink: "https://24pullrequests.com/",
+    applyLink: "https://24pullrequests.com/",
+    poster: "/assets/opensourceProgram/24pull.webp",
+    shareLink: "#24pr",
+  },
+  {
+    organizer: "Processing",
+    title: "Processing Foundation Fellowship",
+    description:
+      "Supports artists and developers contributing to open source creative coding tools.",
+    timelineLink: "https://processingfoundation.org/fellowships",
+    stipend: "yes",
+    type: "Creative, Open Source",
+    exploreLink: "https://processingfoundation.org/fellowships",
+    applyLink: "https://processingfoundation.org/fellowships",
+    poster: "/assets/opensourceProgram/processing.jpg",
+    shareLink: "#processingfellowship",
+  },
+  {
+    organizer: "Haskell.org",
+    title: "Summer of Haskell",
+    description:
+      "Summer internship program to promote Haskell open source development through mentorship.",
+    timelineLink: "https://summer.haskell.org/",
+    stipend: "yes",
+    type: "Student-friendly, Open Source",
+    exploreLink: "https://summer.haskell.org/",
+    applyLink: "https://summer.haskell.org/",
+    poster: "/assets/opensourceProgram/haskell.org.png",
+    shareLink: "#summerofhaskell",
   },
 ];
 
