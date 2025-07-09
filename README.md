@@ -108,4 +108,4 @@ http://localhost:3000
 
 Have questions or suggestions? Get in touch with us:
 
-Email: rgyerse2025@gmail.com
+Email: rgverse2025@gmail.com
