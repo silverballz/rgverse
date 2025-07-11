@@ -63,6 +63,7 @@ function Profile({ data }) {
 function Card({ data }) {
   const cardRef = React.useRef();
   const [showFallback, setShowFallback] = React.useState(false);
+  const [retryCount, setRetryCount] = React.useState(0);
 
   const handleWheel = (event) => {
     event.stopPropagation();
@@ -82,6 +83,22 @@ function Card({ data }) {
     cardRef.current.addEventListener("wheel", handleWheel, { passive: false });
   }, []);
 
+  React.useEffect(() => {
+    if (retryCount > 0 && retryCount < 3) {
+      const timer = setTimeout(() => setShowFallback(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [retryCount]);
+
+  const handleImageError = () => {
+    if (retryCount < 3) {
+      setRetryCount(retryCount + 1);
+      setShowFallback(false);
+    } else {
+      setShowFallback(true);
+    }
+  };
+
   return (
     <div className="mb-6 h-auto rounded-lg bg-white p-4 shadow dark:bg-textPrimary">
       <div className="relative flex gap-4">
@@ -89,7 +106,7 @@ function Card({ data }) {
           {!showFallback ? (
             <img
               src={data.avatar}
-              onError={() => setShowFallback(true)}
+              onError={handleImageError}
               className="h-full w-full rounded-full object-cover"
               alt="User Avatar"
             />
