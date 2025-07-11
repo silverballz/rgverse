@@ -9,13 +9,13 @@ app.use(express.json());
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
   // Configure your email transport (using Gmail here)
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "rgverse2025@gmail.com",
-      pass: "wenwdaqolbwvueri",
-    },
-  });
+   const transporter = nodemailer.createTransport({
+     service: "gmail",
+     auth: {
+       user: process.env.GMAIL_USER,
+       pass: process.env.GMAIL_PASS,
+     },
+   });
 
   const mailOptions = {
     from: email,
