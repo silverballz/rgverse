@@ -26,7 +26,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="hero-section flex flex-col items-center justify-center bg-secondaryColor pb-5 text-white">
+    <section className="bg-transparent hero-section flex flex-col items-center justify-center bg-secondaryColor pb-5 text-white">
       <div className="flex w-full flex-col items-center justify-center px-8 text-center">
         <img
           src={LOGO}
@@ -224,7 +224,7 @@ const TechFeatures = () => {
   ];
 
   return (
-    <section className="tech-features-section  bg-secondaryColor py-16 pt-0 text-white">
+    <section className="bg-transparent tech-features-section py-16 pt-0 text-white">
       <div className="mx-auto mb-16 max-w-4xl text-center">
         <h2 className="custom-font mb-6 text-4xl font-bold text-textSecondary">
           Dive into RGVerse
@@ -272,7 +272,7 @@ const AuthorSection = () => {
   }, []);
 
   return (
-    <section className="author-section bg-secondaryColor py-16 text-white">
+    <section className="author-section bg-transparent py-16 text-white">
       <div className="container mx-auto px-2 xs:px-4">
         <h2 className="custom-font mb-6 text-center text-2xl font-bold text-textSecondary xs:text-3xl">
           Meet the Creator
