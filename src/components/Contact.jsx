@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-secondaryColor px-4 py-8">
+    <div className="background-wrapper flex min-h-screen flex-col items-center justify-center px-4 py-8">
       <nav className="mb-8 w-full max-w-2xl">
         <button
           onClick={() => navigate(-1)}
