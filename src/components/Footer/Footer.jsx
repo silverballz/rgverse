@@ -43,7 +43,7 @@ export const Footer = () => {
               </a>
             </div>
             <div className="flex flex-col space-y-4">
-              <a href="*" className="text-sm hover:text-[#08fb00]">
+              <a href="/Contact" className="text-sm hover:text-[#08fb00]">
                 Contact
               </a>
               <button
