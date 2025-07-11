@@ -1,6 +1,17 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const cors = require("cors");
+const cors = require('cors');
+
+const allowedOrigins = [
+  'https://rgverse.vercel.app', 
+  'http://localhost:3000'       
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 
 const app = express();
 app.use(cors());
@@ -8,7 +19,6 @@ app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
-  // Configure your email transport (using Gmail here)
    const transporter = nodemailer.createTransport({
      service: "gmail",
      auth: {
