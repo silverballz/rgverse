@@ -31,6 +31,7 @@ import ResourcesHub from "./Page/ResourcesHub/ResourcesHub.jsx";
 import OpportunitiesHub from "./Page/OpportunitiesHub/OpportunitiesHub.jsx";
 // About Us
 import AboutUs from "./components/AboutUs.jsx";
+import Contact from "./components/Contact.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
 
 ReactGA.initialize("G-RPQTJTX11Z"); // Initialize Google Analytics with your tracking ID
@@ -102,6 +103,7 @@ function App() {
         <Route path="/OpportunitiesHub" element={<OpportunitiesHub />} />
         {/* About Us */}
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Contact" element={<Contact />} />
         {/* Page Not Found */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
