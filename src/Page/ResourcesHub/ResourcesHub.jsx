@@ -798,198 +798,289 @@ const resourceData = [
     icon: faGoogleDrive,
     iconColor: "#00fb69",
     iconBg: "rgba(0, 251, 105, 0.1)",
-    link: "https://drive.google.com/your-dsa-resources-link",
+    links: [
+      {
+        url: "https://drive.google.com/drive/folders/1Da_v5uHIvBscWcRRgMsYGq-hJ00dQL9Y",
+        label: "Main Drive Folder",
+        icon: faGoogleDrive,
+      },
+      {
+        url: "https://docs.google.com/spreadsheets/d/1SB9SudeHrS729P38isNxwBIuB09p7wxa/edit?gid=367540931#gid=367540931",
+        label: "Extra DSA Sheets",
+        icon: faGoogleDrive,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 2,
-    type: "PDF",
-    title: "Interview Preparation Guide",
+    type: "Google Drive",
+    title: "GATE Resources",
     description:
-      "Detailed guide covering all aspects of technical interviews from coding to system design.",
-    tags: ["#Interview", "#Guide", "#Preparation"],
-    icon: faFilePdf,
-    iconColor: "#ff6b6b",
-    iconBg: "rgba(255, 107, 107, 0.1)",
-    link: "https://example.com/interview-prep-guide.pdf",
+      "GATE preparation resources for all branches at one place – notes, PYQs, strategies, and drives.",
+    tags: ["#GATE", "#Preparation", "#AllBranches"],
+    icon: faGoogleDrive,
+    iconColor: "#00fb69",
+    iconBg: "rgba(0, 251, 105, 0.1)",
+    links: [
+      {
+        url: "https://drive.google.com/drive/u/3/folders/1cizSKoqU8ihukDjUMPz7iSZUHkxfjHa7",
+        label: "GATE CSE I",
+        icon: faGoogleDrive,
+      },
+      {
+        url: "https://github.com/baquer/GATE-and-CSE-Resources-for-Students",
+        label: "GATE CSE II",
+        icon: faGoogleDrive,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 3,
-    type: "GitHub",
-    title: "Coding Projects Repository",
+    type: "Google Drive",
+    title: "Programming Language Notes",
     description:
-      "Collection of real-world projects to enhance your portfolio and practical coding skills.",
-    tags: ["#Projects", "#Coding", "#Portfolio"],
-    icon: fabGithub,
-    iconColor: "#f8f9fa",
-    iconBg: "rgba(24, 24, 35, 0.7)",
-    link: "https://github.com/your-coding-projects-repo",
+      "Handpicked notes and resources for C, C++, Python, Java, and more – from basics to advanced topics.",
+    tags: ["#Programming", "#Notes", "#Languages"],
+    icon: faGoogleDrive,
+    iconColor: "#00fb69",
+    iconBg: "rgba(0, 251, 105, 0.1)",
+    links: [
+      {
+        url: "https://drive.google.com/drive/folders/1gFCtzasHnOOdixNGY3IpPhcl9iDS9Gfx?usp=sharing",
+        label: "View Drive Folder",
+        icon: faGoogleDrive,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 4,
-    type: "Web",
-    title: "Best Online Courses 2025",
+    type: "Document",
+    title: "Top Certified Courses & Certifications",
     description:
-      "Curated list of the best online courses for tech skills from platforms like Coursera, Udemy, and edX.",
-    tags: ["#Courses", "#Learning", "#Online"],
-    icon: faGlobe,
-    iconColor: "#4cc9f0",
-    iconBg: "rgba(76, 201, 240, 0.1)",
-    link: "https://example.com/best-online-courses-2025",
+      "Curated list of in‑demand certification programs—Google Career Certificates, freeCodeCamp, and more—with global recognition and practical learning.",
+    tags: ["#Certification", "#Career", "#SkillUp"],
+    icon: faBook,
+    iconColor: "#ffd166",
+    iconBg: "rgba(255, 209, 102, 0.1)",
+    links: [
+      {
+        url: "https://docs.google.com/document/d/1cKz8SqUOqOZ2h9u_xe1wDfV0G4142dLdMWdDrAZC9HM/edit?tab=t.0",
+        label: "Google Career Certificates",
+        icon: faBook,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 5,
-    type: "Documentation",
-    title: "API Integration Handbook",
+    type: "Web",
+    title: "Open‑Access Research Papers",
     description:
-      "Comprehensive guide to integrating popular APIs with best practices and examples.",
-    tags: ["#API", "#Integration", "#Development"],
-    icon: faBook,
-    iconColor: "#ffd166",
-    iconBg: "rgba(255, 209, 102, 0.1)",
-    link: "https://example.com/api-integration-handbook",
+      "Curated collection of research papers across engineering and tech—accessible via public Google Drive from CORE open‑access repository.",
+    tags: ["#Research", "#Papers", "#AllBranches"],
+    icon: faGlobe,
+    iconColor: "#4cc9f0",
+    iconBg: "rgba(76, 201, 240, 0.1)",
+    links: [
+      {
+        url: "https://core.ac.uk/",
+        label: "Browse CORE Papers",
+        icon: faGlobe,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 6,
-    type: "Research Paper",
-    title: "ML Advancements 2025",
+    type: "GitHub",
+    title: "Projects with Source Code",
     description:
-      "Collection of groundbreaking machine learning research papers from top conferences.",
-    tags: ["#ML", "#Research", "#AI"],
-    icon: faSearch,
-    iconColor: "#7209b7",
-    iconBg: "rgba(114, 9, 183, 0.1)",
-    link: "https://example.com/ml-advancements-2025",
+      "Explore a curated list of beginner to advanced-level projects from various domains with complete open-source code on GitHub.",
+    tags: ["#Projects", "#OpenSource", "#GitHub"],
+    icon: fabGithub,
+    iconColor: "#f8f9fa",
+    iconBg: "rgba(24, 24, 35, 0.7)",
+    links: [
+      {
+        url: "https://github.com/topics/engineering-projects",
+        label: "Explore GitHub Projects",
+        icon: fabGithub,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 7,
-    type: "PDF",
-    title: "GATE Preparation Material",
+    type: "GitHub",
+    title: "Full Stack Development Resources",
     description:
-      "Complete study material, previous year papers, and strategies for GATE exam success.",
-    tags: ["#GATE", "#Exam", "#Study"],
-    icon: faFilePdf,
-    iconColor: "#ff6b6b",
-    iconBg: "rgba(255, 107, 107, 0.1)",
-    link: "https://example.com/gate-preparation-material.pdf",
+      "Comprehensive GitHub repositories covering frontend, backend, databases, authentication, and deployment. Ideal for mastering full stack development.",
+    tags: ["#FullStack", "#GitHub", "#Resources"],
+    icon: fabGithub,
+    iconColor: "#f8f9fa",
+    iconBg: "rgba(24, 24, 35, 0.7)",
+    links: [
+      {
+        url: "https://github.com/iamismile/web-dev-resources?tab=readme-ov-file#-html-and-css",
+        label: "Explore Repository",
+        icon: fabGithub,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 8,
-    type: "Template",
-    title: "Cold Emailing Templates",
+    type: "GitHub",
+    title: "Best Youtube Resources",
     description:
-      "Professionally crafted templates for effective networking and job applications.",
-    tags: ["#Networking", "#Email", "#Job"],
-    icon: faEnvelope,
-    iconColor: "#e63946",
-    iconBg: "rgba(230, 57, 70, 0.1)",
-    link: "https://example.com/cold-emailing-templates",
+      "Top YouTube channels and playlists for coding, CS, and dev—curated in a GitHub repo.",
+    tags: ["#YouTube", "#Learning", "#GitHub"],
+    icon: fabGithub,
+    iconColor: "#f8f9fa",
+    iconBg: "rgba(24, 24, 35, 0.7)",
+    links: [
+      {
+        url: "https://github.com/Rohith2201/Coding-Resources/blob/main/youtube.md",
+        label: "Explore GitHub List",
+        icon: fabGithub,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 9,
-    type: "GitHub",
-    title: "Placement Preparation Kit",
+    type: "Web",
+    title: "Data Science Resources",
     description:
-      "Repository with coding problems, company-specific questions, and interview experiences.",
-    tags: ["#Placement", "#Interview", "#Coding"],
-    icon: fabGithub,
-    iconColor: "#f8f9fa",
-    iconBg: "rgba(24, 24, 35, 0.7)",
-    link: "https://github.com/your-placement-prep-kit",
+      "Handpicked tutorials, datasets, ML guides, and notebooks to kickstart your data science journey.",
+    tags: ["#MachineLearning", "#DataScience", "#AI"],
+    icon: faGlobe,
+    iconColor: "#4cc9f0",
+    iconBg: "rgba(76, 201, 240, 0.1)",
+    links: [
+      {
+        url: "https://github.com/ossu/data-science",
+        label: "Open Source Data Science Path",
+        icon: faGlobe,
+      },
+      {
+        url: "https://www.kaggle.com/learn",
+        label: "Kaggle Learning Tracks",
+        icon: faGlobe,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 10,
-    type: "PDF",
-    title: "Aptitude Mastery Guide",
-    description:
-      "Comprehensive guide covering quantitative, logical, and verbal aptitude topics.",
-    tags: ["#Aptitude", "#Quant", "#Logical"],
-    icon: faFilePdf,
-    iconColor: "#ff6b6b",
-    iconBg: "rgba(255, 107, 107, 0.1)",
-    link: "https://example.com/aptitude-mastery-guide.pdf",
+    type: "Google Drive",
+    title: "Aptitude Material Drive",
+    description: "A comprehensive Material With Important Topics in Aptitude",
+    tags: ["#Aptitude", "#Placement", "#Reasoning"],
+    icon: faGoogleDrive,
+    iconColor: "#00fb69",
+    iconBg: "rgba(0, 251, 105, 0.1)",
+    links: [
+      {
+        url: "https://drive.google.com/drive/folders/1Ks8MWfWahrVwOQ4qFRQiSdS32TcbBXGR",
+        label: "Access Drive Folder",
+        icon: faGoogleDrive,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 11,
-    type: "Google Drive",
-    title: "Company-wise Project Ideas",
+    type: "Web",
+    title: "AI Tools Collection",
     description:
-      "Project ideas tailored to specific company expectations and tech stacks.",
-    tags: ["#Projects", "#Company", "#Portfolio"],
-    icon: faGoogleDrive,
-    iconColor: "#00fb69",
-    iconBg: "rgba(0, 251, 105, 0.1)",
-    link: "https://drive.google.com/your-company-project-ideas",
+      "Explore top AI tools for productivity, coding, content creation, design, and more—all in one place.",
+    tags: ["#AI", "#Productivity", "#Tools"],
+    icon: faGlobe,
+    iconColor: "#4cc9f0",
+    iconBg: "rgba(76, 201, 240, 0.1)",
+    links: [
+      {
+        url: "https://www.toolify.ai/",
+        label: "Visit Collection",
+        icon: faGlobe,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
   {
     id: 12,
     type: "Web",
-    title: "Frontend Development Resources",
+    title: "Algorithm Visualizer Tools",
     description:
-      "Curated list of frameworks, libraries, tools, and learning resources for modern frontend development.",
-    tags: ["#Frontend", "#Web", "#React"],
+      "Interactive platforms to visualize and understand data structures and algorithms in real-time.",
+    tags: ["#DSA", "#Algorithms", "#Visualizer"],
     icon: faGlobe,
     iconColor: "#4cc9f0",
     iconBg: "rgba(76, 201, 240, 0.1)",
-    link: "https://example.com/frontend-development-resources",
+    links: [
+      {
+        url: "https://visualgo.net/en",
+        label: "VisuAlgo",
+        icon: faGlobe,
+      },
+      {
+        url: "https://algorithm-visualizer.org",
+        label: "Algorithm Visualizer",
+        icon: faGlobe,
+      },
+    ],
     contributors: [
-      { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-      { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-      { name: "@Om", profileUrl: "/profile/Omkar23" },
+      { name: "@Piyush", profileUrl: "/profile/Piyush23" },
+      { name: "@Name", profileUrl: "/profile/Name" },
+      { name: "@Name", profileUrl: "/profile/Name" },
     ],
   },
 ];
@@ -1012,84 +1103,133 @@ const gridSpans = [
   { col: 1, row: 1 },
 ];
 
+// Modal for multiple resource links
+const ResourceModal = ({ open, onClose, title, links }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+      <div className="relative w-full max-w-md rounded-xl border border-white bg-gradient-to-b from-[#162e1a] to-[#092413] p-6 shadow-xl">
+        <button
+          onClick={onClose}
+          className="absolute right-2 top-2 text-xl font-bold text-[#00fb69] hover:text-white"
+        >
+          &times;
+        </button>
+        <h3 className="mb-4 text-center text-xl font-bold text-white">
+          {title}
+        </h3>
+        <div className="flex flex-col gap-3">
+          {links.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-[#00fb69] bg-[#162e1a] px-4 py-3 text-center font-medium text-[#00fb69] transition-colors hover:bg-[#0a291e] hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const ResourceCardComponent = ({ resource, gridSpan }) => {
-  const handleClick = () => {
-    window.open(resource.link, "_blank");
-  };
-  // Responsive: force 1x1 span on small screens
   const width = useWindowWidth();
   const span = width <= 700 ? { col: 1, row: 1 } : gridSpan;
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleCardClick = (e) => {
+    // Prevent link clicks inside card from triggering card click
+    if (e.target.tagName === "A") return;
+    if (Array.isArray(resource.links) && resource.links.length === 1) {
+      window.open(resource.links[0].url, "_blank");
+    } else if (Array.isArray(resource.links) && resource.links.length > 1) {
+      setModalOpen(true);
+    }
+  };
+
   return (
-    <ResourceCard
-      style={{
-        gridColumn: `span ${span?.col || 1}`,
-        gridRow: `span ${span?.row || 1}`,
-      }}
-      onClick={handleClick}
-    >
-      <CardHeader>
-        <IconContainer color={resource.iconBg} iconColor={resource.iconColor}>
-          <FontAwesomeIcon icon={resource.icon} />
-        </IconContainer>
-        <ResourceType>{resource.type}</ResourceType>
-      </CardHeader>
-      <CardBody>
-        <ResourceTitle>{resource.title}</ResourceTitle>
-        <ResourceDescription>{resource.description}</ResourceDescription>
-      </CardBody>
-      {Array.isArray(resource.contributors) &&
-        resource.contributors.length > 0 && (
-          <div
-            style={{
-              background: "inherit",
-              color: "#00fb69",
-              padding: "0.4rem 0.8rem",
-              borderRadius: "0.5rem",
-              margin: "0 1rem 0.5rem 1rem",
-              fontSize: "0.95em",
-              fontWeight: 500,
-              textAlign: "left",
-              display: "flex",
-              alignItems: "center",
-              gap: "0.7em",
-              flexWrap: "wrap",
-            }}
-          >
-            <span style={{ marginRight: "0.5em" }}>Contributed by:</span>
-            {resource.contributors.map((contrib, idx) =>
-              contrib.profileUrl ? (
-                <a
-                  key={contrib.name + idx}
-                  href={contrib.profileUrl}
-                  style={{
-                    color: "#c5e3bf",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    marginRight: "0.5em",
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {contrib.name}
-                </a>
-              ) : (
-                <span
-                  key={contrib.name + idx}
-                  style={{ fontWeight: 700, marginRight: "0.5em" }}
-                >
-                  {contrib.name}
-                </span>
-              ),
-            )}
-          </div>
-        )}
-      <CardFooter>
-        {resource.tags.map((tag, index) => (
-          <Tag key={index}>{tag}</Tag>
-        ))}
-      </CardFooter>
-    </ResourceCard>
+    <>
+      <ResourceModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title={resource.title}
+        links={resource.links || []}
+      />
+      <ResourceCard
+        style={{
+          gridColumn: `span ${span?.col || 1}`,
+          gridRow: `span ${span?.row || 1}`,
+        }}
+        onClick={handleCardClick}
+      >
+        <CardHeader>
+          <IconContainer color={resource.iconBg} iconColor={resource.iconColor}>
+            <FontAwesomeIcon icon={resource.icon} />
+          </IconContainer>
+          <ResourceType>{resource.type}</ResourceType>
+        </CardHeader>
+        <CardBody>
+          <ResourceTitle>{resource.title}</ResourceTitle>
+          <ResourceDescription>{resource.description}</ResourceDescription>
+        </CardBody>
+        {Array.isArray(resource.contributors) &&
+          resource.contributors.length > 0 && (
+            <div
+              style={{
+                background: "inherit",
+                color: "#00fb69",
+                padding: "0.4rem 0.8rem",
+                borderRadius: "0.5rem",
+                margin: "0 1rem 0.5rem 1rem",
+                fontSize: "0.95em",
+                fontWeight: 500,
+                textAlign: "left",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.7em",
+                flexWrap: "wrap",
+              }}
+            >
+              <span style={{ marginRight: "0.5em" }}>Contributed by:</span>
+              {resource.contributors.map((contrib, idx) =>
+                contrib.profileUrl ? (
+                  <a
+                    key={contrib.name + idx}
+                    href={contrib.profileUrl}
+                    style={{
+                      color: "#c5e3bf",
+                      fontWeight: 700,
+                      textDecoration: "none",
+                      marginRight: "0.5em",
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {contrib.name}
+                  </a>
+                ) : (
+                  <span
+                    key={contrib.name + idx}
+                    style={{ fontWeight: 700, marginRight: "0.5em" }}
+                  >
+                    {contrib.name}
+                  </span>
+                ),
+              )}
+            </div>
+          )}
+        <CardFooter>
+          {resource.tags.map((tag, index) => (
+            <Tag key={index}>{tag}</Tag>
+          ))}
+        </CardFooter>
+      </ResourceCard>
+    </>
   );
 };
 
