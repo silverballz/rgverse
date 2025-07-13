@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Footer } from "../../components/Footer/Footer";
@@ -543,7 +543,60 @@ const Tags = () => {
   );
 };
 
-const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
+// Modal component styled like a card
+const Modal = ({ open, onClose, title, links }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+      <div className="relative w-full max-w-md rounded-xl border border-white bg-gradient-to-b from-[#0d3528] to-[#092413] p-6 shadow-xl">
+        <button
+          onClick={onClose}
+          className="absolute right-2 top-2 text-xl font-bold text-[#00fb69] hover:text-white"
+        >
+          &times;
+        </button>
+        <h3 className="mb-4 text-center text-xl font-bold text-white">
+          {title}
+        </h3>
+        <div className="flex flex-col gap-3">
+          {links.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-[#00fb69] bg-[#0d3528] px-4 py-3 text-center font-medium text-[#00fb69] transition-colors hover:bg-[#0a291e] hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Update BranchCard to support modal for Handwritten Notes
+const BranchCard = ({
+  branch,
+  image,
+  contributors,
+  handwrittenLinks,
+  link2,
+  link3,
+}) => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleHandwrittenClick = (e) => {
+    if (handwrittenLinks.length === 1) {
+      // Direct to the only link
+      window.open(handwrittenLinks[0].url, "_blank");
+    } else {
+      // Open modal
+      setModalOpen(true);
+    }
+  };
+
   const shareContent = () => {
     if (navigator.share) {
       navigator.share({
@@ -559,9 +612,14 @@ const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
 
   return (
     <div className="branch-card overflow-hidden rounded-xl border border-white bg-gradient-to-b from-[#0d3528] to-[#092413] shadow-xl transition duration-300 hover:border-[#00fb69]">
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title="Handwritten Notes"
+        links={handwrittenLinks}
+      />
       <div className="p-6">
         <h3 className="mb-4 text-xl font-bold text-white">{branch}</h3>
-
         <div className="branch-image mb-4 overflow-hidden rounded-lg">
           <img
             src={image}
@@ -569,7 +627,6 @@ const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
             className="h-52 w-full object-cover"
           />
         </div>
-
         <div className="contributors mb-4">
           <p className="mb-2 text-sm font-medium text-[#00fb69]">
             Contributed By:
@@ -588,7 +645,6 @@ const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
             ))}
           </div>
         </div>
-
         <div className="mb-6 flex gap-3">
           <button
             onClick={shareContent}
@@ -603,23 +659,38 @@ const BranchCard = ({ branch, image, contributors, link1, link2, link3 }) => {
           </button>
         </div>
       </div>
-
       <div className="resource-buttons grid grid-cols-3 gap-0 border-t border-[rgba(20,47,33,0.3)]">
-        <button className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+        {/* Handwritten Notes button triggers modal if multiple links */}
+        <button
+          className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]"
+          onClick={handleHandwrittenClick}
+        >
           <FontAwesomeIcon
             icon={faFileAlt}
             className="text-xl text-[#00fb69]"
           />
-          <a href={link1}>Handwritten Notes </a>
+          <span>Handwritten Notes</span>
         </button>
-        <button className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+        {/* PYQs direct link */}
+        <a
+          className="flex flex-col items-center justify-center gap-1 border-r border-[rgba(20,47,33,0.3)] bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]"
+          href={link2}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faBook} className="text-xl text-[#00fb69]" />
-          <a href={link2}>PYQs </a>
-        </button>
-        <button className="flex flex-col items-center justify-center gap-1 bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]">
+          <span>PYQs</span>
+        </a>
+        {/* E-Books direct link */}
+        <a
+          className="flex flex-col items-center justify-center gap-1 bg-[#092413] p-4 text-[#c8e6d5] transition-colors hover:bg-[#0a291e]"
+          href={link3}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faBook} className="text-xl text-[#00fb69]" />
-          <a href={link3}>E-Books </a>
-        </button>
+          <span>E-Books</span>
+        </a>
       </div>
     </div>
   );
@@ -649,105 +720,133 @@ const SemesterFilter = () => {
   );
 };
 
-
 const Notes = () => {
   const location = useLocation();
   const branchList = [
     {
       branch: "Computer Science Engineering",
-      image: "/assets/branches/CSE3.webp",
+      image: "/assets/branches/CSE2.webp",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-        { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Md Ashhar", profileUrl: "/profile/Ashhar21" },
+        { name: "@Ankur", profileUrl: "/profile/Ankur22" },
+        { name: "@Vivek", profileUrl: "/profile/VivekThakur23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes (2021)",
+          url: "https://drive.google.com/drive/folders/1Rz0GgMMrXlmGJKBUtAKV7W2iG8Lg9Pdc?usp=sharing",
+        },
+        {
+          label: "Handwritten Notes (2022)",
+          url: "https://drive.google.com/drive/folders/1pRSVLBX5uMkDEi_b2ROgPJl5_eBhb-hx?usp=sharing",
+        },
+        {
+          label: "Handwritten Notes (2023)",
+          url: "https://drive.google.com/drive/folders/1UCo0Ymnl0mymqZqv8c43cuwIcqU4BNbO",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Chemical Engineering",
-      image: "/assets/branches/chem2.webp",
+      image: "/assets/branches/chem.webp",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
+        { name: "@Aditya", profileUrl: "/profile/Aditya22" },
         { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes ChE",
+          url: "https://drive.google.com/drive/folders/1k1VGmKArIZL5F3GBLvEelVXEDFXvIM3Q",
+        },
+        {
+          label: "Handwritten Notes RE",
+          url: "https://drive.google.com/drive/folders/19YF3RM09uFR9NdTtSDy-5ckD4OQ2uVsS",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Petroleum Engineering",
-      image: "/assets/branches/petro.webp",
+      image: "/assets/branches/petro2.jpeg",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-        { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes (2021)",
+          url: "#",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mathematics and Computing",
-      image: "/assets/branches/mnc.jpeg",
+      image: "/assets/branches/mnc2.webp",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-        { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Md Ashhar", profileUrl: "/profile/Ashhar21" },
+        { name: "@Ankur", profileUrl: "/profile/Ankur22" },
+        { name: "@Vivek", profileUrl: "/profile/VivekThakur23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes (2021)",
+          url: "https://drive.google.com/drive/folders/1Rz0GgMMrXlmGJKBUtAKV7W2iG8Lg9Pdc?usp=sharing",
+        },
+        {
+          label: "Handwritten Notes (2022)",
+          url: "https://drive.google.com/drive/folders/1pRSVLBX5uMkDEi_b2ROgPJl5_eBhb-hx?usp=sharing",
+        },
+        {
+          label: "Handwritten Notes (2023)",
+          url: "https://drive.google.com/drive/folders/1UCo0Ymnl0mymqZqv8c43cuwIcqU4BNbO",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Electrical and Electronics Engineering",
-      image: "/assets/branches/EEE2.webp",
+      image: "/assets/branches/EEE.webp",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-        { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes (2021)",
+          url: "#",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mechanical Engineering",
-      image: "/assets/branches/mech.webp",
+      image: "/assets/branches/mech2.webp",
       contributors: [
-        { name: "@Harshit", profileUrl: "/profile/Harshit23" },
-        { name: "@Samarth", profileUrl: "/profile/Samarth23" },
-        { name: "@Om", profileUrl: "/profile/Omkar23" },
-        { name: "@Prashant", profileUrl: "/profile/Prashant23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
+        { name: "@Name", profileUrl: "/profile/Name23" },
       ],
-      link1:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link2:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
-      link3:
-        "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
+      handwrittenLinks: [
+        {
+          label: "Handwritten Notes (2021)",
+          url: "#",
+        },
+      ],
+      link2: "#",
+      link3: "#",
     },
   ];
 
@@ -774,16 +873,14 @@ const Notes = () => {
               branch={branch.branch}
               image={branch.image}
               contributors={branch.contributors}
-              link1={branch.link1}
+              handwrittenLinks={branch.handwrittenLinks}
               link2={branch.link2}
               link3={branch.link3}
             />
           ))}
         </div>
       </div>
-
       <SemesterFilter />
-
       <div className="my-8"></div>
       <Footer />
     </div>
