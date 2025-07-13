@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "title": "Megathon",
+    "company": "E‑Cell IIIT‑Hyderabad",
+    "location": "Hyderabad, India",
+    "type": "On-site",
+    "employmentType": "Hackathon / Event",
+    "category": "Hackathon",
+    "description": [
+      "Annual 24‑hour hackathon focused on entrepreneurial innovation and real-world problem solving.",
+      "Attractive prize pool: ₹400,000 in 2023 (≈ 4 L INR), ₹250,000 for select problem winners in 2024.",
+      "Features industry-backed problem statements, mentorship, certificates and networking opportunities."
+    ],
+    "applyLink": "https://megathon.in/register",
+    "logo": "/assets/Opportunities/megathon_logo.png",
+    "tags": ["hackathon", "entrepreneurship", "innovation", "prize ₹4L"]
+  },
+  {
+    "id": 2,
+    "title": "Smart India Hackathon",
+    "company": "MoE India",
+    "location": "Across India",
+    "type": "On-site / Hybrid",
+    "employmentType": "Hackathon / Innovation Challenge",
+    "category": "Hackathon",
+    "description": [
+      "National hackathon by MoE to solve real-world challenges from government and industry.",
+      "Winning teams receive ₹1.5L per problem statement.",
+      "Includes mentorship by experts, implementation support by sponsoring organizations, and opportunity to pitch solutions to stakeholders."
+    ],
+    "applyLink": "https://www.sih.gov.in/",
+    "logo": "/assets/Opportunities/SIH.webp",
+    "tags": ["hackathon", "innovation", "government", "prize ₹1.5L"]
+  },
+  {
+    "id": 3,
+    "title": "Hedera Africa Hackathon",
+    "company": "Hedera x DoraHacks",
+    "location": "Online",
+    "type": "Remote",
+    "employmentType": "Hackathon / Blockchain",
+    "category": "Hackathon",
+    "description": [
+      "Pan-African blockchain hackathon building innovative dApps using the Hedera network.",
+      "Over $60,000 in total prizes across multiple tracks including DeFi, SocialFi, AI, and Sustainability.",
+      "Includes mentorship, grant opportunities, and global exposure via DoraHacks and Hedera ecosystem."
+    ],
+    "applyLink": "https://dorahacks.io/hackathon/hederahackafrica/detail",
+    "logo": "/assets/Opportunities/hedera.png",
+    "tags": ["blockchain", "web3", "remote", "prize $60k", "hedera"]
+  },
+  {
+    "id": 4,
+    "title": "NASA Space Apps Challenge Noida",
+    "company": "NASA x Hack2skill",
+    "location": "Noida, India",
+    "type": "On-site / Virtual",
+    "employmentType": "Hackathon / Global Challenge",
+    "category": "Hackathon",
+    "description": [
+      "Local edition of NASA’s global Space Apps Challenge—India’s Noida hub for Oct 4‑5, 2025.",
+      "Annual event using NASA open data to solve real-world Earth & space problems.",
+      "No registration fee; global recognition for submissions across hundreds of local hubs."
+    ],
+    "applyLink": "https://spaceappschallenge.org/",
+    "logo": "/assets/Opportunities/nasa.png",
+    "tags": ["space", "NASA", "Noida", "hackathon", "2025"]
+  },
+  {
+    "id": 5,
+    "title": "Odoo x CGC Mohali Hackathon",
+    "company": "Odoo",
+    "location": "Mohali, India",
+    "type": "On-site",
+    "employmentType": "Hackathon / Open Source",
+    "category": "Hackathon",
+    "description": [
+      "24‑hour coding competition at CGC Mohali built on the Odoo platform.",
+      "Top teams win prize money (~₹105,000) and internships.",
+      "Final round held on August 30‑31, 2025 with regional visibility."
+    ],
+    "applyLink": "https://www.odoo.com/event/cgc-mohali-8573",
+    "logo": "/assets/Opportunities/odoohack.jpeg",
+    "tags": ["Odoo", "India", "On‑site", "Late Aug 2025", "prize ₹1.05L"]
+  },
+  {
+    "id": 6,
+    "title": "ETHGlobal New York",
+    "company": "ETHGlobal",
+    "location": "New York, USA",
+    "type": "Hybrid",
+    "employmentType": "Hackathon / Blockchain",
+    "category": "Hackathon",
+    "description": [
+      "Major blockchain hackathon with global participation and large sponsor support.",
+      "Prize pool of around $225,000 across tracks including DeFi and L2 scaling.",
+      "Scheduled August 15‑17, 2025, open to all skill levels."
+    ],
+    "applyLink": "https://ethglobal.com/events/newyork2025",
+    "logo": "/assets/Opportunities/ethglobe.jpeg",
+    "tags": ["ETHGlobal", "Blockchain", "NYC", "Aug 2025", "prize $225k"]
+  },
+{
+  "id": 7,
+  "title": "ETHGlobal New Delhi",
+  "company": "ETHGlobal",
+  "location": "New Delhi, India",
+  "type": "Hybrid",
+  "employmentType": "Hackathon / Blockchain",
+  "category": "Hackathon",
+  "description": [
+    "ETHGlobal’s New Delhi edition, open for blockchain builders worldwide.",
+    "Prize pool around $175,000 across categories like smart contracts and NFTs.",
+    "Runs September 26–28, 2025 at a premier tech venue."
+  ],
+  "applyLink": "https://ethglobal.com/events/newdelhi",
+  "logo": "/assets/Opportunities/ethND.webp",
+  "tags": ["ETHGlobal", "Blockchain", "India", "Sept 2025", "prize $175k"]
+},
+{
+  "id": 8,
+  "title": "GovHack 2025",
+  "company": "GovHack",
+  "location": "Australia & New Zealand (various hubs)",
+  "type": "Hybrid",
+  "employmentType": "Hackathon / Civic Tech",
+  "category": "Hackathon",
+  "description": [
+    "Australia and New Zealand’s largest civic hackathon using open government data.",
+    "Participation via local hubs across cities in Sep 2025.",
+    "Winners recognized at national Red Carpet Awards, prize tiers vary."
+  ],
+  "applyLink": "https://www.govhack.org/",
+  "logo": "assets/Opportunities/govhack.png",
+  "tags": ["civic tech", "Australia", "Sep 2025", "GovHack"]
+}
+
+
+]

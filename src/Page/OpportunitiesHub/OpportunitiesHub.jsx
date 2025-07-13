@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import opportunitiesData from "./opportunitieshub.json";
 import { useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Footer } from "../../components/Footer/Footer";
@@ -866,148 +867,10 @@ const categories = [
   "Events",
   "Certifications",
   "Coding Challenges",
-  "OpenSource Program",
+  "Hackathon",
+  "Bootcamps",
+  "Competitions",
   "Startup Incubators",
-];
-
-// Sample opportunityData array
-const opportunityData = [
-  {
-    id: 1,
-    title: "Founding Engineer",
-    company: "Cluely",
-    location: "San Francisco, USA",
-    type: "On-site",
-    employmentType: "Full-time",
-    category: "Jobs",
-    description: [
-      "Cluely is looking to hire the best software engineers in the world to help us create the ultimate experience layer for AI.",
-      "Experience with Electron, Typescript, React, Docker, Kubernetes & DevOps OR building native Mac apps in Swift.",
-      "Must be willing to WORK HARD.",
-      "Working full-time in-person in the Mission District, SF",
-    ],
-    applyLink: "#",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg",
-  },
-  {
-    id: 2,
-    title: "Frontend Developer Intern",
-    company: "TechInnovate",
-    location: "Remote",
-    type: "Remote",
-    employmentType: "Internship",
-    category: "Internships",
-    description: [
-      "3-month internship for students passionate about React and modern frontend development",
-      "Work on real-world projects with mentorship from senior developers",
-      "Opportunity for full-time position upon successful completion",
-      "Stipend provided during internship period",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-  },
-  {
-    id: 3,
-    title: "AI Hackathon 2025",
-    company: "AI Collective",
-    location: "Online",
-    type: "Online",
-    employmentType: "Competition",
-    category: "Coding Challenges",
-    description: [
-      "48-hour hackathon focused on AI solutions for social impact",
-      "$50,000 in prizes across multiple categories",
-      "Open to developers, designers, and AI enthusiasts worldwide",
-      "Mentorship from industry experts throughout the event",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/4712/4712035.png",
-  },
-  {
-    id: 4,
-    title: "UX/UI Design Freelancer",
-    company: "DesignHub",
-    location: "Anywhere",
-    type: "Remote",
-    employmentType: "Freelance",
-    category: "Freelancing",
-    description: [
-      "Design modern interfaces for SaaS products",
-      "Long-term project with flexible working hours",
-      "Must have portfolio showcasing Figma expertise",
-      "Competitive hourly rate with bonus opportunities",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-  },
-  {
-    id: 5,
-    title: "AWS Certified Solutions Architect",
-    company: "Cloud Academy",
-    location: "Online",
-    type: "Certification",
-    employmentType: "Certification",
-    category: "Certifications",
-    description: [
-      "Comprehensive training for AWS certification",
-      "Self-paced learning with expert video tutorials",
-      "Practice exams and hands-on labs included",
-      "Job placement assistance after certification",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/873/873120.png",
-  },
-  {
-    id: 6,
-    title: "Tech Leadership Summit",
-    company: "FutureTech Conferences",
-    location: "Austin, Texas",
-    type: "On-site",
-    employmentType: "Event",
-    category: "Tech Events",
-    description: [
-      "3-day conference for tech leaders and CTOs",
-      "Keynotes from industry pioneers",
-      "Workshops on scaling engineering teams",
-      "Networking with 500+ tech executives",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-  },
-  {
-    id: 7,
-    title: "Open Source Contributor",
-    company: "Linux Foundation",
-    location: "Remote",
-    type: "Remote",
-    employmentType: "Program",
-    category: "OpenSource Program",
-    description: [
-      "3-month mentorship program for open source contribution",
-      "Work on critical Linux kernel projects",
-      "Stipend provided for selected contributors",
-      "Guidance from core maintainers and industry experts",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-  },
-  {
-    id: 8,
-    title: "Startup Incubator Program",
-    company: "InnovateX",
-    location: "New York, NY",
-    type: "Hybrid",
-    employmentType: "Program",
-    category: "Startup Incubators",
-    description: [
-      "12-week intensive program for early-stage startups",
-      "$100,000 seed funding for selected teams",
-      "Mentorship from successful founders and VCs",
-      "Demo day with top investors upon completion",
-    ],
-    applyLink: "#",
-    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-  },
 ];
 
 // Placeholder OpportunityCardComponent
@@ -1087,7 +950,7 @@ const OpportunitiesHub = () => {
   }, [location]);
 
   // Filter opportunities based on selected category and search query
-  const filteredOpportunities = opportunityData.filter((opportunity) => {
+  const filteredOpportunities = opportunitiesData.filter((opportunity) => {
     // Check category filter
     const categoryMatch = filter === "All" || opportunity.category === filter;
 
