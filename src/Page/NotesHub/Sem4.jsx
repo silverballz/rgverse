@@ -446,30 +446,35 @@ const Hero = () => {
 
 const Tags = () => {
   const tags = [
-    "Semester 1",
-    "Semester 2",
-    "Semester 3",
-    "Semester 4",
-    "Semester 5",
-    "Semester 6",
-    "Semester 7",
-    "Semester 8",
-    "Mathematics",
     "Physics",
-    "Chemistry",
-    "Programming",
-    "Data Structures",
+    "IPC",
+    "RAC",
+    "Biology",
     "Algorithms",
-    "Database Systems",
-    "Operating Systems",
+    "Electronics",
+    "CSEP",
+    "Thermodynamics",
+    "IOC",
+    "Fluid Mechanism",
+    "OOPs",
+    "LACA",
+    "CET",
+    "FFO",
+    "SFMMO",
+    "DBMS",
+    "COA",
+    "Statistical",
+    "CPT",
+    "CRE",
+    "HTO",
+    "MTO",
+    "PRE",
+    "Operating System",
+    "DAA",
+    "Data Mining",
+    "Linear Optimization",
+    "Mobile Computing",
     "Computer Networks",
-    "Software Engineering",
-    "Artificial Intelligence",
-    "Machine Learning",
-    "Web Development",
-    "Mobile Development",
-    "Cloud Computing",
-    "Cyber Security",
     "Theory of Computation",
     "Compiler Design",
     "Digital Electronics",
@@ -745,10 +750,8 @@ const Notes = () => {
           url: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Chemical Engineering",
@@ -768,10 +771,8 @@ const Notes = () => {
           url: "https://drive.google.com/drive/folders/1TaDAVMOByQztbUk0kiINHlHDYfg8IbGx",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Petroleum Engineering",
@@ -788,10 +789,8 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mathematics and Computing",
@@ -815,10 +814,8 @@ const Notes = () => {
           url: "https://drive.google.com/drive/u/3/folders/1jNn8XERVXjCRdQ4TUlVEQS5rXEiRErC7",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Electrical and Electronics Engineering",
@@ -835,10 +832,8 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mechanical Engineering",
@@ -855,10 +850,8 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
   ];
 
