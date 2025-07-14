@@ -33,10 +33,10 @@ const Hero = () => {
           alt="RGVerse"
           className="my-4 h-auto w-full max-w-[600px] text-5xl font-bold"
         />
-        <h3 className="custom-font my-4 text-2xl tracking-widest text-gray-300 md:text-xl">
+        <h1 className="custom-font my-4 text-2xl tracking-widest text-gray-300 md:text-xl">
           One Central Hub for RGIPT Students to Discover Resources,
           <br /> Connect with Seniors, and Grow Together.
-        </h3>
+        </h1>
       </div>
       <p className="text-md bg-[rgba(255, 255, 255, 0.14)] group relative mx-auto mb-6 w-fit overflow-hidden rounded-full border border-gray-300 p-2 text-center">
         <a
