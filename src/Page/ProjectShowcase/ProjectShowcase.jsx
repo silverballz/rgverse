@@ -22,7 +22,12 @@ const Navbar = ({ onOpenModal }) => {
           </StyledButton>
         </div>
         <div className="text-2xl font-bold">
-          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
+          <img
+            src="./RGVerse ICON.png"
+            alt="RGVerse"
+            className="h-12 w-12"
+            loading="lazy"
+          />
         </div>
       </div>
     </nav>
@@ -888,6 +893,7 @@ const ProjectCard = ({ project }) => {
                 src={project.profilePic}
                 className="h-8 w-8 rounded-full border border-[#cffab6]"
                 alt="Profile"
+                loading="lazy"
               />
               <span className="font-semibold text-white">{project.author}</span>
             </div>
@@ -905,6 +911,7 @@ const ProjectCard = ({ project }) => {
               src={project.screenshot}
               alt="Project"
               className="h-full w-full object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -944,6 +951,7 @@ const ProjectCard = ({ project }) => {
                 src={project.profilePic}
                 className="h-8 w-8 rounded-full border border-white"
                 alt="Profile"
+                loading="lazy"
               />
               <span className="font-semibold text-white">{project.author}</span>
             </div>
