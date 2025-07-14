@@ -861,15 +861,15 @@ const ShareBtn = styled.button`
 // Sample categories array
 const categories = [
   "All",
-  "Jobs",
   "Internships",
-  "Freelancing",
-  "Events",
-  "Certifications",
-  "Coding Challenges",
   "Hackathon",
+  "Jobs",
   "Bootcamps",
   "Competitions",
+  "Events",
+  "Courses",
+  "Certifications",
+  "Freelancing",
   "Startup Incubators",
 ];
 
