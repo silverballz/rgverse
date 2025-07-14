@@ -57,7 +57,9 @@ function App() {
     <BrowserRouter>
       <RouteTracker />
       <Helmet>
-        <title>RGVerse - One Portal for Every RGIPTian</title>
+        <title>
+          RGVerse - One Portal for Every RGIPTian | RGIPT Resources $ Community
+        </title>
         <meta
           name="description"
           content="One Central Hub for RGIPT Students to Discover Resources, Connect with Seniors, and Grow Together."
