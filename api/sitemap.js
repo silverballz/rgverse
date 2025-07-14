@@ -1,6 +1,7 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 
 export default async function handler(req, res) {
+  res.setHeader("Content-Type", "application/xml");
   const sitemap = new SitemapStream({
     hostname: "https://rgverse.vercel.app/",
   });
@@ -9,6 +10,5 @@ export default async function handler(req, res) {
   sitemap.end();
 
   const xml = await streamToPromise(sitemap).then((data) => data.toString());
-  res.setHeader("Content-Type", "application/xml");
-  res.status(200).send(xml);
+  res.status(200).end(xml);
 }
