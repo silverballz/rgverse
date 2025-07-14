@@ -1,4 +1,4 @@
-import { SitemapStream } from "sitemap";
+import { SitemapStream, streamToPromise } from "sitemap";
 
 export default async function handler(req, res) {
   const sitemap = new SitemapStream({
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   sitemap.write({ url: "/opportunities", changefreq: "weekly", priority: 0.8 });
   sitemap.end();
 
+  const xml = await streamToPromise(sitemap).then((data) => data.toString());
   res.setHeader("Content-Type", "application/xml");
-  res.status(200);
-  sitemap.pipe(res);
+  res.status(200).send(xml);
 }
