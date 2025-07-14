@@ -26,7 +26,12 @@ const Navbar = () => {
         </a>
 
         <div className="text-2xl font-bold">
-          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
+          <img
+            src="./RGVerse ICON.png"
+            alt="RGVerse"
+            className="h-12 w-12"
+            loading="lazy"
+          />
         </div>
       </div>
     </nav>
@@ -885,6 +890,7 @@ const OSProgramCardComponent = ({
             e.target.onerror = null;
             e.target.src = "/images/default.png";
           }}
+          loading="lazy"
         />
         <div className="apply-button-wrapper">
           <a href={applyLink} target="_blank" rel="noopener noreferrer">
