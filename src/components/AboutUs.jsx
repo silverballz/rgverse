@@ -5,7 +5,7 @@ const AboutUs = () => {
     <div className="min-h-screen bg-[#092413] px-6 py-12 text-[rgb(13,53,40)]">
       <div className="mx-auto max-w-4xl rounded-2xl border border-[rgba(194,183,183,0.1)] bg-[rgb(243,244,246)] p-8 shadow-lg">
         <h1 className="mb-6 text-center text-4xl font-bold text-[#092413]">
-          About RGVerse
+          About RGVerse & RGIPT Community
         </h1>
 
         <p className="mb-6 text-lg leading-relaxed">
