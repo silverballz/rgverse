@@ -24,7 +24,12 @@ const Navbar = () => {
         </a>
 
         <div className="text-2xl font-bold">
-          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
+          <img
+            src="./RGVerse ICON.png"
+            alt="RGVerse"
+            className="h-12 w-12"
+            loading="lazy"
+          />
         </div>
       </div>
     </nav>
@@ -445,45 +450,45 @@ const Hero = () => {
 };
 
 const Tags = () => {
-const tags = [
-  "Physics",
-  "IPC",
-  "RAC",
-  "Biology",
-  "Algorithms",
-  "Electronics",
-  "CSEP",
-  "Thermodynamics",
-  "IOC",
-  "Fluid Mechanism",
-  "OOPs",
-  "LACA",
-  "CET",
-  "FFO",
-  "SFMMO",
-  "DBMS",
-  "COA",
-  "Statistical",
-  "CPT",
-  "CRE",
-  "HTO",
-  "MTO",
-  "PRE",
-  "Operating System",
-  "DAA",
-  "Data Mining",
-  "Linear Optimization",
-  "Mobile Computing",
-  "Computer Networks",
-  "Theory of Computation",
-  "Compiler Design",
-  "Digital Electronics",
-  "Microprocessors",
-  "Handwritten Notes",
-  "Lecture Slides",
-  "Previous Year Papers",
-  "Lab Manuals",
-];
+  const tags = [
+    "Physics",
+    "IPC",
+    "RAC",
+    "Biology",
+    "Algorithms",
+    "Electronics",
+    "CSEP",
+    "Thermodynamics",
+    "IOC",
+    "Fluid Mechanism",
+    "OOPs",
+    "LACA",
+    "CET",
+    "FFO",
+    "SFMMO",
+    "DBMS",
+    "COA",
+    "Statistical",
+    "CPT",
+    "CRE",
+    "HTO",
+    "MTO",
+    "PRE",
+    "Operating System",
+    "DAA",
+    "Data Mining",
+    "Linear Optimization",
+    "Mobile Computing",
+    "Computer Networks",
+    "Theory of Computation",
+    "Compiler Design",
+    "Digital Electronics",
+    "Microprocessors",
+    "Handwritten Notes",
+    "Lecture Slides",
+    "Previous Year Papers",
+    "Lab Manuals",
+  ];
 
   return (
     <section id="tags" className="mb-0 w-full pt-12 sm:py-16">
@@ -630,6 +635,7 @@ const BranchCard = ({
             src={image}
             alt={`${branch} representation`}
             className="h-52 w-full object-cover"
+            loading="lazy"
           />
         </div>
         <div className="contributors mb-4">
@@ -749,7 +755,7 @@ const Notes = () => {
     {
       branch: "Chemical Engineering",
       image: "/assets/branches/chem.webp",
-           contributors: [
+      contributors: [
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
@@ -761,15 +767,13 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Petroleum Engineering",
       image: "/assets/branches/petro2.jpeg",
-           contributors: [
+      contributors: [
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
@@ -781,15 +785,13 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mathematics and Computing",
       image: "/assets/branches/mnc2.webp",
-           contributors: [
+      contributors: [
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
@@ -801,15 +803,13 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Electrical and Electronics Engineering",
       image: "/assets/branches/EEE.webp",
-           contributors: [
+      contributors: [
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
@@ -821,15 +821,13 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
     {
       branch: "Mechanical Engineering",
       image: "/assets/branches/mech2.webp",
-           contributors: [
+      contributors: [
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
         { name: "@Name", profileUrl: "/profile/Name23" },
@@ -841,10 +839,8 @@ const Notes = () => {
           url: "#",
         },
       ],
-      link2:
-        "#",
-      link3:
-        "#",
+      link2: "#",
+      link3: "#",
     },
   ];
 

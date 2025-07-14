@@ -24,7 +24,12 @@ const Navbar = () => {
         </a>
 
         <div className="text-2xl font-bold">
-          <img src="./RGVerse ICON.png" alt="RGVerse" className="h-12 w-12" />
+          <img
+            src="./RGVerse ICON.png"
+            alt="RGVerse"
+            className="h-12 w-12"
+            loading="lazy"
+          />
         </div>
       </div>
     </nav>
@@ -630,6 +635,7 @@ const BranchCard = ({
             src={image}
             alt={`${branch} representation`}
             className="h-52 w-full object-cover"
+            loading="lazy"
           />
         </div>
         <div className="contributors mb-4">
