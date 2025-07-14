@@ -101,40 +101,298 @@
     "logo": "/assets/Opportunities/ethglobe.jpeg",
     "tags": ["ETHGlobal", "Blockchain", "NYC", "Aug 2025", "prize $225k"]
   },
-{
-  "id": 7,
-  "title": "ETHGlobal New Delhi",
-  "company": "ETHGlobal",
-  "location": "New Delhi, India",
-  "type": "Hybrid",
-  "employmentType": "Hackathon / Blockchain",
-  "category": "Hackathon",
-  "description": [
-    "ETHGlobal’s New Delhi edition, open for blockchain builders worldwide.",
-    "Prize pool around $175,000 across categories like smart contracts and NFTs.",
-    "Runs September 26–28, 2025 at a premier tech venue."
-  ],
-  "applyLink": "https://ethglobal.com/events/newdelhi",
-  "logo": "/assets/Opportunities/ethND.webp",
-  "tags": ["ETHGlobal", "Blockchain", "India", "Sept 2025", "prize $175k"]
-},
-{
-  "id": 8,
-  "title": "GovHack 2025",
-  "company": "GovHack",
-  "location": "Australia & New Zealand (various hubs)",
-  "type": "Hybrid",
-  "employmentType": "Hackathon / Civic Tech",
-  "category": "Hackathon",
-  "description": [
-    "Australia and New Zealand’s largest civic hackathon using open government data.",
-    "Participation via local hubs across cities in Sep 2025.",
-    "Winners recognized at national Red Carpet Awards, prize tiers vary."
-  ],
-  "applyLink": "https://www.govhack.org/",
-  "logo": "assets/Opportunities/govhack.png",
-  "tags": ["civic tech", "Australia", "Sep 2025", "GovHack"]
-}
-
-
+  {
+    "id": 7,
+    "title": "ETHGlobal New Delhi",
+    "company": "ETHGlobal",
+    "location": "New Delhi, India",
+    "type": "Hybrid",
+    "employmentType": "Hackathon / Blockchain",
+    "category": "Hackathon",
+    "description": [
+      "ETHGlobal’s New Delhi edition, open for blockchain builders worldwide.",
+      "Prize pool around $175,000 across categories like smart contracts and NFTs.",
+      "Runs September 26–28, 2025 at a premier tech venue."
+    ],
+    "applyLink": "https://ethglobal.com/events/newdelhi",
+    "logo": "/assets/Opportunities/ethND.webp",
+    "tags": ["ETHGlobal", "Blockchain", "India", "Sept 2025", "prize $175k"]
+  },
+  {
+    "id": 8,
+    "title": "GovHack 2025",
+    "company": "GovHack",
+    "location": "Australia & New Zealand (various hubs)",
+    "type": "Hybrid",
+    "employmentType": "Hackathon / Civic Tech",
+    "category": "Hackathon",
+    "description": [
+      "Australia and New Zealand’s largest civic hackathon using open government data.",
+      "Participation via local hubs across cities in Sep 2025.",
+      "Winners recognized at national Red Carpet Awards, prize tiers vary."
+    ],
+    "applyLink": "https://www.govhack.org/",
+    "logo": "assets/Opportunities/govhack.png",
+    "tags": ["civic tech", "Australia", "Sep 2025", "GovHack"]
+  },
+  {
+    "id": 9,
+    "title": "Global AI Bootcamp 2025 (India chapters)",
+    "company": "Global AI Community",
+    "location": "In‑person India & online",
+    "type": "Online",
+    "employmentType": "Bootcamps",
+    "category": "Bootcamps",
+    "description": [
+      "One-day AI workshop series across India and global online events.",
+      "Covers Azure AI, ML tools, hands-on labs and demos.",
+      "Free community-run event suitable for beginners and students."
+    ],
+    "applyLink": "https://globalai.community/bootcamp/",
+    "logo": "assets/Opportunities/GlobalBootcamp.png",
+    "tags": ["AI", "free", "India & Online"]
+  },
+  {
+    "id": 10,
+    "title": "Career Catalyst 3.0 – The Ultimate Placement Drill",
+    "company": "AWS Cloud Club ",
+    "location": "Indore, India",
+    "type": "On-site / Virtual",
+    "employmentType": "Competition / Prep Workshop",
+    "category": "Competitions",
+    "description": [
+      "Hands‑on placement drill with aptitude, technical interviews, and mock rounds guided by industry experts.",
+      "Free to attend; includes mentorship from Meta & GFG professionals, career insights and networking.",
+      "No certificates or cash prizes; focus is skill refinement and real‑world interview readiness."
+    ],
+    "applyLink": "https://unstop.com/competitions/career-catalyst-30-the-ultimate-placement-drill-aws-cloud-clubs-medi-caps-university-1518580",
+    "logo": "assets/Opportunities/CC3.0.jpeg",
+    "tags": ["placement prep", "aptitude", "mock interviews", "AWS Cloud Club"]
+  },
+  {
+    "id": 11,
+    "title": "Juspay Hiring Challenge 2025",
+    "company": "Juspay",
+    "location": "India",
+    "type": "Online / On-site",
+    "employmentType": "Competition / Paid Internship",
+    "category": "Competitions",
+    "description": [
+      "Rigorous recruitment challenge for B.Tech/B.E. 2026 grads—MCQ, coding, and technical interview rounds.",
+      "Offers INR 40K/month paid internship (8–12 months) and full-time PPO up to INR 27 LPA.",
+      "Registration open till July 13, 2025; selection based on DSA, systems, and real-world problem-solving."
+    ],
+    "applyLink": "https://unstop.com/competitions/juspay-hiring-challenge-2025-juspay-1466934",
+    "logo": "assets/Opportunities/juspay.jpeg",
+    "tags": [
+      "Competitions",
+      "fintech",
+      "coding challenge",
+      "prize ₹40K stipend"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Software Engineering Internship",
+    "company": "Google",
+    "location": "Bangalore, India",
+    "type": "On-site",
+    "employmentType": "Internship",
+    "category": "Internships",
+    "description": [
+      "Work on scale software systems like NLP, AI, ML under mentorship in Google’s Bangalore office.",
+      "Full-time summer role (12–14 weeks) open to PhD / pre-final tech undergraduates.",
+      "Stipend not disclosed; competitive compensation and access to tech for innovation."
+    ],
+    "applyLink": "https://unstop.com/internships/software-engineering-internship-google-1514017",
+    "logo": "assets/Opportunities/google.png",
+    "tags": ["engineering", "internship", "Bangalore", "Google"]
+  },
+  {
+    "id": 13,
+    "title": "Full-Stack Developer Internship",
+    "company": "Flowbit Private Limited",
+    "location": "Aurangabad",
+    "type": "Remote / Hybrid",
+    "employmentType": "Internship",
+    "category": "Internships",
+    "description": [
+      "Intern with India-based AI solutions firm building automation agents for enterprise software.",
+      "Stipend ₹25,000/month; includes certificate, recommendation letter, and flexible work hours.",
+      "Gain hands-on experience with AI, OCR, cloud integrations (AWS/Azure), and modern full-stack development."
+    ],
+    "applyLink": "https://unstop.com/internships/full-stack-developer-internship-flowbit-private-limited-1518036",
+    "logo": "assets/Opportunities/Flowbit.png",
+    "tags": ["full-stack", "AI", "₹25k stipend", "remote/hybrid", "Flowbit"]
+  },
+  {
+    "id": 14,
+    "title": "T–Hub",
+    "company": "T–Hub",
+    "location": "Hyderabad, India",
+    "type": "In-person",
+    "employmentType": "Startup Incubator",
+    "category": "Startup Incubators",
+    "description": [
+      "Public–private incubator offering workspace, funding, and mentorship to startups.",
+      "Flagship programs include Lab32 and T–Angel for early to growth-stage startups.",
+      "Recognized as India’s leading innovation hub with global reach."
+    ],
+    "applyLink": "https://t-hub.co",
+    "logo": "assets/Opportunities/thub.png",
+    "tags": ["deeptech", "scale-up", "Hyderabad", "Lab32", "T-Hub"]
+  },
+  {
+    "id": 15,
+    "title": "NSRCEL",
+    "company": "IIM Bangalore",
+    "location": "Bangalore, India",
+    "type": "In-person",
+    "employmentType": "Startup Incubator",
+    "category": "Startup Incubators",
+    "description": [
+      "Startup hub at IIM Bangalore supporting ventures across edtech, fintech, mobility.",
+      "Offers co-working space, structured mentorship, and investor exposure.",
+      "Known for programs focused on women founders and social enterprises."
+    ],
+    "applyLink": "https://nsrcel.org/",
+    "logo": "assets/Opportunities/NSRCEL.jpeg",
+    "tags": ["NSRCEL", "IIM-B", "social impact", "fintech", "mentorship"]
+  },
+  {
+    "id": 16,
+    "title": "Atal Incubation Centres",
+    "company": "NITI Aayog / AIM",
+    "location": "Multiple cities, India",
+    "type": "In-person",
+    "employmentType": "Startup Incubator",
+    "category": "Startup Incubators",
+    "description": [
+      "Pan-India network of incubators supporting idea to growth-stage startups.",
+      "Provides funding up to ₹10 crore, labs, mentorship, and investor connect.",
+      "Supported by Atal Innovation Mission, Govt. of India."
+    ],
+    "applyLink": "https://aim.gov.in/atal-incubation-centres.php",
+    "logo": "assets/Opportunities/AIC.jpg",
+    "tags": ["AIC", "government", "pan-India", "funding", "NITI Aayog"]
+  },
+  {
+    "id": 17,
+    "title": "SIIC IIT Kanpur",
+    "company": "IIT Kanpur",
+    "location": "Kanpur, India",
+    "type": "In-person",
+    "employmentType": "Startup Incubator",
+    "category": "Startup Incubators",
+    "description": [
+      "Academic incubator focused on deep-tech, healthcare, and defence innovation.",
+      "Provides equity-free grants, labs, mentorship and prototyping support.",
+      "Collaborates with DST, MeitY, DRDO for tech-commercialization."
+    ],
+    "applyLink": "https://siicincubator.com",
+    "logo": "assets/Opportunities/SIIC.png",
+    "tags": ["SIIC", "IIT-K", "deeptech", "medtech", "equity-free"]
+  },
+  {
+    "id": 18,
+    "title": "AWS Certified Solutions Architect – Associate",
+    "company": "Amazon Web Services",
+    "location": "Online",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Validates ability to design and deploy scalable, secure systems on AWS cloud.",
+      "High industry demand and strong avg salary uplift (~$130K‑$160K).",
+      "Great for cloud architect/developer roles."
+    ],
+    "applyLink": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+    "logo": "assets/Opportunities/AWS.webp",
+    "tags": ["cloud", "AWS", "associate", "online"]
+  },
+  {
+    "id": 19,
+    "title": "Google Professional Cloud Architect",
+    "company": "Google Cloud",
+    "location": "Online",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Recognizes proficiency in designing and managing Google Cloud environments.",
+      "Average salary ~ $120K‑$150K; strong in multi‑cloud roles.",
+      "Ideal for cloud architects and DevOps engineers."
+    ],
+    "applyLink": "https://cloud.google.com/certification/cloud-architect",
+    "logo": "assets/Opportunities/GCloud.png",
+    "tags": ["cloud", "GCP", "architect", "online"]
+  },
+  {
+    "id": 20,
+    "title": "Certified Information Systems Security Professional (CISSP)",
+    "company": "(ISC)²",
+    "location": "Online",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Global benchmark certification for cybersecurity management and risk.",
+      "Avg salary $120K‑$150K; required for senior infosec roles.",
+      "Covers domains like asset security, access control, cryptography."
+    ],
+    "applyLink": "https://www.isc2.org/Certifications/CISSP",
+    "logo": "assets/Opportunities/CISSP.png",
+    "tags": ["cybersecurity", "CISSP", "security manager", "online"]
+  },
+  {
+    "id": 21,
+    "title": "Certified Ethical Hacker (CEH)",
+    "company": "EC‑Council",
+    "location": "Online",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Focuses on ethical hacking techniques to identify and fix vulnerabilities.",
+      "Hands‑on pentesting exam; avg salary $90K‑$120K.",
+      "Ideal for cybersecurity, red‑team, and pentest roles."
+    ],
+    "applyLink": "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
+    "logo": "assets/Opportunities/CEH.png",
+    "tags": ["cybersecurity", "CEH", "ethical hacking", "online"]
+  },
+  {
+    "id": 22,
+    "title": "Certified Kubernetes Administrator (CKA)",
+    "company": "The Linux Foundation",
+    "location": "Online",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Validates skills in installing, configuring, and managing Kubernetes clusters.",
+      "Ideal for DevOps and cloud-native engineers.",
+      "Exam is performance-based—highly practical."
+    ],
+    "applyLink": "https://www.cncf.io/certification/cka/",
+    "logo": "assets/Opportunities/CKA.png",
+    "tags": ["DevOps", "Kubernetes", "CKA", "online"]
+  },
+  {
+    "id": 23,
+    "title": "Project Management Professional (PMP)",
+    "company": "PMI",
+    "location": "Online / Exam Centers",
+    "type": "Online",
+    "employmentType": "Certification",
+    "category": "Certifications",
+    "description": [
+      "Globally recognized credential for project management professionals.",
+      "Avg salary uplift ~20–25%; ideal for tech project leaders.",
+      "Covers agile, risk, and stakeholder management."
+    ],
+    "applyLink": "https://www.pmi.org/certifications/project-management-pmp",
+    "logo": "assets/Opportunities/PMP.png",
+    "tags": ["project management", "PMP", "online", "leadership"]
+  }
 ]
