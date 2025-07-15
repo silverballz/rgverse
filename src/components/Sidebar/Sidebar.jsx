@@ -12,6 +12,7 @@ function Sidebar() {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   function handleHome() {
     navigate("/Home");
@@ -33,6 +34,7 @@ function Sidebar() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
     const form = e.target;
     const fullName = form.fullName.value;
@@ -57,13 +59,20 @@ function Sidebar() {
           "Form submitted successfully, your profile will be added within 24 hours.",
         );
       } else {
-        const data = await response.json();
-        alert(
-          "Failed to submit the form: " + (data.message || "Unknown error"),
-        );
+        let errorMsg = "Failed to submit the form. Please try again.";
+        if (response.status >= 500) {
+          errorMsg =
+            "The server is temporarily unavailable. Please try again later.";
+        } else {
+          const data = await response.json().catch(() => ({}));
+          if (data && data.message) errorMsg = data.message;
+        }
+        setError(errorMsg);
       }
     } catch (error) {
-      alert("Failed to submit the form. Please try again.");
+      setError(
+        "Could not connect to the server. Please check your internet connection or try again later.",
+      );
       console.error(error);
     }
     setLoading(false);
@@ -142,6 +151,11 @@ function Sidebar() {
             <h2 className="mb-4 text-center text-lg font-semibold text-white">
               Fill Your Details
             </h2>
+            {error && (
+              <div className="mb-2 rounded bg-red-100 px-3 py-2 text-center text-red-700">
+                {error}
+              </div>
+            )}
             {submitted ? (
               <div className="py-8 text-center font-semibold text-green-600">
                 Thank you for submitting your profile! We'll add it within 24
