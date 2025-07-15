@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
-import emailjs from "emailjs-com";
 import StyledButton from "../StyledButton";
 import { RxCross2 } from "react-icons/rx";
 // import SvgLoader from "../SvgLoader/SvgLoader";
@@ -11,11 +10,8 @@ function Sidebar() {
   const navigate = useNavigate();
   const [openDropdown, setOpenDropdown] = useState(false);
   const [showForm, setShowForm] = useState(false);
-
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init("E9tssnr-Oke8I2dd5"); // Your public key
-  }, []);
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   function handleHome() {
     navigate("/Home");
@@ -34,8 +30,9 @@ function Sidebar() {
     setOpenDropdown(false);
   };
 
-  function handleFormSubmit(e) {
+  async function handleFormSubmit(e) {
     e.preventDefault();
+    setLoading(true);
 
     const form = e.target;
     const fullName = form.fullName.value;
@@ -43,28 +40,33 @@ function Sidebar() {
     const linkedin = form.linkedin.value;
     const message = form.message.value;
 
-    const templateParams = {
-      from_name: fullName,
-      branch: branch,
-      linkedin: linkedin,
-      message: message,
-      to_email: "rgverse2025@gmail.com",
-    };
-
-    emailjs
-      .send("service_k7barbv", "template_gpqzxsc", templateParams)
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/profile`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ fullName, branch, linkedin, message }),
+        },
+      );
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+        setShowForm(false);
         alert(
           "Form submitted successfully, your profile will be added within 24 hours.",
         );
-        form.reset();
-        setShowForm(false);
-      })
-      .catch((error) => {
-        console.error("FAILED...", error);
-        alert("Failed to submit the form. Please try again.");
-      });
+      } else {
+        const data = await response.json();
+        alert(
+          "Failed to submit the form: " + (data.message || "Unknown error"),
+        );
+      }
+    } catch (error) {
+      alert("Failed to submit the form. Please try again.");
+      console.error(error);
+    }
+    setLoading(false);
   }
 
   return (
@@ -127,56 +129,62 @@ function Sidebar() {
         {showForm && (
           <div
             className="relative mt-4 w-full rounded-lg border-2 p-4 shadow-md"
-            style={{ backgroundColor: "#092413", borderColor: "#ffffff50" }} // semi-transparent white border
+            style={{ backgroundColor: "#092413", borderColor: "#ffffff50" }}
           >
             <button
               onClick={() => setShowForm(false)}
               className="absolute right-3 top-3 text-2xl font-bold"
-              style={{ color: "#cccccc" }} // soft white color
+              style={{ color: "#cccccc" }}
             >
-              <RxCross2 /> {/* 👈 React Icon here */}
+              <RxCross2 />
             </button>
 
             <h2 className="mb-4 text-center text-lg font-semibold text-white">
               Fill Your Details
             </h2>
-            <form className="flex flex-col gap-3" onSubmit={handleFormSubmit}>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                className="rounded border p-2 text-black"
-                required
-              />
-              <input
-                type="text"
-                name="branch"
-                placeholder="Branch"
-                className="rounded border p-2 text-black"
-                required
-              />
-              <input
-                type="text"
-                name="linkedin"
-                placeholder="LinkedIn Link"
-                className="rounded border p-2 text-black"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder={`Your Message
-- Skills
-- Update my profile
-- Any other message`}
-                className="rounded border p-2 text-black"
-                required
-                rows={3}
-              />
+            {submitted ? (
+              <div className="py-8 text-center font-semibold text-green-600">
+                Thank you for submitting your profile! We'll add it within 24
+                hours.
+              </div>
+            ) : (
+              <form className="flex flex-col gap-3" onSubmit={handleFormSubmit}>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  className="rounded border p-2 text-black"
+                  required
+                />
+                <input
+                  type="text"
+                  name="branch"
+                  placeholder="Branch"
+                  className="rounded border p-2 text-black"
+                  required
+                />
+                <input
+                  type="text"
+                  name="linkedin"
+                  placeholder="LinkedIn Link"
+                  className="rounded border p-2 text-black"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder={`Your Message\n- Skills\n- Update my profile\n- Any other message`}
+                  className="rounded border p-2 text-black"
+                  required
+                  rows={3}
+                />
 
-              <StyledButton type="submit">
-                <div className="inner">Submit</div>
-              </StyledButton>
-            </form>
+                <StyledButton type="submit" disabled={loading}>
+                  <div className="inner">
+                    {loading ? "Submitting..." : "Submit"}
+                  </div>
+                </StyledButton>
+              </form>
+            )}
           </div>
         )}
 
