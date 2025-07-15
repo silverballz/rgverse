@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
 import StyledButton from "../StyledButton";
 import { RxCross2 } from "react-icons/rx";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import SvgLoader from "../SvgLoader/SvgLoader";
 
 function Sidebar() {
@@ -12,7 +14,6 @@ function Sidebar() {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
 
   function handleHome() {
     navigate("/Home");
@@ -34,7 +35,6 @@ function Sidebar() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    setError("");
 
     const form = e.target;
     const fullName = form.fullName.value;
@@ -55,7 +55,7 @@ function Sidebar() {
         setSubmitted(true);
         form.reset();
         setShowForm(false);
-        alert(
+        toast.success(
           "Form submitted successfully, your profile will be added within 24 hours.",
         );
       } else {
@@ -67,10 +67,10 @@ function Sidebar() {
           const data = await response.json().catch(() => ({}));
           if (data && data.message) errorMsg = data.message;
         }
-        setError(errorMsg);
+        toast.error(errorMsg);
       }
     } catch (error) {
-      setError(
+      toast.error(
         "Could not connect to the server. Please check your internet connection or try again later.",
       );
       console.error(error);
@@ -81,6 +81,16 @@ function Sidebar() {
   return (
     <div className="my-7 w-full border-r-2 border-borderSecondary px-7 font-spaceMono dark:border-borderColor md:h-[90vh] md:w-[23%] md:px-2 lg:px-7">
       <StyledWrapper className="flex flex-col items-center gap-6 pt-6">
+        <ToastContainer
+          position="top-center"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         {/* Modified Button */}
         <div className="relative flex w-full justify-center">
           <button
@@ -151,11 +161,6 @@ function Sidebar() {
             <h2 className="mb-4 text-center text-lg font-semibold text-white">
               Fill Your Details
             </h2>
-            {error && (
-              <div className="mb-2 rounded bg-red-100 px-3 py-2 text-center text-red-700">
-                {error}
-              </div>
-            )}
             {submitted ? (
               <div className="py-8 text-center font-semibold text-green-600">
                 Thank you for submitting your profile! We'll add it within 24
