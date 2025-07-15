@@ -1,0 +1,15 @@
+{
+  "name": "Tejas (2023-27)", 
+  "location": "Bengaluru",
+  "branch": "Chemical Engineering",
+  "bio": "Aspiring Technical Product Manager with a strong foundation in Java Full Stack Development, currently grinding DSA to build scalable tech products.",
+  "avatar": "https://github.com/Tejas-Praksh.png", 
+  "skills": ["Java Full stack-SpringBoot", "DSA", "Product Managment", "Product Design"],
+  "social": {
+    "GitHub": "https://github.com/Tejas-Praksh",
+    "LinkedIn": "https://www.linkedin.com/in/tejas-acharya/",
+    "Email": "tp5063144@gmail.com",
+    "LeetCode": "https://leetcode.com/u/TejasPrakash/",
+    "Figma": "https://www.figma.com/@tejasp",
+  }
+}
